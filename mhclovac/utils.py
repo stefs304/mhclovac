@@ -67,7 +67,7 @@ def load_index():
 
 
 def load_index_data():
-    fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'index', 'index-data.gz')
+    fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'index', 'index_data.gz')
     data = joblib.load(fpath)
     return data
 
