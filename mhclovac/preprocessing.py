@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-from mhclovac.sequence import model_distribution, encode_sequence
+from mhclovac.sequence import model_distribution
 from .utils import load_index_data
 import math
 
@@ -26,19 +26,6 @@ def sequence_to_features(sequence: str, index_list: list, n_discrete_points: int
     return sequence_features
 
 
-def anchors_to_features(sequence: str, index_data_list: list):
-    if len(sequence) < 4:
-        raise ValueError(f'peptide must be longer than 4')
-    anchor_features = []
-    for index_data in index_data_list:
-        features = encode_sequence(sequence=sequence, encoding_scheme=index_data)
-        anchor1 = features[:4]
-        anchor2 = features[-4:]
-        anchor_features.extend(anchor1)
-        anchor_features.extend(anchor2)
-    return anchor_features
-
-
 def get_features(peptide_list, index_id_list):
     index_data = load_index_data(index_id_list=index_id_list)
     peptide_df = pd.DataFrame()
@@ -47,8 +34,28 @@ def get_features(peptide_list, index_id_list):
     return pd.DataFrame(features.tolist())
 
 
-def transform_ic50(ic50_values):
-    y = pd.DataFrame()
-    y['ic50'] = ic50_values
-    y['ic50'] = y['ic50'].apply(lambda x: (10 - np.log(x)) / 10)
-    return y['ic50']
+def get_label(measure: str) -> int:
+    """
+    Transform qualitative measure.
+    """
+    positive_measures = [
+        'Positive-High',
+        'Positive-Intermediate',
+        'Positive',
+        'Positive-Low'
+    ]
+    if measure in positive_measures:
+        return 1
+    return 0
+
+
+def transform_ic50_measures(ic50_values):
+    data = pd.DataFrame()
+    data['values'] = ic50_values
+    return data['values'].apply(lambda x: 10 - np.log(x) / 10)
+
+
+def transform_qualitative_measures(value_list):
+    data = pd.DataFrame()
+    data['values'] = value_list
+    return data['values'].apply(get_label)
