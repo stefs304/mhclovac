@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 from mhclovac.sequence import model_distribution
 from .utils import load_index_data
+from .config import Config
 import math
 
 
@@ -15,13 +16,19 @@ def normalize_index_data(index: dict) -> dict:
     return normalized_index
 
 
-def sequence_to_features(sequence: str, index_list: list, n_discrete_points: int = 10) -> list:
+def sequence_to_features(sequence: str, index_list: list) -> list:
     """
     Convert sequence string to list of features.
     """
     sequence_features = []
     for index in index_list:
-        features = model_distribution(sequence, index, n_discrete_points=n_discrete_points)
+        features = model_distribution(
+            sequence=sequence,
+            encoding_scheme=index,
+            sigma=Config.SIGMA,
+            overlap_distance=Config.OVERLAP_DISTANCE,
+            n_discrete_points=Config.N_DISCRETE_POINTS
+        )
         sequence_features.extend(features)
     return sequence_features
 

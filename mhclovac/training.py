@@ -1,6 +1,7 @@
 from .utils import load_model
 from .models import BindingModel, LigandModel
-from .preprocessing import get_features
+from .preprocessing import get_features, transform_ic50_measures, transform_qualitative_measures
+from .config import Config
 import os
 import joblib
 
@@ -19,13 +20,19 @@ def train_binding_model(peptide_list, ic50_values, mhc_name, verbose=False):
         model = load_model(mhc_name)
     except:
         model = create_model_template(mhc_name)
+    if verbose:
+        print('Modeling physicochemical profiles.')
+    X = get_features(peptide_list, Config.INDEX_ID_LIST)
+    y = transform_ic50_measures(ic50_values)
     binding_model = BindingModel(verbose=verbose)
-    binding_model.fit(peptide_list=peptide_list, ic50_values=ic50_values)
+    binding_model.fit(X, y)
     model['binding_model'] = binding_model
     dir_path = os.path.dirname(os.path.abspath(__file__))
     filename = os.path.join(dir_path, 'models', f'{mhc_name}.model.gz')
     joblib.dump(model, filename, compress=('gzip', 5))
-    return
+    if verbose:
+        print(f'Model saved; {filename}')
+    return None
 
 
 def train_ligand_model(peptide_list, label_list, mhc_name, verbose=False):
