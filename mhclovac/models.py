@@ -7,7 +7,7 @@ from sklearn.ensemble import StackingRegressor, StackingClassifier
 from sklearn.neighbors import KNeighborsRegressor, KNeighborsClassifier
 from sklearn.tree import DecisionTreeRegressor, DecisionTreeClassifier
 from sklearn.svm import SVR, SVC
-from .preprocessing import get_sequence_features, get_anchor_features, ic50_to_score
+from .preprocessing import get_features, transform_ic50
 
 
 class BindingModel:
@@ -32,13 +32,13 @@ class BindingModel:
         stacked_model = StackingRegressor(estimators=level0, final_estimator=level1, cv=5, n_jobs=n_jobs)
         self.model = make_pipeline(StandardScaler(), stacked_model)
 
-    def fit(self, peptide_list, ic50_list):
-        X = get_sequence_features(peptide_list=peptide_list, index_id_list=self.index_id_list)
-        y = ic50_to_score(ic50_list)
+    def fit(self, peptide_list, ic50_values):
+        X = get_features(peptide_list=peptide_list, index_id_list=self.index_id_list)
+        y = transform_ic50(ic50_values=ic50_values)
         self.model.fit(X, y)
 
     def predict(self, peptide_list):
-        X = get_sequence_features(peptide_list=peptide_list, index_id_list=self.index_id_list)
+        X = get_features(peptide_list=peptide_list, index_id_list=self.index_id_list)
         return self.model.predict(X)
 
 

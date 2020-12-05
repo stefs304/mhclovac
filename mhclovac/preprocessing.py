@@ -47,8 +47,8 @@ def get_features(peptide_list, index_id_list):
     return pd.DataFrame(features.tolist())
 
 
-def ic50_to_score(ic50_list):
+def transform_ic50(ic50_values):
     y = pd.DataFrame()
-    y['ic50'] = ic50_list
+    y['ic50'] = ic50_values
     y['ic50'] = y['ic50'].apply(lambda x: (10 - np.log(x)) / 10)
     return y['ic50']
