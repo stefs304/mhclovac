@@ -15,13 +15,13 @@ def normalize_index_data(index: dict) -> dict:
     return normalized_index
 
 
-def sequence_to_features(sequence: str, index_list: list, sigma: float = 0.4, n_discrete_points: int = 10) -> list:
+def sequence_to_features(sequence: str, index_list: list, n_discrete_points: int = 10) -> list:
     """
     Convert sequence string to list of features.
     """
     sequence_features = []
     for index in index_list:
-        features = model_distribution(sequence, index, sigma=sigma, n_discrete_points=n_discrete_points)
+        features = model_distribution(sequence, index, n_discrete_points=n_discrete_points)
         sequence_features.extend(features)
     return sequence_features
 
@@ -39,22 +39,11 @@ def anchors_to_features(sequence: str, index_data_list: list):
     return anchor_features
 
 
-def get_sequence_features(peptide_list, index_id_list):
+def get_features(peptide_list, index_id_list):
     index_data = load_index_data(index_id_list=index_id_list)
     peptide_df = pd.DataFrame()
     peptide_df['peptide'] = peptide_list
     features = peptide_df['peptide'].apply(lambda x: sequence_to_features(x, index_data))
-    return pd.DataFrame(features.tolist())
-
-
-def get_anchor_features(peptide_list, index_id_list):
-    index_data = []
-    index_data_full = load_index_data()
-    peptide_df = pd.DataFrame()
-    peptide_df['peptide'] = peptide_list
-    for index_id in index_id_list:
-        index_data.append(index_data_full[index_id]['index_data'])
-    features = peptide_df['peptide'].apply(lambda x: anchors_to_features(x, index_data))
     return pd.DataFrame(features.tolist())
 
 
