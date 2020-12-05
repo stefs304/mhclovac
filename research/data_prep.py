@@ -22,7 +22,7 @@ def get_species(label):
     for key in species_map:
         if label in species_map[key]:
             return key
-    return None
+    None
 
 
 mhc_map = {
@@ -81,25 +81,25 @@ for species in species_map:
 
 bdata['mhc'] = bdata['mhc'].apply(lambda x: mhc_map[x] if x in mhc_map else x)
 
+data = edata.append(bdata)
 
-bdata['meas'] = bdata['meas'].apply(lambda x: 1.0 if x < 1.0 else x)
-bdata['meas'] = bdata['meas'].apply(lambda x: 20000 if x > 20000 else x)
+print(data.shape)
 
-bdata['valid_seq'] = bdata['sequence'].apply(lambda x: validate_sequence(x, sequence_name='none', silent=True))
-bdata = bdata[bdata['valid_seq'] == True]
-bdata.drop(['valid_seq'], axis=1, inplace=True)
+data['meas'] = data['meas'].apply(lambda x: 0.1 if x == 0 else x)
+data['meas'] = data['meas'].apply(lambda x: 20000 if x > 20000 else x)
 
-edata['valid_seq'] = edata['sequence'].apply(lambda x: validate_sequence(x, sequence_name='none', silent=True))
-edata = edata[edata['valid_seq'] == True]
-edata.drop(['valid_seq'], axis=1, inplace=True)
+data['valid_seq'] = data['sequence'].apply(lambda x: validate_sequence(x))
+data = data[data['valid_seq'] == True]
+data.drop(['valid_seq'], axis=1, inplace=True)
 
+print(data.shape)
 
-bdata['species'] = bdata['species'].apply(get_species)
-bdata = bdata[~bdata['species'].isna()]
+data['species'] = data['species'].apply(get_species)
+data = data[~data['species'].isna()]
 
-edata['species'] = edata['species'].apply(get_species)
-edata = edata[~edata['species'].isna()]
+print(data.shape)
 
+print(data.shape)
+print(data['species'].unique())
 
-bdata.to_csv('./data/binding_data.tsv', sep='\t')
-edata.to_csv('./data/ligand_data.tsv', sep='\t')
+data.to_csv('../data/combined_data.tsv', sep='\t')
