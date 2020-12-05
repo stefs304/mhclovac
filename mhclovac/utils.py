@@ -27,15 +27,17 @@ def load_model(mhc: str):
     return binding_model, ligand_model
 
 
-def load_index_data(index_id_list: list) -> list:
+def load_index_data(index_id_list: list = None) -> list or dict:
     """
     Load index data for a given list of index IDs.
     """
     file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'index', 'index_data.gz')
     data = joblib.load(file_path)
-    index_data = []
-    for index_id in index_id_list:
-        index_data.append(data[index_id]['index_data'])
+    if index_id_list:
+        index_data = []
+        for index_id in index_id_list:
+            index_data.append(data[index_id]['index_data'])
+        return index_data
     return data
 
 

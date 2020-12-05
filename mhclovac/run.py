@@ -1,5 +1,5 @@
 from mhclovac.sequence import validate_sequence, chop_sequence, read_fasta
-from mhclovac.utils import load_model, load_index
+from mhclovac.utils import load_model, load_index_data
 import pandas as pd
 import sys
 import argparse

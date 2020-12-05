@@ -21,9 +21,13 @@ def train_binding_model(peptide_list, ic50_values, mhc_name, verbose=False):
     except:
         model = create_model_template(mhc_name)
     if verbose:
-        print('Modeling... This may take a while...')
+        print(f'Training binding model for {mhc_name}')
+        print('Modeling physicochemical properties... This may take a while...')
     X = get_features(peptide_list, Config.INDEX_ID_LIST)
     y = transform_ic50_measures(ic50_values)
+    if verbose:
+        print(f'n_samples: {X.shape[0]}')
+        print(f'n_features: {X.shape[1]}')
     binding_model = BindingModel(verbose=verbose)
     binding_model.fit(X, y)
     model['binding_model'] = binding_model
