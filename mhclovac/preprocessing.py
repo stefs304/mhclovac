@@ -40,12 +40,9 @@ def anchors_to_features(sequence: str, index_data_list: list):
 
 
 def get_sequence_features(peptide_list, index_id_list):
-    index_data = []
-    index_data_full = load_index_data()
+    index_data = load_index_data(index_id_list=index_id_list)
     peptide_df = pd.DataFrame()
     peptide_df['peptide'] = peptide_list
-    for index_id in index_id_list:
-        index_data.append(index_data_full[index_id]['index_data'])
     features = peptide_df['peptide'].apply(lambda x: sequence_to_features(x, index_data))
     return pd.DataFrame(features.tolist())
 

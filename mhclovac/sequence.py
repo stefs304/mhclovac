@@ -2,8 +2,8 @@ import numpy as np
 from .utils import pdf
 
 
-def model_distribution(sequence: str, encoding_scheme: dict, overlap_distance: int = 2,
-                       sigma: float = 0.4, n_discrete_points: int = None):
+def model_distribution(sequence: str, encoding_scheme: dict, overlap_distance: int = 1,
+                       sigma: float = 0.8, n_discrete_points: int = None):
     """
     Models distribution of physicochemical property across a peptide sequence.
     """
@@ -22,12 +22,10 @@ def model_distribution(sequence: str, encoding_scheme: dict, overlap_distance: i
     dist_vector = dist_vector[overlap_distance*scaling_factor:-overlap_distance*scaling_factor]
     if n_discrete_points:
         discrete_vector = []
-        offset = int(np.floor(len(dist_vector) / n_discrete_points))
         step = int(len(dist_vector) / n_discrete_points)
-        for i in range(offset, len(dist_vector), step):
-            sample_tick = dist_vector[i]
-            discrete_vector.append(sample_tick)
-        return np.array(discrete_vector)
+        for i in range(0, len(dist_vector), step):
+            discrete_vector.append(dist_vector[i])
+        return discrete_vector
     return dist_vector
 
 

@@ -6,59 +6,42 @@ import joblib
 def list_mhc_alleles():
     """
     Returns the list of available MHC alleles.
-
-    :return: list
     """
     mhc_alleles = []
     for fname in os.listdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'models')):
         mhc_name = fname.split('.model.gz')[0]
         mhc_alleles.append(mhc_name)
-
     return mhc_alleles
 
 
-def load_model(mhc):
+def load_model(mhc: str):
     """
-    Returns trained models for given MHC allele.
-
-    :param mhc: str, MHC allele
-    :return: mhclovac.BindingPredictor, mhclovac.EpitopePredictor
+    Load trained models for a given MHC allele.
     """
     if mhc not in list_mhc_alleles():
-        msg = f'"{mhc}" not available.'
+        msg = f'"{mhc}" not supported.'
         raise ValueError(msg)
-    fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'models', f'{mhc}.model.gz')
-    data = joblib.load(fpath)
-    bmodel, emodel = data['binding'], data['epitope']
+    model_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'models', f'{mhc}.model.gz')
+    data = joblib.load(model_path)
+    binding_model, ligand_model = data['binding_model'], data['ligand_model']
+    return binding_model, ligand_model
 
-    return bmodel, emodel
 
-
-def load_index():
+def load_index_data(index_id_list: list) -> list:
     """
-    Loads and returns index data.
-
-    :return: list, index data
+    Load index data for a given list of index IDs.
     """
-    index_list = ['PRAM900101', 'FASG760101', 'ZIMJ680104', 'CHOP780201', 'PRAM820103', 'RACS820112', 'ROBB760107']
+    file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'index', 'index_data.gz')
+    data = joblib.load(file_path)
     index_data = []
-    for index_id in index_list:
-        fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'index', f'{index_id}.index.gz')
-        data = joblib.load(fpath)
-        index_data.append(data['index_data'])
-
-    return index_data
-
-
-def load_index_data():
-    fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'index', 'index_data.gz')
-    data = joblib.load(fpath)
+    for index_id in index_id_list:
+        index_data.append(data[index_id]['index_data'])
     return data
 
 
-def index_correlation(index1, index2):
+def get_index_correlation(index1, index2):
     """
-    Find correlation coefficient for two physicochemical indexes.
+    Get correlation coefficient for two physicochemical indexes.
     """
     keys = list(index1.keys())
     array_1 = []
@@ -66,7 +49,6 @@ def index_correlation(index1, index2):
     for key in keys:
         array_1.append(index1[key])
         array_2.append(index2[key])
-
     return np.corrcoef(array_1, array_2)[0][1]
 
 
