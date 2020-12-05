@@ -59,7 +59,7 @@ def get_label(measure: str) -> int:
 def transform_ic50_measures(ic50_values):
     data = pd.DataFrame()
     data['values'] = ic50_values
-    return data['values'].apply(lambda x: 10 - np.log(x) / 10)
+    return data['values'].apply(lambda x: 1 - math.log(x, 50000))
 
 
 def transform_qualitative_measures(value_list):

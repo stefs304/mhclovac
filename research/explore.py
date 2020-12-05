@@ -18,16 +18,14 @@ SKIP_LIST = [
     'H2-Kb Y22F, M23I, E24S, D30N mutant',
     'RT1-A',
 ]
-N_PROC = 2
-N_ITERATIONS = 3
+N_PROC = 6
+N_ITERATIONS = 5
 CORRELATION_THRESHOLD = 0.3
 
 
 logging.basicConfig(filename='explore.log', level=logging.DEBUG, format='%(asctime)s: %(message)s')
-data = pd.read_csv(DATA_FILE, sep='\t', low_memory=False)
-data['meas'] = data['meas'].apply(lambda x: 20000 if x > 20000 else x)  # cap high at 20k
-data['meas'] = data['meas'].apply(lambda x: 1.0 if x < 1.0 else x)  # cap low at 1.0
 
+data = pd.read_csv(DATA_FILE, sep='\t', low_memory=False)
 index_data = load_index_data()
 
 
