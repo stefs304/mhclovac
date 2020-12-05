@@ -21,7 +21,7 @@ def train_binding_model(peptide_list, ic50_values, mhc_name, verbose=False):
     except:
         model = create_model_template(mhc_name)
     if verbose:
-        print('Modeling physicochemical profiles.')
+        print('Modeling... This may take a while...')
     X = get_features(peptide_list, Config.INDEX_ID_LIST)
     y = transform_ic50_measures(ic50_values)
     binding_model = BindingModel(verbose=verbose)
