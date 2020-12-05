@@ -5,18 +5,6 @@ from .utils import load_index_data
 import math
 
 
-def standardize_index(index: dict) -> dict:
-    """
-    Standardize values of given index to range [-1 1].
-    """
-    values = np.array([index[k] for k in index])
-    mu = values.mean()
-    std = values.std()
-    for k, v in index.items():
-        index[k] = (v - mu) / std
-    return index
-
-
 def normalize_index_data(index: dict) -> dict:
     normalized_index = dict(index)
     values = np.array([index[k] for k in index])

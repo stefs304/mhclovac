@@ -3,22 +3,6 @@ import os
 import joblib
 
 
-def standardize_index(index):
-    """
-    Standardizes values of given index.
-
-    :param index: dict, index data
-    :return: dict
-    """
-    values = np.array([index[k] for k in index])
-    mu = values.mean()
-    std = values.std()
-    for k, v in index.items():
-        index[k] = (v - mu) / std
-
-    return index
-
-
 def list_mhc_alleles():
     """
     Returns the list of available MHC alleles.
