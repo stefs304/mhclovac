@@ -1,0 +1,5537 @@
+{
+  "mhc_key": "HLA-B*27:02",
+  "binding": [
+    [
+      "ANDN920101",
+      "alpha-CH chemical shifts (Andersen et al., 1992)",
+      0.12066666666666669
+    ],
+    [
+      "ARGP820102",
+      "Signal sequence helical potential (Argos et al., 1982)",
+      -0.521
+    ],
+    [
+      "ARGP820103",
+      "Membrane-buried preference parameters (Argos et al., 1982)",
+      -0.5496666666666666
+    ],
+    [
+      "BEGF750101",
+      "Conformational parameter of inner helix (Beghin-Dirkx, 1975)",
+      0.06666666666666667
+    ],
+    [
+      "ARGP820101",
+      "Hydrophobicity index (Argos et al., 1982)",
+      -0.11966666666666666
+    ],
+    [
+      "BEGF750103",
+      "Conformational parameter of beta-turn (Beghin-Dirkx, 1975)",
+      -0.3526666666666667
+    ],
+    [
+      "BEGF750102",
+      "Conformational parameter of beta-structure (Beghin-Dirkx, 1975)",
+      -0.025999999999999995
+    ],
+    [
+      "BHAR880101",
+      "Average flexibility indices (Bhaskaran-Ponnuswamy, 1988)",
+      -0.12433333333333334
+    ],
+    [
+      "BIGC670101",
+      "Residue volume (Bigelow, 1967)",
+      -1.748333333333333
+    ],
+    [
+      "BIOV880102",
+      "Information value for accessibility; average fraction 23% (Biou et al., 1988)",
+      -0.30433333333333334
+    ],
+    [
+      "BIOV880101",
+      "Information value for accessibility; average fraction 35% (Biou et al., 1988)",
+      -0.25333333333333335
+    ],
+    [
+      "BROC820101",
+      "Retention coefficient in TFA (Browne et al., 1982)",
+      -0.7469999999999999
+    ],
+    [
+      "BULH740101",
+      "Transfer free energy to surface (Bull-Breese, 1974)",
+      -0.7770000000000001
+    ],
+    [
+      "BROC820102",
+      "Retention coefficient in HFBA (Browne et al., 1982)",
+      -1.1813333333333331
+    ],
+    [
+      "BULH740102",
+      "Apparent partial specific volume (Bull-Breese, 1974)",
+      -1.4400000000000002
+    ],
+    [
+      "BUNA790101",
+      "alpha-NH chemical shifts (Bundi-Wuthrich, 1979)",
+      -0.25533333333333336
+    ],
+    [
+      "BUNA790103",
+      "Spin-spin coupling constants 3JHalpha-NH (Bundi-Wuthrich, 1979)",
+      0.2743333333333333
+    ],
+    [
+      "BUNA790102",
+      "alpha-CH chemical shifts (Bundi-Wuthrich, 1979)",
+      0.2866666666666667
+    ],
+    [
+      "BURA740102",
+      "Normalized frequency of extended structure (Burgess et al., 1974)",
+      0.294
+    ],
+    [
+      "BURA740101",
+      "Normalized frequency of alpha-helix (Burgess et al., 1974)",
+      0.3103333333333333
+    ],
+    [
+      "CHAM810101",
+      "Steric parameter (Charton, 1981)",
+      0.14433333333333334
+    ],
+    [
+      "CHAM820101",
+      "Polarizability parameter (Charton-Charton, 1982)",
+      0.4213333333333333
+    ],
+    [
+      "CHAM820102",
+      "Free energy of solution in water, kcal/mole (Charton-Charton, 1982)",
+      0.4246666666666667
+    ],
+    [
+      "CHAM830101",
+      "The Chou-Fasman parameter of the coil conformation (Charton-Charton, 1983)",
+      0.03066666666666668
+    ],
+    [
+      "CHAM830103",
+      "The number of atoms in the side chain labelled 1+1 (Charton-Charton, 1983)",
+      0.020999999999999994
+    ],
+    [
+      "CHAM830102",
+      "A parameter defined from the residuals obtained from the best correlation of the Chou-Fasman parameter of beta-sheet (Charton-Charton, 1983)",
+      0.16866666666666666
+    ],
+    [
+      "CHAM830104",
+      "The number of atoms in the side chain labelled 2+1 (Charton-Charton, 1983)",
+      0.21399999999999997
+    ],
+    [
+      "CHAM830105",
+      "The number of atoms in the side chain labelled 3+1 (Charton-Charton, 1983)",
+      0.25333333333333335
+    ],
+    [
+      "CHAM830106",
+      "The number of bonds in the longest chain (Charton-Charton, 1983)",
+      0.13933333333333334
+    ],
+    [
+      "CHAM830107",
+      "A parameter of charge transfer capability (Charton-Charton, 1983)",
+      -0.154
+    ],
+    [
+      "CHAM830108",
+      "A parameter of charge transfer donor capability (Charton-Charton, 1983)",
+      0.057666666666666665
+    ],
+    [
+      "CHOC750101",
+      "Average volume of buried residue (Chothia, 1975)",
+      0.27366666666666667
+    ],
+    [
+      "CHOC760102",
+      "Residue accessible surface area in folded protein (Chothia, 1976)",
+      -0.5896666666666667
+    ],
+    [
+      "CHOC760101",
+      "Residue accessible surface area in tripeptide (Chothia, 1976)",
+      0.07366666666666667
+    ],
+    [
+      "CHOC760103",
+      "Proportion of residues 95% buried (Chothia, 1976)",
+      -0.5056666666666666
+    ],
+    [
+      "CHOC760104",
+      "Proportion of residues 100% buried (Chothia, 1976)",
+      -0.3443333333333334
+    ],
+    [
+      "CHOP780101",
+      "Normalized frequency of beta-turn (Chou-Fasman, 1978a)",
+      0.06833333333333333
+    ],
+    [
+      "CHOP780201",
+      "Normalized frequency of alpha-helix (Chou-Fasman, 1978b)",
+      0.3153333333333333
+    ],
+    [
+      "CHOP780202",
+      "Normalized frequency of beta-sheet (Chou-Fasman, 1978b)",
+      0.03466666666666665
+    ],
+    [
+      "CHOP780203",
+      "Normalized frequency of beta-turn (Chou-Fasman, 1978b)",
+      0.068
+    ],
+    [
+      "CHOP780204",
+      "Normalized frequency of N-terminal helix (Chou-Fasman, 1978b)",
+      0.5353333333333333
+    ],
+    [
+      "CHOP780205",
+      "Normalized frequency of C-terminal helix (Chou-Fasman, 1978b)",
+      0.18133333333333335
+    ],
+    [
+      "CHOP780206",
+      "Normalized frequency of N-terminal non helical region (Chou-Fasman, 1978b)",
+      0.4346666666666667
+    ],
+    [
+      "CHOP780207",
+      "Normalized frequency of C-terminal non helical region (Chou-Fasman, 1978b)",
+      0.347
+    ],
+    [
+      "CHOP780208",
+      "Normalized frequency of N-terminal beta-sheet (Chou-Fasman, 1978b)",
+      0.36933333333333335
+    ],
+    [
+      "CHOP780209",
+      "Normalized frequency of C-terminal beta-sheet (Chou-Fasman, 1978b)",
+      0.6996666666666668
+    ],
+    [
+      "CHOP780211",
+      "Normalized frequency of C-terminal non beta region (Chou-Fasman, 1978b)",
+      0.38366666666666666
+    ],
+    [
+      "CHOP780210",
+      "Normalized frequency of N-terminal non beta region (Chou-Fasman, 1978b)",
+      0.40166666666666667
+    ],
+    [
+      "CHOP780212",
+      "Frequency of the 1st residue in turn (Chou-Fasman, 1978b)",
+      0.6033333333333334
+    ],
+    [
+      "CHOP780213",
+      "Frequency of the 2nd residue in turn (Chou-Fasman, 1978b)",
+      0.3866666666666667
+    ],
+    [
+      "CHOP780214",
+      "Frequency of the 3rd residue in turn (Chou-Fasman, 1978b)",
+      -0.16033333333333333
+    ],
+    [
+      "CHOP780215",
+      "Frequency of the 4th residue in turn (Chou-Fasman, 1978b)",
+      0.11533333333333334
+    ],
+    [
+      "CHOP780216",
+      "Normalized frequency of the 2nd and 3rd residues in turn (Chou-Fasman, 1978b)",
+      0.169
+    ],
+    [
+      "CIDH920101",
+      "Normalized hydrophobicity scales for alpha-proteins (Cid et al., 1992)",
+      0.4683333333333333
+    ],
+    [
+      "CIDH920103",
+      "Normalized hydrophobicity scales for alpha+beta-proteins (Cid et al., 1992)",
+      0.467
+    ],
+    [
+      "CIDH920102",
+      "Normalized hydrophobicity scales for beta-proteins (Cid et al., 1992)",
+      0.4426666666666667
+    ],
+    [
+      "CIDH920104",
+      "Normalized hydrophobicity scales for alpha/beta-proteins (Cid et al., 1992)",
+      -0.076
+    ],
+    [
+      "CIDH920105",
+      "Normalized average hydrophobicity scales (Cid et al., 1992)",
+      0.01966666666666665
+    ],
+    [
+      "COHE430101",
+      "Partial specific volume (Cohn-Edsall, 1943)",
+      0.023333333333333317
+    ],
+    [
+      "CRAJ730101",
+      "Normalized frequency of middle helix (Crawford et al., 1973)",
+      -0.20700000000000005
+    ],
+    [
+      "CRAJ730102",
+      "Normalized frequency of beta-sheet (Crawford et al., 1973)",
+      -0.02733333333333336
+    ],
+    [
+      "CRAJ730103",
+      "Normalized frequency of turn (Crawford et al., 1973)",
+      0.06366666666666666
+    ],
+    [
+      "DAWD720101",
+      "Size (Dawson, 1972)",
+      0.12200000000000004
+    ],
+    [
+      "DAYM780101",
+      "Amino acid composition (Dayhoff et al., 1978a)",
+      -0.01933333333333335
+    ],
+    [
+      "DAYM780201",
+      "Relative mutability (Dayhoff et al., 1978b)",
+      0.4383333333333333
+    ],
+    [
+      "DESM900101",
+      "Membrane preference for cytochrome b: MPH89 (Degli Esposti et al., 1990)",
+      0.19433333333333333
+    ],
+    [
+      "DESM900102",
+      "Average membrane preference: AMP07 (Degli Esposti et al., 1990)",
+      0.32366666666666666
+    ],
+    [
+      "EISD840101",
+      "Consensus normalized hydrophobicity scale (Eisenberg, 1984)",
+      0.33233333333333337
+    ],
+    [
+      "EISD860101",
+      "Solvation free energy (Eisenberg-McLachlan, 1986)",
+      0.027999999999999997
+    ],
+    [
+      "EISD860103",
+      "Direction of hydrophobic moment (Eisenberg-McLachlan, 1986)",
+      0.3196666666666667
+    ],
+    [
+      "EISD860102",
+      "Atom-based hydrophobic moment (Eisenberg-McLachlan, 1986)",
+      0.26899999999999996
+    ],
+    [
+      "FASG760101",
+      "Molecular weight (Fasman, 1976)",
+      0.45933333333333337
+    ],
+    [
+      "FASG760102",
+      "Melting point (Fasman, 1976)",
+      0.15233333333333335
+    ],
+    [
+      "FASG760104",
+      "pK-N (Fasman, 1976)",
+      0.5179999999999999
+    ],
+    [
+      "FASG760103",
+      "Optical rotation (Fasman, 1976)",
+      0.18099999999999997
+    ],
+    [
+      "FASG760105",
+      "pK-C (Fasman, 1976)",
+      0.16733333333333333
+    ],
+    [
+      "FAUJ830101",
+      "Hydrophobic parameter pi (Fauchere-Pliska, 1983)",
+      0.17933333333333334
+    ],
+    [
+      "FAUJ880101",
+      "Graph shape index (Fauchere et al., 1988)",
+      0.459
+    ],
+    [
+      "FAUJ880102",
+      "Smoothed upsilon steric parameter (Fauchere et al., 1988)",
+      0.16533333333333333
+    ],
+    [
+      "FAUJ880103",
+      "Normalized van der Waals volume (Fauchere et al., 1988)",
+      0.5830000000000001
+    ],
+    [
+      "FAUJ880104",
+      "STERIMOL length of the side chain (Fauchere et al., 1988)",
+      -0.20033333333333334
+    ],
+    [
+      "FAUJ880105",
+      "STERIMOL minimum width of the side chain (Fauchere et al., 1988)",
+      -0.43566666666666665
+    ],
+    [
+      "FAUJ880106",
+      "STERIMOL maximum width of the side chain (Fauchere et al., 1988)",
+      0.03666666666666666
+    ],
+    [
+      "FAUJ880107",
+      "N.m.r. chemical shift of alpha-carbon (Fauchere et al., 1988)",
+      -0.10733333333333332
+    ],
+    [
+      "FAUJ880108",
+      "Localized electrical effect (Fauchere et al., 1988)",
+      0.26699999999999996
+    ],
+    [
+      "FAUJ880109",
+      "Number of hydrogen bond donors (Fauchere et al., 1988)",
+      -0.257
+    ],
+    [
+      "FAUJ880110",
+      "Number of full nonbonding orbitals (Fauchere et al., 1988)",
+      -0.006666666666666672
+    ],
+    [
+      "FAUJ880111",
+      "Positive charge (Fauchere et al., 1988)",
+      -0.46366666666666667
+    ],
+    [
+      "FAUJ880112",
+      "Negative charge (Fauchere et al., 1988)",
+      -9.925333333333333
+    ],
+    [
+      "FAUJ880113",
+      "pK-a(RCOOH) (Fauchere et al., 1988)",
+      -10.197333333333335
+    ],
+    [
+      "FINA770101",
+      "Helix-coil equilibrium constant (Finkelstein-Ptitsyn, 1977)",
+      -11.582
+    ],
+    [
+      "FINA910101",
+      "Helix initiation parameter at posision i-1 (Finkelstein et al., 1991)",
+      -7.664666666666668
+    ],
+    [
+      "FINA910102",
+      "Helix initiation parameter at posision i,i+1,i+2 (Finkelstein et al., 1991)",
+      -6.0056666666666665
+    ],
+    [
+      "FINA910103",
+      "Helix termination parameter at posision j-2,j-1,j (Finkelstein et al., 1991)",
+      -6.4046666666666665
+    ],
+    [
+      "FINA910104",
+      "Helix termination parameter at posision j+1 (Finkelstein et al., 1991)",
+      -11.806000000000003
+    ],
+    [
+      "GARJ730101",
+      "Partition coefficient (Garel et al., 1973)",
+      -3.425666666666667
+    ],
+    [
+      "GEIM800101",
+      "Alpha-helix indices (Geisow-Roberts, 1980)",
+      0.11866666666666668
+    ],
+    [
+      "GEIM800102",
+      "Alpha-helix indices for alpha-proteins (Geisow-Roberts, 1980)",
+      -0.09699999999999998
+    ],
+    [
+      "GEIM800103",
+      "Alpha-helix indices for beta-proteins (Geisow-Roberts, 1980)",
+      -0.2306666666666667
+    ],
+    [
+      "GEIM800105",
+      "Beta-strand indices (Geisow-Roberts, 1980)",
+      0.24733333333333332
+    ],
+    [
+      "GEIM800106",
+      "Beta-strand indices for beta-proteins (Geisow-Roberts, 1980)",
+      0.234
+    ],
+    [
+      "GEIM800104",
+      "Alpha-helix indices for alpha/beta-proteins (Geisow-Roberts, 1980)",
+      -0.03933333333333331
+    ],
+    [
+      "GEIM800108",
+      "Aperiodic indices (Geisow-Roberts, 1980)",
+      0.31666666666666665
+    ],
+    [
+      "GEIM800107",
+      "Beta-strand indices for alpha/beta-proteins (Geisow-Roberts, 1980)",
+      0.055333333333333345
+    ],
+    [
+      "GEIM800109",
+      "Aperiodic indices for alpha-proteins (Geisow-Roberts, 1980)",
+      0.49333333333333335
+    ],
+    [
+      "GEIM800110",
+      "Aperiodic indices for beta-proteins (Geisow-Roberts, 1980)",
+      0.5526666666666666
+    ],
+    [
+      "GEIM800111",
+      "Aperiodic indices for alpha/beta-proteins (Geisow-Roberts, 1980)",
+      0.08766666666666666
+    ],
+    [
+      "GOLD730101",
+      "Hydrophobicity factor (Goldsack-Chalifoux, 1973)",
+      0.20300000000000004
+    ],
+    [
+      "GOLD730102",
+      "Residue volume (Goldsack-Chalifoux, 1973)",
+      0.5083333333333333
+    ],
+    [
+      "GRAR740101",
+      "Composition (Grantham, 1974)",
+      0.2816666666666667
+    ],
+    [
+      "GRAR740103",
+      "Volume (Grantham, 1974)",
+      0.5393333333333333
+    ],
+    [
+      "GRAR740102",
+      "Polarity (Grantham, 1974)",
+      0.418
+    ],
+    [
+      "GUYH850101",
+      "Partition energy (Guy, 1985)",
+      0.21566666666666667
+    ],
+    [
+      "HOPA770101",
+      "Hydration number (Hopfinger, 1971), Cited by Charton-Charton (1982)",
+      0.31466666666666665
+    ],
+    [
+      "HOPT810101",
+      "Hydrophilicity value (Hopp-Woods, 1981)",
+      0.4503333333333333
+    ],
+    [
+      "HUTJ700101",
+      "Heat capacity (Hutchens, 1970)",
+      0.2336666666666667
+    ],
+    [
+      "HUTJ700102",
+      "Absolute entropy (Hutchens, 1970)",
+      0.217
+    ],
+    [
+      "HUTJ700103",
+      "Entropy of formation (Hutchens, 1970)",
+      0.08
+    ],
+    [
+      "ISOY800102",
+      "Normalized relative frequency of extended structure (Isogai et al., 1980)",
+      0.572
+    ],
+    [
+      "ISOY800101",
+      "Normalized relative frequency of alpha-helix (Isogai et al., 1980)",
+      0.20566666666666666
+    ],
+    [
+      "ISOY800104",
+      "Normalized relative frequency of bend R (Isogai et al., 1980)",
+      0.09700000000000002
+    ],
+    [
+      "ISOY800103",
+      "Normalized relative frequency of bend (Isogai et al., 1980)",
+      0.15633333333333332
+    ],
+    [
+      "ISOY800105",
+      "Normalized relative frequency of bend S (Isogai et al., 1980)",
+      0.5003333333333333
+    ],
+    [
+      "ISOY800106",
+      "Normalized relative frequency of helix end (Isogai et al., 1980)",
+      0.17066666666666666
+    ],
+    [
+      "ISOY800107",
+      "Normalized relative frequency of double bend (Isogai et al., 1980)",
+      0.2986666666666667
+    ],
+    [
+      "ISOY800108",
+      "Normalized relative frequency of coil (Isogai et al., 1980)",
+      -0.6299999999999999
+    ],
+    [
+      "JANJ780101",
+      "Average accessible surface area (Janin et al., 1978)",
+      0.04999999999999999
+    ],
+    [
+      "JANJ780102",
+      "Percentage of buried residues (Janin et al., 1978)",
+      0.17566666666666667
+    ],
+    [
+      "JANJ780103",
+      "Percentage of exposed residues (Janin et al., 1978)",
+      -0.6709999999999999
+    ],
+    [
+      "JANJ790101",
+      "Ratio of buried and accessible molar fractions (Janin, 1979)",
+      -0.7423333333333334
+    ],
+    [
+      "JANJ790102",
+      "Transfer free energy (Janin, 1979)",
+      -0.7046666666666668
+    ],
+    [
+      "JOND750101",
+      "Hydrophobicity (Jones, 1975)",
+      0.09300000000000001
+    ],
+    [
+      "JOND750102",
+      "pK (-COOH) (Jones, 1975)",
+      -0.439
+    ],
+    [
+      "JOND920101",
+      "Relative frequency of occurrence (Jones et al., 1992)",
+      -1.0206666666666668
+    ],
+    [
+      "JOND920102",
+      "Relative mutability (Jones et al., 1992)",
+      -0.5826666666666668
+    ],
+    [
+      "JUKT750101",
+      "Amino acid distribution (Jukes et al., 1975)",
+      -0.758
+    ],
+    [
+      "JUNJ780101",
+      "Sequence frequency (Jungck, 1978)",
+      -5.523
+    ],
+    [
+      "KANM800101",
+      "Average relative probability of helix (Kanehisa-Tsong, 1980)",
+      -7.194333333333334
+    ],
+    [
+      "KANM800102",
+      "Average relative probability of beta-sheet (Kanehisa-Tsong, 1980)",
+      -6.483333333333334
+    ],
+    [
+      "KANM800103",
+      "Average relative probability of inner helix (Kanehisa-Tsong, 1980)",
+      -6.366333333333334
+    ],
+    [
+      "KANM800104",
+      "Average relative probability of inner beta-sheet (Kanehisa-Tsong, 1980)",
+      -8.520333333333335
+    ],
+    [
+      "KARP850101",
+      "Flexibility parameter for no rigid neighbors (Karplus-Schulz, 1985)",
+      -7.641333333333333
+    ],
+    [
+      "KARP850102",
+      "Flexibility parameter for one rigid neighbor (Karplus-Schulz, 1985)",
+      -9.617666666666667
+    ],
+    [
+      "KARP850103",
+      "Flexibility parameter for two rigid neighbors (Karplus-Schulz, 1985)",
+      -7.769666666666667
+    ],
+    [
+      "KHAG800101",
+      "The Kerr-constant increments (Khanarian-Moore, 1980)",
+      0.47700000000000004
+    ],
+    [
+      "KLEP840101",
+      "Net charge (Klein et al., 1984)",
+      0.41733333333333333
+    ],
+    [
+      "KRIW710101",
+      "Side chain interaction parameter (Krigbaum-Rubin, 1971)",
+      0.38966666666666666
+    ],
+    [
+      "KRIW790101",
+      "Side chain interaction parameter (Krigbaum-Komoriya, 1979)",
+      0.36999999999999994
+    ],
+    [
+      "KRIW790102",
+      "Fraction of site occupied by water (Krigbaum-Komoriya, 1979)",
+      0.157
+    ],
+    [
+      "KRIW790103",
+      "Side chain volume (Krigbaum-Komoriya, 1979)",
+      0.49833333333333335
+    ],
+    [
+      "KYTJ820101",
+      "Hydropathy index (Kyte-Doolittle, 1982)",
+      0.2733333333333333
+    ],
+    [
+      "LEVM760101",
+      "Hydrophobic parameter (Levitt, 1976)",
+      -0.6233333333333333
+    ],
+    [
+      "LAWE840101",
+      "Transfer free energy, CHP/water (Lawson et al., 1984)",
+      0.111
+    ],
+    [
+      "LEVM760102",
+      "Distance between C-alpha and centroid of side chain (Levitt, 1976)",
+      0.014000000000000012
+    ],
+    [
+      "LEVM760103",
+      "Side chain angle theta(AAR) (Levitt, 1976)",
+      -0.16933333333333334
+    ],
+    [
+      "LEVM760105",
+      "Radius of gyration of side chain (Levitt, 1976)",
+      -0.21766666666666667
+    ],
+    [
+      "LEVM760104",
+      "Side chain torsion angle phi(AAAR) (Levitt, 1976)",
+      0.15133333333333335
+    ],
+    [
+      "LEVM760106",
+      "van der Waals parameter R0 (Levitt, 1976)",
+      -0.20933333333333334
+    ],
+    [
+      "LEVM780101",
+      "Normalized frequency of alpha-helix, with weights (Levitt, 1978)",
+      0.292
+    ],
+    [
+      "LEVM760107",
+      "van der Waals parameter epsilon (Levitt, 1976)",
+      0.008666666666666675
+    ],
+    [
+      "LEVM780102",
+      "Normalized frequency of beta-sheet, with weights (Levitt, 1978)",
+      -0.509
+    ],
+    [
+      "LEVM780103",
+      "Normalized frequency of reverse turn, with weights (Levitt, 1978)",
+      0.20733333333333334
+    ],
+    [
+      "LEVM780104",
+      "Normalized frequency of alpha-helix, unweighted (Levitt, 1978)",
+      0.4426666666666667
+    ],
+    [
+      "LEVM780105",
+      "Normalized frequency of beta-sheet, unweighted (Levitt, 1978)",
+      0.20466666666666666
+    ],
+    [
+      "LEVM780106",
+      "Normalized frequency of reverse turn, unweighted (Levitt, 1978)",
+      0.125
+    ],
+    [
+      "LEWP710101",
+      "Frequency of occurrence in beta-bends (Lewis et al., 1971)",
+      0.20733333333333337
+    ],
+    [
+      "LIFS790101",
+      "Conformational preference for all beta-strands (Lifson-Sander, 1979)",
+      0.054666666666666676
+    ],
+    [
+      "LIFS790102",
+      "Conformational preference for parallel beta-strands (Lifson-Sander, 1979)",
+      -0.12366666666666666
+    ],
+    [
+      "LIFS790103",
+      "Conformational preference for antiparallel beta-strands (Lifson-Sander, 1979)",
+      0.2996666666666666
+    ],
+    [
+      "MANP780101",
+      "Average surrounding hydrophobicity (Manavalan-Ponnuswamy, 1978)",
+      0.2593333333333333
+    ],
+    [
+      "MAXF760101",
+      "Normalized frequency of alpha-helix (Maxfield-Scheraga, 1976)",
+      0.44566666666666666
+    ],
+    [
+      "MAXF760102",
+      "Normalized frequency of extended structure (Maxfield-Scheraga, 1976)",
+      0.166
+    ],
+    [
+      "MAXF760103",
+      "Normalized frequency of zeta R (Maxfield-Scheraga, 1976)",
+      0.37166666666666676
+    ],
+    [
+      "MAXF760104",
+      "Normalized frequency of left-handed alpha-helix (Maxfield-Scheraga, 1976)",
+      -0.09766666666666668
+    ],
+    [
+      "MAXF760105",
+      "Normalized frequency of zeta L (Maxfield-Scheraga, 1976)",
+      0.42366666666666664
+    ],
+    [
+      "MAXF760106",
+      "Normalized frequency of alpha region (Maxfield-Scheraga, 1976)",
+      0.2836666666666667
+    ],
+    [
+      "MEEJ800101",
+      "Retention coefficient in HPLC, pH7.4 (Meek, 1980)",
+      0.40700000000000003
+    ],
+    [
+      "MCMT640101",
+      "Refractivity (McMeekin et al., 1964), Cited by Jones (1975)",
+      0.36166666666666664
+    ],
+    [
+      "MEEJ800102",
+      "Retention coefficient in HPLC, pH2.1 (Meek, 1980)",
+      0.36433333333333334
+    ],
+    [
+      "MEEJ810101",
+      "Retention coefficient in NaClO4 (Meek-Rossetti, 1981)",
+      0.442
+    ],
+    [
+      "MEEJ810102",
+      "Retention coefficient in NaH2PO4 (Meek-Rossetti, 1981)",
+      0.49833333333333335
+    ],
+    [
+      "MEIH800101",
+      "Average reduced distance for C-alpha (Meirovitch et al., 1980)",
+      0.36866666666666664
+    ],
+    [
+      "MEIH800103",
+      "Average side chain orientation angle (Meirovitch et al., 1980)",
+      0.25533333333333336
+    ],
+    [
+      "MEIH800102",
+      "Average reduced distance for side chain (Meirovitch et al., 1980)",
+      0.37066666666666664
+    ],
+    [
+      "MIYS850101",
+      "Effective partition energy (Miyazawa-Jernigan, 1985)",
+      0.3473333333333333
+    ],
+    [
+      "NAGK730101",
+      "Normalized frequency of alpha-helix (Nagano, 1973)",
+      0.4709999999999999
+    ],
+    [
+      "NAGK730102",
+      "Normalized frequency of bata-structure (Nagano, 1973)",
+      0.5136666666666666
+    ],
+    [
+      "NAKH900101",
+      "AA composition of total proteins (Nakashima et al., 1990)",
+      0.4263333333333333
+    ],
+    [
+      "NAGK730103",
+      "Normalized frequency of coil (Nagano, 1973)",
+      0.43333333333333335
+    ],
+    [
+      "NAKH900102",
+      "SD of AA composition of total proteins (Nakashima et al., 1990)",
+      0.5006666666666667
+    ],
+    [
+      "NAKH900103",
+      "AA composition of mt-proteins (Nakashima et al., 1990)",
+      0.283
+    ],
+    [
+      "NAKH900104",
+      "Normalized composition of mt-proteins (Nakashima et al., 1990)",
+      -0.19666666666666668
+    ],
+    [
+      "NAKH900105",
+      "AA composition of mt-proteins from animal (Nakashima et al., 1990)",
+      -0.7913333333333332
+    ],
+    [
+      "NAKH900106",
+      "Normalized composition from animal (Nakashima et al., 1990)",
+      0.29200000000000004
+    ],
+    [
+      "NAKH900107",
+      "AA composition of mt-proteins from fungi and plant (Nakashima et al., 1990)",
+      -0.4143333333333333
+    ],
+    [
+      "NAKH900108",
+      "Normalized composition from fungi and plant (Nakashima et al., 1990)",
+      0.32466666666666666
+    ],
+    [
+      "NAKH900109",
+      "AA composition of membrane proteins (Nakashima et al., 1990)",
+      -0.601
+    ],
+    [
+      "NAKH900110",
+      "Normalized composition of membrane proteins (Nakashima et al., 1990)",
+      -0.5066666666666667
+    ],
+    [
+      "NAKH900111",
+      "Transmembrane regions of non-mt-proteins (Nakashima et al., 1990)",
+      -0.14966666666666667
+    ],
+    [
+      "NAKH900112",
+      "Transmembrane regions of mt-proteins (Nakashima et al., 1990)",
+      -0.627
+    ],
+    [
+      "NAKH900113",
+      "Ratio of average and computed composition (Nakashima et al., 1990)",
+      -0.26300000000000007
+    ],
+    [
+      "NAKH920101",
+      "AA composition of CYT of single-spanning proteins (Nakashima-Nishikawa, 1992)",
+      -0.22166666666666668
+    ],
+    [
+      "NAKH920102",
+      "AA composition of CYT2 of single-spanning proteins (Nakashima-Nishikawa, 1992)",
+      -1.2116666666666667
+    ],
+    [
+      "NAKH920103",
+      "AA composition of EXT of single-spanning proteins (Nakashima-Nishikawa, 1992)",
+      -0.9513333333333334
+    ],
+    [
+      "NAKH920104",
+      "AA composition of EXT2 of single-spanning proteins (Nakashima-Nishikawa, 1992)",
+      -0.25133333333333335
+    ],
+    [
+      "NAKH920105",
+      "AA composition of MEM of single-spanning proteins (Nakashima-Nishikawa, 1992)",
+      -0.8936666666666667
+    ],
+    [
+      "NAKH920106",
+      "AA composition of CYT of multi-spanning proteins (Nakashima-Nishikawa, 1992)",
+      -0.3466666666666667
+    ],
+    [
+      "NAKH920108",
+      "AA composition of MEM of multi-spanning proteins (Nakashima-Nishikawa, 1992)",
+      0.44
+    ],
+    [
+      "NAKH920107",
+      "AA composition of EXT of multi-spanning proteins (Nakashima-Nishikawa, 1992)",
+      0.32466666666666666
+    ],
+    [
+      "NISK800101",
+      "8 A contact number (Nishikawa-Ooi, 1980)",
+      -0.19866666666666666
+    ],
+    [
+      "NISK860101",
+      "14 A contact number (Nishikawa-Ooi, 1986)",
+      0.38633333333333336
+    ],
+    [
+      "NOZY710101",
+      "Transfer energy, organic solvent/water (Nozaki-Tanford, 1971)",
+      0.58
+    ],
+    [
+      "OOBM770101",
+      "Average non-bonded energy per atom (Oobatake-Ooi, 1977)",
+      0.35600000000000004
+    ],
+    [
+      "OOBM770102",
+      "Short and medium range non-bonded energy per atom (Oobatake-Ooi, 1977)",
+      0.15466666666666667
+    ],
+    [
+      "OOBM770103",
+      "Long range non-bonded energy per atom (Oobatake-Ooi, 1977)",
+      0.149
+    ],
+    [
+      "OOBM770104",
+      "Average non-bonded energy per residue (Oobatake-Ooi, 1977)",
+      0.5066666666666667
+    ],
+    [
+      "OOBM770105",
+      "Short and medium range non-bonded energy per residue (Oobatake-Ooi, 1977)",
+      0.2026666666666667
+    ],
+    [
+      "OOBM850101",
+      "Optimized beta-structure-coil equilibrium constant (Oobatake et al., 1985)",
+      0.4023333333333334
+    ],
+    [
+      "OOBM850102",
+      "Optimized propensity to form reverse turn (Oobatake et al., 1985)",
+      0.19866666666666666
+    ],
+    [
+      "OOBM850103",
+      "Optimized transfer energy parameter (Oobatake et al., 1985)",
+      0.38766666666666666
+    ],
+    [
+      "OOBM850105",
+      "Optimized side chain interaction parameter (Oobatake et al., 1985)",
+      0.42566666666666664
+    ],
+    [
+      "OOBM850104",
+      "Optimized average non-bonded energy per atom (Oobatake et al., 1985)",
+      0.28633333333333333
+    ],
+    [
+      "PALJ810101",
+      "Normalized frequency of alpha-helix from LG (Palau et al., 1981)",
+      0.40399999999999997
+    ],
+    [
+      "PALJ810102",
+      "Normalized frequency of alpha-helix from CF (Palau et al., 1981)",
+      0.25
+    ],
+    [
+      "PALJ810103",
+      "Normalized frequency of beta-sheet from LG (Palau et al., 1981)",
+      -0.29633333333333334
+    ],
+    [
+      "PALJ810104",
+      "Normalized frequency of beta-sheet from CF (Palau et al., 1981)",
+      0.49099999999999994
+    ],
+    [
+      "PALJ810105",
+      "Normalized frequency of turn from LG (Palau et al., 1981)",
+      0.07200000000000001
+    ],
+    [
+      "PALJ810106",
+      "Normalized frequency of turn from CF (Palau et al., 1981)",
+      0.13133333333333333
+    ],
+    [
+      "PALJ810107",
+      "Normalized frequency of alpha-helix in all-alpha class (Palau et al., 1981)",
+      0.246
+    ],
+    [
+      "PALJ810108",
+      "Normalized frequency of alpha-helix in alpha+beta class (Palau et al., 1981)",
+      0.20066666666666666
+    ],
+    [
+      "PALJ810109",
+      "Normalized frequency of alpha-helix in alpha/beta class (Palau et al., 1981)",
+      0.19933333333333336
+    ],
+    [
+      "PALJ810110",
+      "Normalized frequency of beta-sheet in all-beta class (Palau et al., 1981)",
+      0.06900000000000002
+    ],
+    [
+      "PALJ810112",
+      "Normalized frequency of beta-sheet in alpha/beta class (Palau et al., 1981)",
+      -1.5706666666666667
+    ],
+    [
+      "PALJ810111",
+      "Normalized frequency of beta-sheet in alpha+beta class (Palau et al., 1981)",
+      -0.22333333333333336
+    ],
+    [
+      "PALJ810113",
+      "Normalized frequency of turn in all-alpha class (Palau et al., 1981)",
+      0.16833333333333333
+    ],
+    [
+      "PALJ810114",
+      "Normalized frequency of turn in all-beta class (Palau et al., 1981)",
+      0.01566666666666668
+    ],
+    [
+      "PALJ810115",
+      "Normalized frequency of turn in alpha+beta class (Palau et al., 1981)",
+      0.16599999999999998
+    ],
+    [
+      "PALJ810116",
+      "Normalized frequency of turn in alpha/beta class (Palau et al., 1981)",
+      0.30933333333333335
+    ],
+    [
+      "PARJ860101",
+      "HPLC parameter (Parker et al., 1986)",
+      -0.09433333333333332
+    ],
+    [
+      "PONP800101",
+      "Surrounding hydrophobicity in folded form (Ponnuswamy et al., 1980)",
+      -0.19099999999999998
+    ],
+    [
+      "PLIV810101",
+      "Partition coefficient (Pliska et al., 1981)",
+      -5.987666666666667
+    ],
+    [
+      "PONP800102",
+      "Average gain in surrounding hydrophobicity (Ponnuswamy et al., 1980)",
+      -10.648666666666667
+    ],
+    [
+      "PONP800103",
+      "Average gain ratio in surrounding hydrophobicity (Ponnuswamy et al., 1980)",
+      -9.558666666666666
+    ],
+    [
+      "PONP800104",
+      "Surrounding hydrophobicity in alpha-helix (Ponnuswamy et al., 1980)",
+      -5.7443333333333335
+    ],
+    [
+      "PONP800105",
+      "Surrounding hydrophobicity in beta-sheet (Ponnuswamy et al., 1980)",
+      -7.249
+    ],
+    [
+      "PONP800107",
+      "Accessibility reduction ratio (Ponnuswamy et al., 1980)",
+      -14.600666666666669
+    ],
+    [
+      "PONP800106",
+      "Surrounding hydrophobicity in turn (Ponnuswamy et al., 1980)",
+      -17.11733333333333
+    ],
+    [
+      "PRAM820101",
+      "Intercept in regression analysis (Prabhakaran-Ponnuswamy, 1982)",
+      0.08833333333333333
+    ],
+    [
+      "PONP800108",
+      "Average number of surrounding residues (Ponnuswamy et al., 1980)",
+      -9.710333333333333
+    ],
+    [
+      "PRAM820102",
+      "Slope in regression analysis x 1.0E1 (Prabhakaran-Ponnuswamy, 1982)",
+      0.105
+    ],
+    [
+      "PRAM820103",
+      "Correlation coefficient in regression analysis (Prabhakaran-Ponnuswamy, 1982)",
+      0.22000000000000006
+    ],
+    [
+      "PRAM900101",
+      "Hydrophobicity (Prabhakaran, 1990)",
+      0.2793333333333333
+    ],
+    [
+      "PRAM900102",
+      "Relative frequency in alpha-helix (Prabhakaran, 1990)",
+      0.34500000000000003
+    ],
+    [
+      "PRAM900103",
+      "Relative frequency in beta-sheet (Prabhakaran, 1990)",
+      0.12533333333333335
+    ],
+    [
+      "PRAM900104",
+      "Relative frequency in reverse-turn (Prabhakaran, 1990)",
+      0.26133333333333336
+    ],
+    [
+      "PTIO830101",
+      "Helix-coil equilibrium constant (Ptitsyn-Finkelstein, 1983)",
+      -1.5643333333333331
+    ],
+    [
+      "PTIO830102",
+      "Beta-coil equilibrium constant (Ptitsyn-Finkelstein, 1983)",
+      0.3546666666666667
+    ],
+    [
+      "QIAN880101",
+      "Weights for alpha-helix at the window position of -6 (Qian-Sejnowski, 1988)",
+      -0.758
+    ],
+    [
+      "QIAN880102",
+      "Weights for alpha-helix at the window position of -5 (Qian-Sejnowski, 1988)",
+      0.618
+    ],
+    [
+      "QIAN880103",
+      "Weights for alpha-helix at the window position of -4 (Qian-Sejnowski, 1988)",
+      -0.2483333333333333
+    ],
+    [
+      "QIAN880104",
+      "Weights for alpha-helix at the window position of -3 (Qian-Sejnowski, 1988)",
+      -0.8366666666666666
+    ],
+    [
+      "QIAN880105",
+      "Weights for alpha-helix at the window position of -2 (Qian-Sejnowski, 1988)",
+      -0.42733333333333334
+    ],
+    [
+      "QIAN880106",
+      "Weights for alpha-helix at the window position of -1 (Qian-Sejnowski, 1988)",
+      -0.8973333333333334
+    ],
+    [
+      "QIAN880107",
+      "Weights for alpha-helix at the window position of 0 (Qian-Sejnowski, 1988)",
+      -0.26066666666666666
+    ],
+    [
+      "QIAN880108",
+      "Weights for alpha-helix at the window position of 1 (Qian-Sejnowski, 1988)",
+      -0.7216666666666667
+    ],
+    [
+      "QIAN880109",
+      "Weights for alpha-helix at the window position of 2 (Qian-Sejnowski, 1988)",
+      -0.20766666666666667
+    ],
+    [
+      "QIAN880110",
+      "Weights for alpha-helix at the window position of 3 (Qian-Sejnowski, 1988)",
+      -0.17866666666666667
+    ],
+    [
+      "QIAN880111",
+      "Weights for alpha-helix at the window position of 4 (Qian-Sejnowski, 1988)",
+      -0.30066666666666664
+    ],
+    [
+      "QIAN880112",
+      "Weights for alpha-helix at the window position of 5 (Qian-Sejnowski, 1988)",
+      -0.18966666666666668
+    ],
+    [
+      "QIAN880113",
+      "Weights for alpha-helix at the window position of 6 (Qian-Sejnowski, 1988)",
+      0.04133333333333333
+    ],
+    [
+      "QIAN880114",
+      "Weights for beta-sheet at the window position of -6 (Qian-Sejnowski, 1988)",
+      -0.3796666666666666
+    ],
+    [
+      "QIAN880115",
+      "Weights for beta-sheet at the window position of -5 (Qian-Sejnowski, 1988)",
+      -1.0033333333333332
+    ],
+    [
+      "QIAN880116",
+      "Weights for beta-sheet at the window position of -4 (Qian-Sejnowski, 1988)",
+      -0.14333333333333334
+    ],
+    [
+      "QIAN880117",
+      "Weights for beta-sheet at the window position of -3 (Qian-Sejnowski, 1988)",
+      -1.765666666666667
+    ],
+    [
+      "QIAN880118",
+      "Weights for beta-sheet at the window position of -2 (Qian-Sejnowski, 1988)",
+      -0.39233333333333337
+    ],
+    [
+      "QIAN880119",
+      "Weights for beta-sheet at the window position of -1 (Qian-Sejnowski, 1988)",
+      -0.09266666666666667
+    ],
+    [
+      "QIAN880120",
+      "Weights for beta-sheet at the window position of 0 (Qian-Sejnowski, 1988)",
+      0.26933333333333337
+    ],
+    [
+      "QIAN880121",
+      "Weights for beta-sheet at the window position of 1 (Qian-Sejnowski, 1988)",
+      -0.3246666666666667
+    ],
+    [
+      "QIAN880122",
+      "Weights for beta-sheet at the window position of 2 (Qian-Sejnowski, 1988)",
+      -0.9416666666666668
+    ],
+    [
+      "QIAN880123",
+      "Weights for beta-sheet at the window position of 3 (Qian-Sejnowski, 1988)",
+      0.25866666666666666
+    ],
+    [
+      "QIAN880124",
+      "Weights for beta-sheet at the window position of 4 (Qian-Sejnowski, 1988)",
+      -0.19466666666666668
+    ],
+    [
+      "QIAN880125",
+      "Weights for beta-sheet at the window position of 5 (Qian-Sejnowski, 1988)",
+      0.04833333333333334
+    ],
+    [
+      "QIAN880126",
+      "Weights for beta-sheet at the window position of 6 (Qian-Sejnowski, 1988)",
+      0.11433333333333333
+    ],
+    [
+      "QIAN880127",
+      "Weights for coil at the window position of -6 (Qian-Sejnowski, 1988)",
+      0.078
+    ],
+    [
+      "QIAN880128",
+      "Weights for coil at the window position of -5 (Qian-Sejnowski, 1988)",
+      0.32066666666666666
+    ],
+    [
+      "QIAN880129",
+      "Weights for coil at the window position of -4 (Qian-Sejnowski, 1988)",
+      -0.09333333333333332
+    ],
+    [
+      "QIAN880130",
+      "Weights for coil at the window position of -3 (Qian-Sejnowski, 1988)",
+      0.034333333333333334
+    ],
+    [
+      "QIAN880131",
+      "Weights for coil at the window position of -2 (Qian-Sejnowski, 1988)",
+      0.18633333333333332
+    ],
+    [
+      "QIAN880133",
+      "Weights for coil at the window position of 0 (Qian-Sejnowski, 1988)",
+      -0.24266666666666667
+    ],
+    [
+      "QIAN880132",
+      "Weights for coil at the window position of -1 (Qian-Sejnowski, 1988)",
+      -0.151
+    ],
+    [
+      "QIAN880134",
+      "Weights for coil at the window position of 1 (Qian-Sejnowski, 1988)",
+      -0.46466666666666673
+    ],
+    [
+      "QIAN880136",
+      "Weights for coil at the window position of 3 (Qian-Sejnowski, 1988)",
+      -0.2633333333333333
+    ],
+    [
+      "QIAN880135",
+      "Weights for coil at the window position of 2 (Qian-Sejnowski, 1988)",
+      -0.38800000000000007
+    ],
+    [
+      "QIAN880137",
+      "Weights for coil at the window position of 4 (Qian-Sejnowski, 1988)",
+      0.10733333333333332
+    ],
+    [
+      "QIAN880138",
+      "Weights for coil at the window position of 5 (Qian-Sejnowski, 1988)",
+      -0.016666666666666663
+    ],
+    [
+      "QIAN880139",
+      "Weights for coil at the window position of 6 (Qian-Sejnowski, 1988)",
+      0.08933333333333332
+    ],
+    [
+      "RACS770101",
+      "Average reduced distance for C-alpha (Rackovsky-Scheraga, 1977)",
+      -0.16699999999999995
+    ],
+    [
+      "RACS770102",
+      "Average reduced distance for side chain (Rackovsky-Scheraga, 1977)",
+      -0.26066666666666666
+    ],
+    [
+      "RACS770103",
+      "Side chain orientational preference (Rackovsky-Scheraga, 1977)",
+      -0.07900000000000003
+    ],
+    [
+      "RACS820101",
+      "Average relative fractional occurrence in A0(i) (Rackovsky-Scheraga, 1982)",
+      0.20299999999999999
+    ],
+    [
+      "RACS820102",
+      "Average relative fractional occurrence in AR(i) (Rackovsky-Scheraga, 1982)",
+      0.32666666666666666
+    ],
+    [
+      "RACS820103",
+      "Average relative fractional occurrence in AL(i) (Rackovsky-Scheraga, 1982)",
+      -0.06366666666666666
+    ],
+    [
+      "RACS820104",
+      "Average relative fractional occurrence in EL(i) (Rackovsky-Scheraga, 1982)",
+      0.38933333333333336
+    ],
+    [
+      "RACS820105",
+      "Average relative fractional occurrence in E0(i) (Rackovsky-Scheraga, 1982)",
+      -0.33699999999999997
+    ],
+    [
+      "RACS820106",
+      "Average relative fractional occurrence in ER(i) (Rackovsky-Scheraga, 1982)",
+      -0.6516666666666667
+    ],
+    [
+      "RACS820108",
+      "Average relative fractional occurrence in AR(i-1) (Rackovsky-Scheraga, 1982)",
+      0.021333333333333333
+    ],
+    [
+      "RACS820107",
+      "Average relative fractional occurrence in A0(i-1) (Rackovsky-Scheraga, 1982)",
+      0.19899999999999998
+    ],
+    [
+      "RACS820109",
+      "Average relative fractional occurrence in AL(i-1) (Rackovsky-Scheraga, 1982)",
+      0.461
+    ],
+    [
+      "RACS820110",
+      "Average relative fractional occurrence in EL(i-1) (Rackovsky-Scheraga, 1982)",
+      -0.19866666666666669
+    ],
+    [
+      "RACS820111",
+      "Average relative fractional occurrence in E0(i-1) (Rackovsky-Scheraga, 1982)",
+      -0.42199999999999993
+    ],
+    [
+      "RACS820112",
+      "Average relative fractional occurrence in ER(i-1) (Rackovsky-Scheraga, 1982)",
+      -0.7236666666666668
+    ],
+    [
+      "RACS820113",
+      "Value of theta(i) (Rackovsky-Scheraga, 1982)",
+      -0.048999999999999995
+    ],
+    [
+      "RACS820114",
+      "Value of theta(i-1) (Rackovsky-Scheraga, 1982)",
+      -0.03766666666666668
+    ],
+    [
+      "RADA880102",
+      "Transfer free energy from oct to wat (Radzicka-Wolfenden, 1988)",
+      -0.45366666666666666
+    ],
+    [
+      "RADA880101",
+      "Transfer free energy from chx to wat (Radzicka-Wolfenden, 1988)",
+      0.035666666666666624
+    ],
+    [
+      "RADA880103",
+      "Transfer free energy from vap to chx (Radzicka-Wolfenden, 1988)",
+      0.2823333333333333
+    ],
+    [
+      "RADA880104",
+      "Transfer free energy from chx to oct (Radzicka-Wolfenden, 1988)",
+      0.103
+    ],
+    [
+      "RADA880105",
+      "Transfer free energy from vap to oct (Radzicka-Wolfenden, 1988)",
+      0.144
+    ],
+    [
+      "RADA880106",
+      "Accessible surface area (Radzicka-Wolfenden, 1988)",
+      0.417
+    ],
+    [
+      "RADA880108",
+      "Mean polarity (Radzicka-Wolfenden, 1988)",
+      -0.032333333333333346
+    ],
+    [
+      "RADA880107",
+      "Energy transfer from out to in(95%buried) (Radzicka-Wolfenden, 1988)",
+      -0.37633333333333335
+    ],
+    [
+      "RICJ880101",
+      "Relative preference value at N\" (Richardson-Richardson, 1988)",
+      -0.15000000000000002
+    ],
+    [
+      "RICJ880103",
+      "Relative preference value at N-cap (Richardson-Richardson, 1988)",
+      0.238
+    ],
+    [
+      "RICJ880102",
+      "Relative preference value at N' (Richardson-Richardson, 1988)",
+      -0.10866666666666668
+    ],
+    [
+      "RICJ880104",
+      "Relative preference value at N1 (Richardson-Richardson, 1988)",
+      -0.007666666666666669
+    ],
+    [
+      "RICJ880105",
+      "Relative preference value at N2 (Richardson-Richardson, 1988)",
+      -0.15033333333333335
+    ],
+    [
+      "RICJ880106",
+      "Relative preference value at N3 (Richardson-Richardson, 1988)",
+      -0.12466666666666666
+    ],
+    [
+      "RICJ880107",
+      "Relative preference value at N4 (Richardson-Richardson, 1988)",
+      0.17400000000000002
+    ],
+    [
+      "RICJ880108",
+      "Relative preference value at N5 (Richardson-Richardson, 1988)",
+      0.3183333333333333
+    ],
+    [
+      "RICJ880109",
+      "Relative preference value at Mid (Richardson-Richardson, 1988)",
+      -0.14166666666666664
+    ],
+    [
+      "RICJ880110",
+      "Relative preference value at C5 (Richardson-Richardson, 1988)",
+      0.45166666666666666
+    ],
+    [
+      "RICJ880112",
+      "Relative preference value at C3 (Richardson-Richardson, 1988)",
+      0.12666666666666668
+    ],
+    [
+      "RICJ880111",
+      "Relative preference value at C4 (Richardson-Richardson, 1988)",
+      0.12699999999999997
+    ],
+    [
+      "RICJ880114",
+      "Relative preference value at C1 (Richardson-Richardson, 1988)",
+      0.1136666666666667
+    ],
+    [
+      "RICJ880113",
+      "Relative preference value at C2 (Richardson-Richardson, 1988)",
+      0.39999999999999997
+    ],
+    [
+      "RICJ880115",
+      "Relative preference value at C-cap (Richardson-Richardson, 1988)",
+      0.4756666666666667
+    ],
+    [
+      "RICJ880116",
+      "Relative preference value at C' (Richardson-Richardson, 1988)",
+      0.316
+    ],
+    [
+      "RICJ880117",
+      "Relative preference value at C\" (Richardson-Richardson, 1988)",
+      0.35033333333333333
+    ],
+    [
+      "ROBB760101",
+      "Information measure for alpha-helix (Robson-Suzuki, 1976)",
+      0.322
+    ],
+    [
+      "ROBB760102",
+      "Information measure for N-terminal helix (Robson-Suzuki, 1976)",
+      0.32
+    ],
+    [
+      "ROBB760103",
+      "Information measure for middle helix (Robson-Suzuki, 1976)",
+      0.2836666666666667
+    ],
+    [
+      "ROBB760104",
+      "Information measure for C-terminal helix (Robson-Suzuki, 1976)",
+      0.19200000000000003
+    ],
+    [
+      "ROBB760105",
+      "Information measure for extended (Robson-Suzuki, 1976)",
+      0.335
+    ],
+    [
+      "ROBB760106",
+      "Information measure for pleated-sheet (Robson-Suzuki, 1976)",
+      -0.433
+    ],
+    [
+      "ROBB760107",
+      "Information measure for extended without H-bond (Robson-Suzuki, 1976)",
+      -0.79
+    ],
+    [
+      "ROBB760109",
+      "Information measure for N-terminal turn (Robson-Suzuki, 1976)",
+      0.04866666666666667
+    ],
+    [
+      "ROBB760110",
+      "Information measure for middle turn (Robson-Suzuki, 1976)",
+      -0.4779999999999999
+    ],
+    [
+      "ROBB760108",
+      "Information measure for turn (Robson-Suzuki, 1976)",
+      0.5476666666666666
+    ],
+    [
+      "ROBB760111",
+      "Information measure for C-terminal turn (Robson-Suzuki, 1976)",
+      -0.08133333333333333
+    ],
+    [
+      "ROBB760112",
+      "Information measure for coil (Robson-Suzuki, 1976)",
+      -1.086
+    ],
+    [
+      "ROBB760113",
+      "Information measure for loop (Robson-Suzuki, 1976)",
+      -0.1703333333333333
+    ],
+    [
+      "ROBB790101",
+      "Hydration free energy (Robson-Osguthorpe, 1979)",
+      0.03833333333333331
+    ],
+    [
+      "ROSG850101",
+      "Mean area buried on transfer (Rose et al., 1985)",
+      0.463
+    ],
+    [
+      "ROSG850102",
+      "Mean fractional area loss (Rose et al., 1985)",
+      -0.4476666666666666
+    ],
+    [
+      "ROSM880101",
+      "Side chain hydropathy, uncorrected for solvation (Roseman, 1988)",
+      0.01099999999999999
+    ],
+    [
+      "ROSM880102",
+      "Side chain hydropathy, corrected for solvation (Roseman, 1988)",
+      -1.2636666666666667
+    ],
+    [
+      "ROSM880103",
+      "Loss of Side chain hydropathy by helix formation (Roseman, 1988)",
+      0.213
+    ],
+    [
+      "SIMZ760101",
+      "Transfer free energy (Simon, 1976), Cited by Charton-Charton (1982)",
+      0.32566666666666666
+    ],
+    [
+      "SNEP660101",
+      "Principal component I (Sneath, 1966)",
+      -0.19199999999999998
+    ],
+    [
+      "SNEP660102",
+      "Principal component II (Sneath, 1966)",
+      -6.1819999999999995
+    ],
+    [
+      "SNEP660103",
+      "Principal component III (Sneath, 1966)",
+      -2.1056666666666666
+    ],
+    [
+      "SNEP660104",
+      "Principal component IV (Sneath, 1966)",
+      -4.408
+    ],
+    [
+      "SUEM840101",
+      "Zimm-Bragg parameter s at 20 C (Sueki et al., 1984)",
+      -5.139333333333333
+    ],
+    [
+      "SUEM840102",
+      "Zimm-Bragg parameter sigma x 1.0E4 (Sueki et al., 1984)",
+      -0.37166666666666665
+    ],
+    [
+      "TANS770101",
+      "Normalized frequency of alpha-helix (Tanaka-Scheraga, 1977)",
+      -4.005
+    ],
+    [
+      "SWER830101",
+      "Optimal matching hydrophobicity (Sweet-Eisenberg, 1983)",
+      -3.2106666666666666
+    ],
+    [
+      "TANS770103",
+      "Normalized frequency of extended structure (Tanaka-Scheraga, 1977)",
+      0.5653333333333334
+    ],
+    [
+      "TANS770102",
+      "Normalized frequency of isolated helix (Tanaka-Scheraga, 1977)",
+      -3.927666666666667
+    ],
+    [
+      "TANS770104",
+      "Normalized frequency of chain reversal R (Tanaka-Scheraga, 1977)",
+      0.426
+    ],
+    [
+      "TANS770105",
+      "Normalized frequency of chain reversal S (Tanaka-Scheraga, 1977)",
+      0.30433333333333334
+    ],
+    [
+      "TANS770106",
+      "Normalized frequency of chain reversal D (Tanaka-Scheraga, 1977)",
+      0.301
+    ],
+    [
+      "TANS770107",
+      "Normalized frequency of left-handed helix (Tanaka-Scheraga, 1977)",
+      -3.252333333333334
+    ],
+    [
+      "TANS770108",
+      "Normalized frequency of zeta R (Tanaka-Scheraga, 1977)",
+      0.45966666666666667
+    ],
+    [
+      "TANS770109",
+      "Normalized frequency of coil (Tanaka-Scheraga, 1977)",
+      0.4466666666666667
+    ],
+    [
+      "TANS770110",
+      "Normalized frequency of chain reversal (Tanaka-Scheraga, 1977)",
+      -4.789666666666666
+    ],
+    [
+      "VASM830101",
+      "Relative population of conformational state A (Vasquez et al., 1983)",
+      0.459
+    ],
+    [
+      "VASM830102",
+      "Relative population of conformational state C (Vasquez et al., 1983)",
+      -3.4493333333333336
+    ],
+    [
+      "VELV850101",
+      "Electron-ion interaction potential (Veljkovic et al., 1985)",
+      -3.8426666666666662
+    ],
+    [
+      "VASM830103",
+      "Relative population of conformational state E (Vasquez et al., 1983)",
+      -0.1386666666666667
+    ],
+    [
+      "VHEG790101",
+      "Transfer free energy to lipophilic phase (von Heijne-Blomberg, 1979)",
+      -3.4980000000000007
+    ],
+    [
+      "VENT840101",
+      "Bitterness (Venanzi, 1984)",
+      0.37266666666666665
+    ],
+    [
+      "WARP780101",
+      "Average interactions per side chain atom (Warme-Morgan, 1978)",
+      -3.286
+    ],
+    [
+      "WEBA780101",
+      "RF value in high salt chromatography (Weber-Lacey, 1978)",
+      0.18766666666666673
+    ],
+    [
+      "WERD780101",
+      "Propensity to be buried inside (Wertz-Scheraga, 1978)",
+      0.12566666666666668
+    ],
+    [
+      "WERD780102",
+      "Free energy change of epsilon(i) to epsilon(ex) (Wertz-Scheraga, 1978)",
+      -4.016666666666667
+    ],
+    [
+      "WERD780104",
+      "Free energy change of epsilon(i) to alpha(Rh) (Wertz-Scheraga, 1978)",
+      -0.0043333333333333375
+    ],
+    [
+      "WERD780103",
+      "Free energy change of alpha(Ri) to alpha(Rh) (Wertz-Scheraga, 1978)",
+      -0.02
+    ],
+    [
+      "WOEC730101",
+      "Polar requirement (Woese, 1973)",
+      0.21133333333333335
+    ],
+    [
+      "WOLR810101",
+      "Hydration potential (Wolfenden et al., 1981)",
+      -4.585
+    ],
+    [
+      "WOLS870101",
+      "Principal property value z1 (Wold et al., 1987)",
+      -0.24233333333333332
+    ],
+    [
+      "WOLS870102",
+      "Principal property value z2 (Wold et al., 1987)",
+      -0.5696666666666667
+    ],
+    [
+      "YUTK870101",
+      "Unfolding Gibbs energy in water, pH7.0 (Yutani et al., 1987)",
+      0.11566666666666665
+    ],
+    [
+      "WOLS870103",
+      "Principal property value z3 (Wold et al., 1987)",
+      -0.31266666666666665
+    ],
+    [
+      "YUTK870102",
+      "Unfolding Gibbs energy in water, pH9.0 (Yutani et al., 1987)",
+      -0.30533333333333335
+    ],
+    [
+      "YUTK870103",
+      "Activation Gibbs energy of unfolding, pH7.0 (Yutani et al., 1987)",
+      -0.31566666666666665
+    ],
+    [
+      "YUTK870104",
+      "Activation Gibbs energy of unfolding, pH9.0 (Yutani et al., 1987)",
+      -0.7743333333333333
+    ],
+    [
+      "ZASB820101",
+      "Dependence of partition coefficient on ionic strength (Zaslavsky et al., 1982)",
+      0.06000000000000005
+    ],
+    [
+      "ZIMJ680102",
+      "Bulkiness (Zimmerman et al., 1968)",
+      0.334
+    ],
+    [
+      "ZIMJ680101",
+      "Hydrophobicity (Zimmerman et al., 1968)",
+      -0.16366666666666665
+    ],
+    [
+      "ZIMJ680103",
+      "Polarity (Zimmerman et al., 1968)",
+      -0.16066666666666665
+    ],
+    [
+      "ZIMJ680104",
+      "Isoelectric point (Zimmerman et al., 1968)",
+      -0.32033333333333336
+    ],
+    [
+      "AURR980101",
+      "Normalized positional residue frequency at helix termini N4'(Aurora-Rose, 1998)",
+      -0.2383333333333333
+    ],
+    [
+      "ZIMJ680105",
+      "RF rank (Zimmerman et al., 1968)",
+      0.23233333333333336
+    ],
+    [
+      "AURR980102",
+      "Normalized positional residue frequency at helix termini N\"' (Aurora-Rose, 1998)",
+      -1.7283333333333333
+    ],
+    [
+      "AURR980103",
+      "Normalized positional residue frequency at helix termini N\" (Aurora-Rose, 1998)",
+      -0.37633333333333335
+    ],
+    [
+      "AURR980105",
+      "Normalized positional residue frequency at helix termini Nc (Aurora-Rose, 1998)",
+      0.16533333333333333
+    ],
+    [
+      "AURR980104",
+      "Normalized positional residue frequency at helix termini N'(Aurora-Rose, 1998)",
+      -3.285
+    ],
+    [
+      "AURR980106",
+      "Normalized positional residue frequency at helix termini N1 (Aurora-Rose, 1998)",
+      -0.153
+    ],
+    [
+      "AURR980107",
+      "Normalized positional residue frequency at helix termini N2 (Aurora-Rose, 1998)",
+      -0.30433333333333334
+    ],
+    [
+      "AURR980108",
+      "Normalized positional residue frequency at helix termini N3 (Aurora-Rose, 1998)",
+      -4.137666666666667
+    ],
+    [
+      "AURR980110",
+      "Normalized positional residue frequency at helix termini N5 (Aurora-Rose, 1998)",
+      -1.7300000000000002
+    ],
+    [
+      "AURR980109",
+      "Normalized positional residue frequency at helix termini N4 (Aurora-Rose, 1998)",
+      -2.025333333333333
+    ],
+    [
+      "AURR980111",
+      "Normalized positional residue frequency at helix termini C5 (Aurora-Rose, 1998)",
+      -0.4023333333333334
+    ],
+    [
+      "AURR980112",
+      "Normalized positional residue frequency at helix termini C4 (Aurora-Rose, 1998)",
+      -2.2153333333333336
+    ],
+    [
+      "AURR980113",
+      "Normalized positional residue frequency at helix termini C3 (Aurora-Rose, 1998)",
+      -0.3976666666666668
+    ],
+    [
+      "AURR980116",
+      "Normalized positional residue frequency at helix termini Cc (Aurora-Rose, 1998)",
+      -0.5399999999999999
+    ],
+    [
+      "AURR980115",
+      "Normalized positional residue frequency at helix termini C1 (Aurora-Rose, 1998)",
+      -0.3106666666666667
+    ],
+    [
+      "AURR980114",
+      "Normalized positional residue frequency at helix termini C2 (Aurora-Rose, 1998)",
+      -2.2983333333333333
+    ],
+    [
+      "AURR980117",
+      "Normalized positional residue frequency at helix termini C' (Aurora-Rose, 1998)",
+      -0.2563333333333333
+    ],
+    [
+      "AURR980119",
+      "Normalized positional residue frequency at helix termini C\"' (Aurora-Rose, 1998)",
+      -1.757
+    ],
+    [
+      "AURR980118",
+      "Normalized positional residue frequency at helix termini C\" (Aurora-Rose, 1998)",
+      -0.36633333333333334
+    ],
+    [
+      "AURR980120",
+      "Normalized positional residue frequency at helix termini C4' (Aurora-Rose, 1998)",
+      0.05233333333333334
+    ],
+    [
+      "ONEK900101",
+      "Delta G values for the peptides extrapolated to 0 M urea (O'Neil-DeGrado, 1990)",
+      0.16433333333333333
+    ],
+    [
+      "ONEK900102",
+      "Helix formation parameters (delta delta G) (O'Neil-DeGrado, 1990)",
+      0.2906666666666667
+    ],
+    [
+      "VINM940101",
+      "Normalized flexibility parameters (B-values), average (Vihinen et al., 1994)",
+      0.162
+    ],
+    [
+      "VINM940102",
+      "Normalized flexibility parameters (B-values) for each residue surrounded by none rigid neighbours (Vihinen et al., 1994)",
+      -0.211
+    ],
+    [
+      "VINM940103",
+      "Normalized flexibility parameters (B-values) for each residue surrounded by one rigid neighbours (Vihinen et al., 1994)",
+      0.09633333333333334
+    ],
+    [
+      "VINM940104",
+      "Normalized flexibility parameters (B-values) for each residue surrounded by two rigid neighbours (Vihinen et al., 1994)",
+      0.00733333333333334
+    ],
+    [
+      "MUNV940101",
+      "Free energy in alpha-helical conformation (Munoz-Serrano, 1994)",
+      0.2946666666666667
+    ],
+    [
+      "MUNV940102",
+      "Free energy in alpha-helical region (Munoz-Serrano, 1994)",
+      0.3056666666666667
+    ],
+    [
+      "MUNV940103",
+      "Free energy in beta-strand conformation (Munoz-Serrano, 1994)",
+      0.3163333333333333
+    ],
+    [
+      "MUNV940104",
+      "Free energy in beta-strand region (Munoz-Serrano, 1994)",
+      0.32166666666666666
+    ],
+    [
+      "KIMC930101",
+      "Thermodynamic beta sheet propensity (Kim-Berg, 1993)",
+      0.20199999999999999
+    ],
+    [
+      "MUNV940105",
+      "Free energy in beta-strand region (Munoz-Serrano, 1994)",
+      0.32899999999999996
+    ],
+    [
+      "WIMW960101",
+      "Free energies of transfer of AcWl-X-LL peptides from bilayer interface to water (Wimley-White, 1996)",
+      0.42799999999999994
+    ],
+    [
+      "MONM990101",
+      "Turn propensity scale for transmembrane helices (Monne et al., 1999)",
+      0.171
+    ],
+    [
+      "BLAM930101",
+      "Alpha helix propensity of position 44 in T4 lysozyme (Blaber et al., 1993)",
+      -0.010333333333333335
+    ],
+    [
+      "PARS000101",
+      "p-Values of mesophilic proteins based on the distributions of B values (Parthasarathy-Murthy, 2000)",
+      0.341
+    ],
+    [
+      "PARS000102",
+      "p-Values of thermophilic proteins based on the distributions of B values (Parthasarathy-Murthy, 2000)",
+      0.30166666666666675
+    ],
+    [
+      "KUMS000101",
+      "Distribution of amino acid residues in the 18 non-redundant families of thermophilic proteins (Kumar et al., 2000)",
+      -0.26799999999999996
+    ],
+    [
+      "KUMS000102",
+      "Distribution of amino acid residues in the 18 non-redundant families of mesophilic proteins (Kumar et al., 2000)",
+      -0.119
+    ],
+    [
+      "KUMS000104",
+      "Distribution of amino acid residues in the alpha-helices in mesophilic proteins (Kumar et al., 2000)",
+      0.14166666666666666
+    ],
+    [
+      "KUMS000103",
+      "Distribution of amino acid residues in the alpha-helices in thermophilic proteins (Kumar et al., 2000)",
+      -0.37300000000000005
+    ],
+    [
+      "TAKK010101",
+      "Side-chain contribution to protein stability (kJ/mol) (Takano-Yutani, 2001)",
+      0.18866666666666668
+    ],
+    [
+      "FODM020101",
+      "Propensity of amino acids within pi-helices (Fodje-Al-Karadaghi, 2002)",
+      -0.06700000000000002
+    ],
+    [
+      "NADH010101",
+      "Hydropathy scale based on self-information values in the two-state model (5% accessibility) (Naderi-Manesh et al., 2001)",
+      -0.055000000000000014
+    ],
+    [
+      "NADH010102",
+      "Hydropathy scale based on self-information values in the two-state model (9% accessibility) (Naderi-Manesh et al., 2001)",
+      -0.7356666666666666
+    ],
+    [
+      "NADH010103",
+      "Hydropathy scale based on self-information values in the two-state model (16% accessibility) (Naderi-Manesh et al., 2001)",
+      -0.8836666666666667
+    ],
+    [
+      "NADH010106",
+      "Hydropathy scale based on self-information values in the two-state model (36% accessibility) (Naderi-Manesh et al., 2001)",
+      -0.44966666666666666
+    ],
+    [
+      "NADH010104",
+      "Hydropathy scale based on self-information values in the two-state model (20% accessibility) (Naderi-Manesh et al., 2001)",
+      -0.9443333333333334
+    ],
+    [
+      "NADH010105",
+      "Hydropathy scale based on self-information values in the two-state model (25% accessibility) (Naderi-Manesh et al., 2001)",
+      0.17066666666666666
+    ],
+    [
+      "NADH010107",
+      "Hydropathy scale based on self-information values in the two-state model (50% accessibility) (Naderi-Manesh et al., 2001)",
+      -0.19166666666666665
+    ],
+    [
+      "MONM990201",
+      "Averaged turn propensities in a transmembrane helix (Monne et al., 1999)",
+      -2.2463333333333337
+    ],
+    [
+      "KOEP990101",
+      "Alpha-helix propensity derived from designed sequences (Koehl-Levitt, 1999)",
+      -0.4123333333333334
+    ],
+    [
+      "KOEP990102",
+      "Beta-sheet propensity derived from designed sequences (Koehl-Levitt, 1999)",
+      0.06266666666666665
+    ],
+    [
+      "CEDJ970101",
+      "Composition of amino acids in extracellular proteins (percent) (Cedano et al., 1997)",
+      0.2866666666666667
+    ],
+    [
+      "CEDJ970102",
+      "Composition of amino acids in anchored proteins (percent) (Cedano et al., 1997)",
+      0.07466666666666666
+    ],
+    [
+      "CEDJ970103",
+      "Composition of amino acids in membrane proteins (percent) (Cedano et al., 1997)",
+      -0.06966666666666667
+    ],
+    [
+      "CEDJ970104",
+      "Composition of amino acids in intracellular proteins (percent) (Cedano et al., 1997)",
+      -0.4606666666666666
+    ],
+    [
+      "FUKS010101",
+      "Surface composition of amino acids in intracellular proteins of thermophiles (percent) (Fukuchi-Nishikawa, 2001)",
+      -0.15533333333333335
+    ],
+    [
+      "CEDJ970105",
+      "Composition of amino acids in nuclear proteins (percent) (Cedano et al., 1997)",
+      -0.7999999999999999
+    ],
+    [
+      "FUKS010102",
+      "Surface composition of amino acids in intracellular proteins of mesophiles (percent) (Fukuchi-Nishikawa, 2001)",
+      -0.06433333333333334
+    ],
+    [
+      "FUKS010103",
+      "Surface composition of amino acids in extracellular proteins of mesophiles (percent) (Fukuchi-Nishikawa, 2001)",
+      -0.7233333333333333
+    ],
+    [
+      "FUKS010104",
+      "Surface composition of amino acids in nuclear proteins (percent) (Fukuchi-Nishikawa, 2001)",
+      -0.48400000000000004
+    ],
+    [
+      "FUKS010105",
+      "Interior composition of amino acids in intracellular proteins of thermophiles (percent) (Fukuchi-Nishikawa, 2001)",
+      -0.5776666666666667
+    ],
+    [
+      "FUKS010106",
+      "Interior composition of amino acids in intracellular proteins of mesophiles (percent) (Fukuchi-Nishikawa, 2001)",
+      -0.16133333333333333
+    ],
+    [
+      "FUKS010107",
+      "Interior composition of amino acids in extracellular proteins of mesophiles (percent) (Fukuchi-Nishikawa, 2001)",
+      -0.235
+    ],
+    [
+      "FUKS010108",
+      "Interior composition of amino acids in nuclear proteins (percent) (Fukuchi-Nishikawa, 2001)",
+      -0.26266666666666666
+    ],
+    [
+      "FUKS010110",
+      "Entire chain composition of amino acids in intracellular proteins of mesophiles (percent) (Fukuchi-Nishikawa, 2001)",
+      -0.2616666666666667
+    ],
+    [
+      "FUKS010109",
+      "Entire chain composition of amino acids in intracellular proteins of thermophiles (percent) (Fukuchi-Nishikawa, 2001)",
+      0.20266666666666666
+    ],
+    [
+      "FUKS010111",
+      "Entire chain composition of amino acids in extracellular proteins of mesophiles (percent) (Fukuchi-Nishikawa, 2001)",
+      -1.356
+    ],
+    [
+      "FUKS010112",
+      "Entire chain compositino of amino acids in nuclear proteins (percent) (Fukuchi-Nishikawa, 2001)",
+      -0.8513333333333334
+    ],
+    [
+      "MITS020101",
+      "Amphiphilicity index (Mitaku et al., 2002)",
+      -1.9116666666666668
+    ],
+    [
+      "TSAJ990101",
+      "Volumes including the crystallographic waters using the ProtOr (Tsai et al., 1999)",
+      -1.088
+    ],
+    [
+      "TSAJ990102",
+      "Volumes not including the crystallographic waters using the ProtOr (Tsai et al., 1999)",
+      0.12033333333333333
+    ],
+    [
+      "COSI940101",
+      "Electron-ion interaction potential values (Cosic, 1994)",
+      -1.454
+    ],
+    [
+      "PONP930101",
+      "Hydrophobicity scales (Ponnuswamy, 1993)",
+      -1.423
+    ],
+    [
+      "WILM950102",
+      "Hydrophobicity coefficient in RP-HPLC, C8 with 0.1%TFA/MeCN/H2O (Wilce et al. 1995)",
+      0.36000000000000004
+    ],
+    [
+      "WILM950101",
+      "Hydrophobicity coefficient in RP-HPLC, C18 with 0.1%TFA/MeCN/H2O (Wilce et al. 1995)",
+      -0.3333333333333333
+    ],
+    [
+      "WILM950103",
+      "Hydrophobicity coefficient in RP-HPLC, C4 with 0.1%TFA/MeCN/H2O (Wilce et al. 1995)",
+      0.3983333333333334
+    ],
+    [
+      "WILM950104",
+      "Hydrophobicity coefficient in RP-HPLC, C18 with 0.1%TFA/2-PrOH/MeCN/H2O (Wilce et al. 1995)",
+      0.3666666666666667
+    ],
+    [
+      "KUHL950101",
+      "Hydrophilicity scale (Kuhn et al., 1995)",
+      0.15466666666666665
+    ],
+    [
+      "GUOD860101",
+      "Retention coefficient at pH 2 (Guo et al., 1986)",
+      -0.9496666666666668
+    ],
+    [
+      "BASU050101",
+      "Interactivity scale obtained from the contact matrix (Bastolla et al., 2005)",
+      0.4086666666666667
+    ],
+    [
+      "JURD980101",
+      "Modified Kyte-Doolittle hydrophobicity scale (Juretic et al., 1998)",
+      0.10033333333333333
+    ],
+    [
+      "BASU050103",
+      "Interactivity scale obtained by maximizing the mean of correlation coefficient over pairs of sequences sharing the TIM barrel fold (Bastolla et al., 2005)",
+      -1.2413333333333334
+    ],
+    [
+      "BASU050102",
+      "Interactivity scale obtained by maximizing the mean of correlation coefficient over single-domain globular proteins (Bastolla et al., 2005)",
+      -0.8143333333333334
+    ],
+    [
+      "SUYM030101",
+      "Linker propensity index (Suyama-Ohara, 2003)",
+      -0.2653333333333333
+    ],
+    [
+      "PUNT030101",
+      "Knowledge-based membrane-propensity scale from 1D_Helix in MPtopo databases (Punta-Maritan, 2003)",
+      -0.37633333333333335
+    ],
+    [
+      "PUNT030102",
+      "Knowledge-based membrane-propensity scale from 3D_Helix in MPtopo databases (Punta-Maritan, 2003)",
+      -1.4043333333333334
+    ],
+    [
+      "GEOR030101",
+      "Linker propensity from all dataset (George-Heringa, 2003)",
+      0.08133333333333333
+    ],
+    [
+      "GEOR030102",
+      "Linker propensity from 1-linker dataset (George-Heringa, 2003)",
+      -0.597
+    ],
+    [
+      "GEOR030104",
+      "Linker propensity from 3-linker dataset (George-Heringa, 2003)",
+      0.20933333333333334
+    ],
+    [
+      "GEOR030105",
+      "Linker propensity from small dataset (linker length is less than six residues) (George-Heringa, 2003)",
+      0.10466666666666669
+    ],
+    [
+      "GEOR030106",
+      "Linker propensity from medium dataset (linker length is between six and 14 residues) (George-Heringa, 2003)",
+      0.18433333333333335
+    ],
+    [
+      "GEOR030103",
+      "Linker propensity from 2-linker dataset (George-Heringa, 2003)",
+      -0.21733333333333335
+    ],
+    [
+      "GEOR030109",
+      "Linker propensity from non-helical (annotated by DSSP) dataset (George-Heringa, 2003)",
+      -0.11666666666666665
+    ],
+    [
+      "GEOR030108",
+      "Linker propensity from helical (annotated by DSSP) dataset (George-Heringa, 2003)",
+      -0.005999999999999987
+    ],
+    [
+      "ZHOH040101",
+      "The stability scale from the knowledge-based atom-atom potential (Zhou-Zhou, 2004)",
+      0.27499999999999997
+    ],
+    [
+      "GEOR030107",
+      "Linker propensity from long dataset (linker length is greater than 14 residues) (George-Heringa, 2003)",
+      0.08566666666666668
+    ],
+    [
+      "ZHOH040102",
+      "The relative stability scale extracted from mutation experiments (Zhou-Zhou, 2004)",
+      0.06999999999999999
+    ],
+    [
+      "ZHOH040103",
+      "Buriability (Zhou-Zhou, 2004)",
+      -0.5586666666666666
+    ],
+    [
+      "BAEK050101",
+      "Linker index (Bae et al., 2005)",
+      0.12566666666666665
+    ],
+    [
+      "HARY940101",
+      "Mean volumes of residues buried in protein interiors (Harpaz et al., 1994)",
+      0.505
+    ],
+    [
+      "PONJ960101",
+      "Average volumes of residues (Pontius et al., 1996)",
+      0.332
+    ],
+    [
+      "DIGM050101",
+      "Hydrostatic pressure asymmetry index, PAI (Di Giulio, 2005)",
+      0.41
+    ],
+    [
+      "WOLR790101",
+      "Hydrophobicity index (Wolfenden et al., 1979)",
+      0.34
+    ],
+    [
+      "KIDA850101",
+      "Hydrophobicity-related index (Kidera et al., 1985)",
+      -0.22799999999999998
+    ],
+    [
+      "OLSK800101",
+      "Average internal preferences (Olsen, 1980)",
+      0.204
+    ],
+    [
+      "GUYH850102",
+      "Apparent partition energies calculated from Wertz-Scheraga index (Guy, 1985)",
+      0.4076666666666666
+    ],
+    [
+      "GUYH850104",
+      "Apparent partition energies calculated from Janin index (Guy, 1985)",
+      -0.45366666666666666
+    ],
+    [
+      "GUYH850105",
+      "Apparent partition energies calculated from Chothia index (Guy, 1985)",
+      0.15433333333333332
+    ],
+    [
+      "JACR890101",
+      "Weights from the IFH scale (Jacobs-White, 1989)",
+      0.2836666666666667
+    ],
+    [
+      "COWR900101",
+      "Hydrophobicity index, 3.0 pH (Cowan-Whittaker, 1990)",
+      -0.5586666666666668
+    ],
+    [
+      "BLAS910101",
+      "Scaled side chain hydrophobicity values (Black-Mould, 1991)",
+      -0.303
+    ],
+    [
+      "CASG920101",
+      "Hydrophobicity scale from native protein structures (Casari-Sippl, 1992)",
+      0.2383333333333333
+    ],
+    [
+      "CORJ870101",
+      "NNEIG index (Cornette et al., 1987)",
+      -0.2793333333333334
+    ],
+    [
+      "CORJ870102",
+      "SWEIG index (Cornette et al., 1987)",
+      0.3216666666666667
+    ],
+    [
+      "CORJ870103",
+      "PRIFT index (Cornette et al., 1987)",
+      0.06633333333333334
+    ],
+    [
+      "CORJ870104",
+      "PRILS index (Cornette et al., 1987)",
+      0.12299999999999996
+    ],
+    [
+      "CORJ870105",
+      "ALTFT index (Cornette et al., 1987)",
+      -0.05566666666666664
+    ],
+    [
+      "CORJ870106",
+      "ALTLS index (Cornette et al., 1987)",
+      0.08966666666666667
+    ],
+    [
+      "CORJ870107",
+      "TOTFT index (Cornette et al., 1987)",
+      0.0
+    ],
+    [
+      "MIYS990101",
+      "Relative partition energies derived by the Bethe approximation (Miyazawa-Jernigan, 1999)",
+      -0.7113333333333333
+    ],
+    [
+      "CORJ870108",
+      "TOTLS index (Cornette et al., 1987)",
+      0.08133333333333333
+    ],
+    [
+      "MIYS990103",
+      "Optimized relative partition energies - method B (Miyazawa-Jernigan, 1999)",
+      -0.5166666666666666
+    ],
+    [
+      "MIYS990102",
+      "Optimized relative partition energies - method A (Miyazawa-Jernigan, 1999)",
+      -0.064
+    ],
+    [
+      "MIYS990104",
+      "Optimized relative partition energies - method C (Miyazawa-Jernigan, 1999)",
+      0.27699999999999997
+    ],
+    [
+      "MIYS990105",
+      "Optimized relative partition energies - method D (Miyazawa-Jernigan, 1999)",
+      -0.057666666666666665
+    ],
+    [
+      "ENGD860101",
+      "Hydrophobicity index (Engelman et al., 1986)",
+      -1.5
+    ],
+    [
+      "KARS160101",
+      "Number of vertices (order of the graph) (Karkbara-Knisley, 2016)",
+      -0.06533333333333334
+    ],
+    [
+      "FASG890101",
+      "Hydrophobicity index (Fasman, 1989)",
+      -1.1493333333333333
+    ],
+    [
+      "KARS160102",
+      "Number of edges (size of the graph) (Karkbara-Knisley, 2016)",
+      0.04666666666666667
+    ],
+    [
+      "KARS160103",
+      "Total weighted degree of the graph (obtained by adding all the weights of all the vertices) (Karkbara-Knisley, 2016)",
+      -0.49533333333333335
+    ],
+    [
+      "KARS160104",
+      "Weighted domination number (Karkbara-Knisley, 2016)",
+      0.136
+    ],
+    [
+      "KARS160106",
+      "Radius (minimum eccentricity) (Karkbara-Knisley, 2016)",
+      0.018000000000000006
+    ],
+    [
+      "KARS160105",
+      "Average eccentricity (Karkbara-Knisley, 2016)",
+      -0.14633333333333332
+    ],
+    [
+      "KARS160108",
+      "Average weighted degree (total degree, divided by the number of vertices) (Karkbara-Knisley, 2016)",
+      -0.8383333333333334
+    ],
+    [
+      "KARS160107",
+      "Diameter (maximum eccentricity) (Karkbara-Knisley, 2016)",
+      -0.042
+    ],
+    [
+      "KARS160109",
+      "Maximum eigenvalue of the weighted Laplacian matrix of the graph (Karkbara-Knisley, 2016)",
+      -0.2613333333333334
+    ],
+    [
+      "KARS160110",
+      "Minimum eigenvalue of the weighted Laplacian matrix of the graph (Karkbara-Knisley, 2016)",
+      -0.12333333333333334
+    ],
+    [
+      "KARS160111",
+      "Average eigenvalue of the Laplacian matrix of the the graph (Karkbara-Knisley, 2016)",
+      -0.43566666666666665
+    ],
+    [
+      "KARS160112",
+      "Second smallest eigenvalue of the Laplacian matrix of the graph (Karkbara-Knisley, 2016)",
+      -0.49600000000000005
+    ],
+    [
+      "KARS160114",
+      "Average weighted eccentricity based on the the atomic number (Karkbara-Knisley, 2016)",
+      -0.6873333333333332
+    ],
+    [
+      "KARS160115",
+      "Weighted radius based on the atomic number (minimum eccentricity) (Karkbara-Knisley, 2016)",
+      -0.302
+    ],
+    [
+      "KARS160113",
+      "Weighted domination number using the atomic number (Karkbara-Knisley, 2016)",
+      -0.6526666666666666
+    ],
+    [
+      "KARS160117",
+      "Total weighted atomic number of the graph (obtained by summing all the atomic number of each of the vertices in the graph) (Karkbara-Knisley, 2016)",
+      -0.42166666666666663
+    ],
+    [
+      "KARS160118",
+      "Average weighted atomic number or degree based on atomic number in the graph (Karkbara-Knisley, 2016)",
+      -0.6623333333333333
+    ],
+    [
+      "KARS160116",
+      "Weighted diameter based on the atomic number (maximum eccentricity) (Karkbara-Knisley, 2016)",
+      -0.6786666666666666
+    ],
+    [
+      "KARS160119",
+      "Weighted maximum eigenvalue based on the atomic numbers (Karkbara-Knisley, 2016)",
+      0.155
+    ],
+    [
+      "KARS160120",
+      "Weighted minimum eigenvalue based on the atomic numbers (Karkbara-Knisley, 2016)",
+      0.16733333333333333
+    ],
+    [
+      "KARS160121",
+      "Weighted average eigenvalue based on the atomic numbers (Karkbara-Knisley, 2016)",
+      -0.49766666666666665
+    ],
+    [
+      "KARS160122",
+      "Weighted second smallest eigenvalue of the weighted Laplacian matrix (Karkbara-Knisley, 2016)",
+      0.4053333333333333
+    ]
+  ],
+  "epitope": [
+    [
+      "BEGF750103",
+      "Conformational parameter of beta-turn (Beghin-Dirkx, 1975)",
+      0.9993333333333334
+    ],
+    [
+      "BEGF750102",
+      "Conformational parameter of beta-structure (Beghin-Dirkx, 1975)",
+      0.9993333333333334
+    ],
+    [
+      "BEGF750101",
+      "Conformational parameter of inner helix (Beghin-Dirkx, 1975)",
+      0.9986666666666667
+    ],
+    [
+      "ANDN920101",
+      "alpha-CH chemical shifts (Andersen et al., 1992)",
+      0.9993333333333334
+    ],
+    [
+      "ARGP820101",
+      "Hydrophobicity index (Argos et al., 1982)",
+      0.9993333333333334
+    ],
+    [
+      "ARGP820103",
+      "Membrane-buried preference parameters (Argos et al., 1982)",
+      0.9993333333333334
+    ],
+    [
+      "ARGP820102",
+      "Signal sequence helical potential (Argos et al., 1982)",
+      0.9993333333333334
+    ],
+    [
+      "BHAR880101",
+      "Average flexibility indices (Bhaskaran-Ponnuswamy, 1988)",
+      0.9993333333333334
+    ],
+    [
+      "BIGC670101",
+      "Residue volume (Bigelow, 1967)",
+      0.9986666666666667
+    ],
+    [
+      "BIOV880101",
+      "Information value for accessibility; average fraction 35% (Biou et al., 1988)",
+      0.9979999999999999
+    ],
+    [
+      "BIOV880102",
+      "Information value for accessibility; average fraction 23% (Biou et al., 1988)",
+      0.9979999999999999
+    ],
+    [
+      "BROC820102",
+      "Retention coefficient in HFBA (Browne et al., 1982)",
+      0.9979999999999999
+    ],
+    [
+      "BROC820101",
+      "Retention coefficient in TFA (Browne et al., 1982)",
+      0.9979999999999999
+    ],
+    [
+      "BULH740101",
+      "Transfer free energy to surface (Bull-Breese, 1974)",
+      0.9979999999999999
+    ],
+    [
+      "BULH740102",
+      "Apparent partial specific volume (Bull-Breese, 1974)",
+      0.9979999999999999
+    ],
+    [
+      "BUNA790101",
+      "alpha-NH chemical shifts (Bundi-Wuthrich, 1979)",
+      0.9979999999999999
+    ],
+    [
+      "BURA740101",
+      "Normalized frequency of alpha-helix (Burgess et al., 1974)",
+      1.0
+    ],
+    [
+      "BUNA790102",
+      "alpha-CH chemical shifts (Bundi-Wuthrich, 1979)",
+      1.0
+    ],
+    [
+      "BURA740102",
+      "Normalized frequency of extended structure (Burgess et al., 1974)",
+      1.0
+    ],
+    [
+      "BUNA790103",
+      "Spin-spin coupling constants 3JHalpha-NH (Bundi-Wuthrich, 1979)",
+      1.0
+    ],
+    [
+      "CHAM810101",
+      "Steric parameter (Charton, 1981)",
+      1.0
+    ],
+    [
+      "CHAM820101",
+      "Polarizability parameter (Charton-Charton, 1982)",
+      1.0
+    ],
+    [
+      "CHAM820102",
+      "Free energy of solution in water, kcal/mole (Charton-Charton, 1982)",
+      1.0
+    ],
+    [
+      "CHAM830101",
+      "The Chou-Fasman parameter of the coil conformation (Charton-Charton, 1983)",
+      1.0
+    ],
+    [
+      "CHAM830103",
+      "The number of atoms in the side chain labelled 1+1 (Charton-Charton, 1983)",
+      0.9986666666666667
+    ],
+    [
+      "CHAM830105",
+      "The number of atoms in the side chain labelled 3+1 (Charton-Charton, 1983)",
+      0.9986666666666667
+    ],
+    [
+      "CHAM830104",
+      "The number of atoms in the side chain labelled 2+1 (Charton-Charton, 1983)",
+      0.9986666666666667
+    ],
+    [
+      "CHAM830107",
+      "A parameter of charge transfer capability (Charton-Charton, 1983)",
+      0.9986666666666667
+    ],
+    [
+      "CHAM830108",
+      "A parameter of charge transfer donor capability (Charton-Charton, 1983)",
+      0.9986666666666667
+    ],
+    [
+      "CHAM830102",
+      "A parameter defined from the residuals obtained from the best correlation of the Chou-Fasman parameter of beta-sheet (Charton-Charton, 1983)",
+      0.9986666666666667
+    ],
+    [
+      "CHAM830106",
+      "The number of bonds in the longest chain (Charton-Charton, 1983)",
+      0.9986666666666667
+    ],
+    [
+      "CHOC750101",
+      "Average volume of buried residue (Chothia, 1975)",
+      0.9986666666666667
+    ],
+    [
+      "CHOC760101",
+      "Residue accessible surface area in tripeptide (Chothia, 1976)",
+      0.999
+    ],
+    [
+      "CHOC760104",
+      "Proportion of residues 100% buried (Chothia, 1976)",
+      0.9993333333333334
+    ],
+    [
+      "CHOP780101",
+      "Normalized frequency of beta-turn (Chou-Fasman, 1978a)",
+      0.9983333333333334
+    ],
+    [
+      "CHOC760103",
+      "Proportion of residues 95% buried (Chothia, 1976)",
+      0.9983333333333334
+    ],
+    [
+      "CHOC760102",
+      "Residue accessible surface area in folded protein (Chothia, 1976)",
+      0.999
+    ],
+    [
+      "CHOP780201",
+      "Normalized frequency of alpha-helix (Chou-Fasman, 1978b)",
+      0.9983333333333334
+    ],
+    [
+      "CHOP780202",
+      "Normalized frequency of beta-sheet (Chou-Fasman, 1978b)",
+      0.9983333333333334
+    ],
+    [
+      "CHOP780203",
+      "Normalized frequency of beta-turn (Chou-Fasman, 1978b)",
+      0.9983333333333334
+    ],
+    [
+      "CHOP780204",
+      "Normalized frequency of N-terminal helix (Chou-Fasman, 1978b)",
+      0.9979999999999999
+    ],
+    [
+      "CHOP780205",
+      "Normalized frequency of C-terminal helix (Chou-Fasman, 1978b)",
+      0.9979999999999999
+    ],
+    [
+      "CHOP780207",
+      "Normalized frequency of C-terminal non helical region (Chou-Fasman, 1978b)",
+      0.9979999999999999
+    ],
+    [
+      "CHOP780206",
+      "Normalized frequency of N-terminal non helical region (Chou-Fasman, 1978b)",
+      0.9979999999999999
+    ],
+    [
+      "CHOP780208",
+      "Normalized frequency of N-terminal beta-sheet (Chou-Fasman, 1978b)",
+      0.9979999999999999
+    ],
+    [
+      "CHOP780209",
+      "Normalized frequency of C-terminal beta-sheet (Chou-Fasman, 1978b)",
+      0.9979999999999999
+    ],
+    [
+      "CHOP780210",
+      "Normalized frequency of N-terminal non beta region (Chou-Fasman, 1978b)",
+      0.9979999999999999
+    ],
+    [
+      "CHOP780211",
+      "Normalized frequency of C-terminal non beta region (Chou-Fasman, 1978b)",
+      0.9979999999999999
+    ],
+    [
+      "CHOP780214",
+      "Frequency of the 3rd residue in turn (Chou-Fasman, 1978b)",
+      0.9986666666666667
+    ],
+    [
+      "CHOP780212",
+      "Frequency of the 1st residue in turn (Chou-Fasman, 1978b)",
+      0.9986666666666667
+    ],
+    [
+      "CHOP780213",
+      "Frequency of the 2nd residue in turn (Chou-Fasman, 1978b)",
+      0.9986666666666667
+    ],
+    [
+      "CHOP780215",
+      "Frequency of the 4th residue in turn (Chou-Fasman, 1978b)",
+      0.9986666666666667
+    ],
+    [
+      "CHOP780216",
+      "Normalized frequency of the 2nd and 3rd residues in turn (Chou-Fasman, 1978b)",
+      0.9986666666666667
+    ],
+    [
+      "CIDH920101",
+      "Normalized hydrophobicity scales for alpha-proteins (Cid et al., 1992)",
+      0.9986666666666667
+    ],
+    [
+      "CIDH920102",
+      "Normalized hydrophobicity scales for beta-proteins (Cid et al., 1992)",
+      0.9986666666666667
+    ],
+    [
+      "CIDH920103",
+      "Normalized hydrophobicity scales for alpha+beta-proteins (Cid et al., 1992)",
+      0.9986666666666667
+    ],
+    [
+      "CIDH920104",
+      "Normalized hydrophobicity scales for alpha/beta-proteins (Cid et al., 1992)",
+      0.9983333333333334
+    ],
+    [
+      "CIDH920105",
+      "Normalized average hydrophobicity scales (Cid et al., 1992)",
+      0.9983333333333334
+    ],
+    [
+      "COHE430101",
+      "Partial specific volume (Cohn-Edsall, 1943)",
+      0.9983333333333334
+    ],
+    [
+      "CRAJ730102",
+      "Normalized frequency of beta-sheet (Crawford et al., 1973)",
+      0.9983333333333334
+    ],
+    [
+      "CRAJ730101",
+      "Normalized frequency of middle helix (Crawford et al., 1973)",
+      0.9983333333333334
+    ],
+    [
+      "DAWD720101",
+      "Size (Dawson, 1972)",
+      0.9983333333333334
+    ],
+    [
+      "CRAJ730103",
+      "Normalized frequency of turn (Crawford et al., 1973)",
+      0.9983333333333334
+    ],
+    [
+      "DAYM780101",
+      "Amino acid composition (Dayhoff et al., 1978a)",
+      0.9983333333333334
+    ],
+    [
+      "DAYM780201",
+      "Relative mutability (Dayhoff et al., 1978b)",
+      0.9979999999999999
+    ],
+    [
+      "DESM900101",
+      "Membrane preference for cytochrome b: MPH89 (Degli Esposti et al., 1990)",
+      0.9979999999999999
+    ],
+    [
+      "DESM900102",
+      "Average membrane preference: AMP07 (Degli Esposti et al., 1990)",
+      0.9979999999999999
+    ],
+    [
+      "EISD860101",
+      "Solvation free energy (Eisenberg-McLachlan, 1986)",
+      0.9979999999999999
+    ],
+    [
+      "EISD840101",
+      "Consensus normalized hydrophobicity scale (Eisenberg, 1984)",
+      0.9973333333333333
+    ],
+    [
+      "EISD860102",
+      "Atom-based hydrophobic moment (Eisenberg-McLachlan, 1986)",
+      0.9976666666666666
+    ],
+    [
+      "EISD860103",
+      "Direction of hydrophobic moment (Eisenberg-McLachlan, 1986)",
+      0.9979999999999999
+    ],
+    [
+      "FASG760101",
+      "Molecular weight (Fasman, 1976)",
+      0.9986666666666667
+    ],
+    [
+      "FASG760102",
+      "Melting point (Fasman, 1976)",
+      0.9983333333333334
+    ],
+    [
+      "FASG760103",
+      "Optical rotation (Fasman, 1976)",
+      0.9983333333333334
+    ],
+    [
+      "FASG760104",
+      "pK-N (Fasman, 1976)",
+      0.9983333333333334
+    ],
+    [
+      "FASG760105",
+      "pK-C (Fasman, 1976)",
+      0.9976666666666666
+    ],
+    [
+      "FAUJ880101",
+      "Graph shape index (Fauchere et al., 1988)",
+      0.9983333333333334
+    ],
+    [
+      "FAUJ830101",
+      "Hydrophobic parameter pi (Fauchere-Pliska, 1983)",
+      0.9983333333333334
+    ],
+    [
+      "FAUJ880102",
+      "Smoothed upsilon steric parameter (Fauchere et al., 1988)",
+      0.9983333333333334
+    ],
+    [
+      "FAUJ880103",
+      "Normalized van der Waals volume (Fauchere et al., 1988)",
+      0.9983333333333334
+    ],
+    [
+      "FAUJ880105",
+      "STERIMOL minimum width of the side chain (Fauchere et al., 1988)",
+      0.9973333333333333
+    ],
+    [
+      "FAUJ880104",
+      "STERIMOL length of the side chain (Fauchere et al., 1988)",
+      0.9973333333333333
+    ],
+    [
+      "FAUJ880109",
+      "Number of hydrogen bond donors (Fauchere et al., 1988)",
+      0.9973333333333333
+    ],
+    [
+      "FAUJ880110",
+      "Number of full nonbonding orbitals (Fauchere et al., 1988)",
+      0.9973333333333333
+    ],
+    [
+      "FAUJ880106",
+      "STERIMOL maximum width of the side chain (Fauchere et al., 1988)",
+      0.9966666666666667
+    ],
+    [
+      "FAUJ880111",
+      "Positive charge (Fauchere et al., 1988)",
+      0.9963333333333333
+    ],
+    [
+      "FAUJ880107",
+      "N.m.r. chemical shift of alpha-carbon (Fauchere et al., 1988)",
+      0.9973333333333333
+    ],
+    [
+      "FAUJ880108",
+      "Localized electrical effect (Fauchere et al., 1988)",
+      0.9973333333333333
+    ],
+    [
+      "FAUJ880112",
+      "Negative charge (Fauchere et al., 1988)",
+      0.9976666666666666
+    ],
+    [
+      "FINA910104",
+      "Helix termination parameter at posision j+1 (Finkelstein et al., 1991)",
+      0.9976666666666666
+    ],
+    [
+      "FINA770101",
+      "Helix-coil equilibrium constant (Finkelstein-Ptitsyn, 1977)",
+      0.9976666666666666
+    ],
+    [
+      "FINA910101",
+      "Helix initiation parameter at posision i-1 (Finkelstein et al., 1991)",
+      0.9976666666666666
+    ],
+    [
+      "FINA910102",
+      "Helix initiation parameter at posision i,i+1,i+2 (Finkelstein et al., 1991)",
+      0.9963333333333333
+    ],
+    [
+      "FINA910103",
+      "Helix termination parameter at posision j-2,j-1,j (Finkelstein et al., 1991)",
+      0.9973333333333333
+    ],
+    [
+      "FAUJ880113",
+      "pK-a(RCOOH) (Fauchere et al., 1988)",
+      0.997
+    ],
+    [
+      "GARJ730101",
+      "Partition coefficient (Garel et al., 1973)",
+      0.997
+    ],
+    [
+      "GEIM800101",
+      "Alpha-helix indices (Geisow-Roberts, 1980)",
+      0.999
+    ],
+    [
+      "GEIM800102",
+      "Alpha-helix indices for alpha-proteins (Geisow-Roberts, 1980)",
+      0.999
+    ],
+    [
+      "GEIM800103",
+      "Alpha-helix indices for beta-proteins (Geisow-Roberts, 1980)",
+      0.999
+    ],
+    [
+      "GEIM800104",
+      "Alpha-helix indices for alpha/beta-proteins (Geisow-Roberts, 1980)",
+      0.999
+    ],
+    [
+      "GEIM800105",
+      "Beta-strand indices (Geisow-Roberts, 1980)",
+      0.999
+    ],
+    [
+      "GEIM800106",
+      "Beta-strand indices for beta-proteins (Geisow-Roberts, 1980)",
+      0.999
+    ],
+    [
+      "GEIM800107",
+      "Beta-strand indices for alpha/beta-proteins (Geisow-Roberts, 1980)",
+      0.999
+    ],
+    [
+      "GEIM800108",
+      "Aperiodic indices (Geisow-Roberts, 1980)",
+      0.999
+    ],
+    [
+      "GEIM800109",
+      "Aperiodic indices for alpha-proteins (Geisow-Roberts, 1980)",
+      0.9983333333333334
+    ],
+    [
+      "GEIM800110",
+      "Aperiodic indices for beta-proteins (Geisow-Roberts, 1980)",
+      0.9983333333333334
+    ],
+    [
+      "GOLD730101",
+      "Hydrophobicity factor (Goldsack-Chalifoux, 1973)",
+      0.9983333333333334
+    ],
+    [
+      "GEIM800111",
+      "Aperiodic indices for alpha/beta-proteins (Geisow-Roberts, 1980)",
+      0.9983333333333334
+    ],
+    [
+      "GRAR740101",
+      "Composition (Grantham, 1974)",
+      0.9983333333333334
+    ],
+    [
+      "GOLD730102",
+      "Residue volume (Goldsack-Chalifoux, 1973)",
+      0.9983333333333334
+    ],
+    [
+      "GRAR740102",
+      "Polarity (Grantham, 1974)",
+      0.9983333333333334
+    ],
+    [
+      "GRAR740103",
+      "Volume (Grantham, 1974)",
+      0.9983333333333334
+    ],
+    [
+      "GUYH850101",
+      "Partition energy (Guy, 1985)",
+      0.9993333333333334
+    ],
+    [
+      "HOPA770101",
+      "Hydration number (Hopfinger, 1971), Cited by Charton-Charton (1982)",
+      0.9993333333333334
+    ],
+    [
+      "HOPT810101",
+      "Hydrophilicity value (Hopp-Woods, 1981)",
+      0.9993333333333334
+    ],
+    [
+      "HUTJ700101",
+      "Heat capacity (Hutchens, 1970)",
+      0.9993333333333334
+    ],
+    [
+      "HUTJ700102",
+      "Absolute entropy (Hutchens, 1970)",
+      0.9993333333333334
+    ],
+    [
+      "HUTJ700103",
+      "Entropy of formation (Hutchens, 1970)",
+      0.9993333333333334
+    ],
+    [
+      "ISOY800101",
+      "Normalized relative frequency of alpha-helix (Isogai et al., 1980)",
+      0.9993333333333334
+    ],
+    [
+      "ISOY800102",
+      "Normalized relative frequency of extended structure (Isogai et al., 1980)",
+      0.9993333333333334
+    ],
+    [
+      "ISOY800103",
+      "Normalized relative frequency of bend (Isogai et al., 1980)",
+      0.9976666666666666
+    ],
+    [
+      "ISOY800104",
+      "Normalized relative frequency of bend R (Isogai et al., 1980)",
+      0.9973333333333333
+    ],
+    [
+      "ISOY800105",
+      "Normalized relative frequency of bend S (Isogai et al., 1980)",
+      0.9976666666666666
+    ],
+    [
+      "ISOY800106",
+      "Normalized relative frequency of helix end (Isogai et al., 1980)",
+      0.9976666666666666
+    ],
+    [
+      "ISOY800107",
+      "Normalized relative frequency of double bend (Isogai et al., 1980)",
+      0.9976666666666666
+    ],
+    [
+      "ISOY800108",
+      "Normalized relative frequency of coil (Isogai et al., 1980)",
+      0.9976666666666666
+    ],
+    [
+      "JANJ780101",
+      "Average accessible surface area (Janin et al., 1978)",
+      0.9976666666666666
+    ],
+    [
+      "JANJ780102",
+      "Percentage of buried residues (Janin et al., 1978)",
+      0.9976666666666666
+    ],
+    [
+      "JANJ780103",
+      "Percentage of exposed residues (Janin et al., 1978)",
+      0.9996666666666667
+    ],
+    [
+      "JANJ790101",
+      "Ratio of buried and accessible molar fractions (Janin, 1979)",
+      0.9993333333333334
+    ],
+    [
+      "JANJ790102",
+      "Transfer free energy (Janin, 1979)",
+      0.9996666666666667
+    ],
+    [
+      "JOND750101",
+      "Hydrophobicity (Jones, 1975)",
+      0.9993333333333334
+    ],
+    [
+      "JUKT750101",
+      "Amino acid distribution (Jukes et al., 1975)",
+      0.9993333333333334
+    ],
+    [
+      "JOND750102",
+      "pK (-COOH) (Jones, 1975)",
+      0.9983333333333334
+    ],
+    [
+      "JOND920101",
+      "Relative frequency of occurrence (Jones et al., 1992)",
+      0.9993333333333334
+    ],
+    [
+      "JOND920102",
+      "Relative mutability (Jones et al., 1992)",
+      0.9993333333333334
+    ],
+    [
+      "JUNJ780101",
+      "Sequence frequency (Jungck, 1978)",
+      0.999
+    ],
+    [
+      "KANM800101",
+      "Average relative probability of helix (Kanehisa-Tsong, 1980)",
+      0.999
+    ],
+    [
+      "KANM800104",
+      "Average relative probability of inner beta-sheet (Kanehisa-Tsong, 1980)",
+      0.999
+    ],
+    [
+      "KANM800102",
+      "Average relative probability of beta-sheet (Kanehisa-Tsong, 1980)",
+      0.999
+    ],
+    [
+      "KANM800103",
+      "Average relative probability of inner helix (Kanehisa-Tsong, 1980)",
+      0.999
+    ],
+    [
+      "KARP850101",
+      "Flexibility parameter for no rigid neighbors (Karplus-Schulz, 1985)",
+      0.999
+    ],
+    [
+      "KARP850103",
+      "Flexibility parameter for two rigid neighbors (Karplus-Schulz, 1985)",
+      0.9980000000000001
+    ],
+    [
+      "KARP850102",
+      "Flexibility parameter for one rigid neighbor (Karplus-Schulz, 1985)",
+      0.999
+    ],
+    [
+      "KHAG800101",
+      "The Kerr-constant increments (Khanarian-Moore, 1980)",
+      0.9986666666666667
+    ],
+    [
+      "KLEP840101",
+      "Net charge (Klein et al., 1984)",
+      0.9993333333333334
+    ],
+    [
+      "KRIW710101",
+      "Side chain interaction parameter (Krigbaum-Rubin, 1971)",
+      0.9993333333333334
+    ],
+    [
+      "KRIW790101",
+      "Side chain interaction parameter (Krigbaum-Komoriya, 1979)",
+      0.9993333333333334
+    ],
+    [
+      "KRIW790102",
+      "Fraction of site occupied by water (Krigbaum-Komoriya, 1979)",
+      0.9993333333333334
+    ],
+    [
+      "KRIW790103",
+      "Side chain volume (Krigbaum-Komoriya, 1979)",
+      0.9993333333333334
+    ],
+    [
+      "KYTJ820101",
+      "Hydropathy index (Kyte-Doolittle, 1982)",
+      0.9993333333333334
+    ],
+    [
+      "LAWE840101",
+      "Transfer free energy, CHP/water (Lawson et al., 1984)",
+      0.9993333333333334
+    ],
+    [
+      "LEVM760101",
+      "Hydrophobic parameter (Levitt, 1976)",
+      0.9966666666666666
+    ],
+    [
+      "LEVM760102",
+      "Distance between C-alpha and centroid of side chain (Levitt, 1976)",
+      0.9966666666666666
+    ],
+    [
+      "LEVM760103",
+      "Side chain angle theta(AAR) (Levitt, 1976)",
+      0.9966666666666666
+    ],
+    [
+      "LEVM760104",
+      "Side chain torsion angle phi(AAAR) (Levitt, 1976)",
+      0.9966666666666666
+    ],
+    [
+      "LEVM760105",
+      "Radius of gyration of side chain (Levitt, 1976)",
+      0.9966666666666666
+    ],
+    [
+      "LEVM760106",
+      "van der Waals parameter R0 (Levitt, 1976)",
+      0.9966666666666666
+    ],
+    [
+      "LEVM760107",
+      "van der Waals parameter epsilon (Levitt, 1976)",
+      0.9966666666666666
+    ],
+    [
+      "LEVM780101",
+      "Normalized frequency of alpha-helix, with weights (Levitt, 1978)",
+      0.9966666666666666
+    ],
+    [
+      "LEVM780102",
+      "Normalized frequency of beta-sheet, with weights (Levitt, 1978)",
+      0.9979999999999999
+    ],
+    [
+      "LEVM780103",
+      "Normalized frequency of reverse turn, with weights (Levitt, 1978)",
+      0.9979999999999999
+    ],
+    [
+      "LEVM780104",
+      "Normalized frequency of alpha-helix, unweighted (Levitt, 1978)",
+      0.9979999999999999
+    ],
+    [
+      "LEVM780105",
+      "Normalized frequency of beta-sheet, unweighted (Levitt, 1978)",
+      0.9979999999999999
+    ],
+    [
+      "LEVM780106",
+      "Normalized frequency of reverse turn, unweighted (Levitt, 1978)",
+      0.9979999999999999
+    ],
+    [
+      "LEWP710101",
+      "Frequency of occurrence in beta-bends (Lewis et al., 1971)",
+      0.9979999999999999
+    ],
+    [
+      "LIFS790101",
+      "Conformational preference for all beta-strands (Lifson-Sander, 1979)",
+      0.9979999999999999
+    ],
+    [
+      "LIFS790102",
+      "Conformational preference for parallel beta-strands (Lifson-Sander, 1979)",
+      0.9979999999999999
+    ],
+    [
+      "LIFS790103",
+      "Conformational preference for antiparallel beta-strands (Lifson-Sander, 1979)",
+      0.9973333333333333
+    ],
+    [
+      "MANP780101",
+      "Average surrounding hydrophobicity (Manavalan-Ponnuswamy, 1978)",
+      0.9973333333333333
+    ],
+    [
+      "MAXF760101",
+      "Normalized frequency of alpha-helix (Maxfield-Scheraga, 1976)",
+      0.9973333333333333
+    ],
+    [
+      "MAXF760102",
+      "Normalized frequency of extended structure (Maxfield-Scheraga, 1976)",
+      0.9973333333333333
+    ],
+    [
+      "MAXF760103",
+      "Normalized frequency of zeta R (Maxfield-Scheraga, 1976)",
+      0.9973333333333333
+    ],
+    [
+      "MAXF760104",
+      "Normalized frequency of left-handed alpha-helix (Maxfield-Scheraga, 1976)",
+      0.9973333333333333
+    ],
+    [
+      "MAXF760105",
+      "Normalized frequency of zeta L (Maxfield-Scheraga, 1976)",
+      0.9976666666666666
+    ],
+    [
+      "MAXF760106",
+      "Normalized frequency of alpha region (Maxfield-Scheraga, 1976)",
+      0.9973333333333333
+    ],
+    [
+      "MCMT640101",
+      "Refractivity (McMeekin et al., 1964), Cited by Jones (1975)",
+      0.9976666666666666
+    ],
+    [
+      "MEEJ800101",
+      "Retention coefficient in HPLC, pH7.4 (Meek, 1980)",
+      0.9976666666666666
+    ],
+    [
+      "MEEJ800102",
+      "Retention coefficient in HPLC, pH2.1 (Meek, 1980)",
+      0.9976666666666666
+    ],
+    [
+      "MEEJ810101",
+      "Retention coefficient in NaClO4 (Meek-Rossetti, 1981)",
+      0.9976666666666666
+    ],
+    [
+      "MEEJ810102",
+      "Retention coefficient in NaH2PO4 (Meek-Rossetti, 1981)",
+      0.9976666666666666
+    ],
+    [
+      "MEIH800101",
+      "Average reduced distance for C-alpha (Meirovitch et al., 1980)",
+      0.9976666666666666
+    ],
+    [
+      "MEIH800102",
+      "Average reduced distance for side chain (Meirovitch et al., 1980)",
+      0.9976666666666666
+    ],
+    [
+      "MEIH800103",
+      "Average side chain orientation angle (Meirovitch et al., 1980)",
+      0.9976666666666666
+    ],
+    [
+      "MIYS850101",
+      "Effective partition energy (Miyazawa-Jernigan, 1985)",
+      0.9973333333333333
+    ],
+    [
+      "NAGK730101",
+      "Normalized frequency of alpha-helix (Nagano, 1973)",
+      0.9973333333333333
+    ],
+    [
+      "NAGK730102",
+      "Normalized frequency of bata-structure (Nagano, 1973)",
+      0.9973333333333333
+    ],
+    [
+      "NAGK730103",
+      "Normalized frequency of coil (Nagano, 1973)",
+      0.9973333333333333
+    ],
+    [
+      "NAKH900101",
+      "AA composition of total proteins (Nakashima et al., 1990)",
+      0.9973333333333333
+    ],
+    [
+      "NAKH900102",
+      "SD of AA composition of total proteins (Nakashima et al., 1990)",
+      0.9973333333333333
+    ],
+    [
+      "NAKH900103",
+      "AA composition of mt-proteins (Nakashima et al., 1990)",
+      0.9973333333333333
+    ],
+    [
+      "NAKH900104",
+      "Normalized composition of mt-proteins (Nakashima et al., 1990)",
+      0.9973333333333333
+    ],
+    [
+      "NAKH900105",
+      "AA composition of mt-proteins from animal (Nakashima et al., 1990)",
+      0.9986666666666667
+    ],
+    [
+      "NAKH900106",
+      "Normalized composition from animal (Nakashima et al., 1990)",
+      0.999
+    ],
+    [
+      "NAKH900107",
+      "AA composition of mt-proteins from fungi and plant (Nakashima et al., 1990)",
+      0.999
+    ],
+    [
+      "NAKH900108",
+      "Normalized composition from fungi and plant (Nakashima et al., 1990)",
+      0.999
+    ],
+    [
+      "NAKH900109",
+      "AA composition of membrane proteins (Nakashima et al., 1990)",
+      0.999
+    ],
+    [
+      "NAKH900110",
+      "Normalized composition of membrane proteins (Nakashima et al., 1990)",
+      0.999
+    ],
+    [
+      "NAKH900111",
+      "Transmembrane regions of non-mt-proteins (Nakashima et al., 1990)",
+      0.999
+    ],
+    [
+      "NAKH900112",
+      "Transmembrane regions of mt-proteins (Nakashima et al., 1990)",
+      0.9983333333333334
+    ],
+    [
+      "NAKH900113",
+      "Ratio of average and computed composition (Nakashima et al., 1990)",
+      0.9963333333333333
+    ],
+    [
+      "NAKH920101",
+      "AA composition of CYT of single-spanning proteins (Nakashima-Nishikawa, 1992)",
+      0.9966666666666667
+    ],
+    [
+      "NAKH920102",
+      "AA composition of CYT2 of single-spanning proteins (Nakashima-Nishikawa, 1992)",
+      0.9966666666666667
+    ],
+    [
+      "NAKH920103",
+      "AA composition of EXT of single-spanning proteins (Nakashima-Nishikawa, 1992)",
+      0.9966666666666667
+    ],
+    [
+      "NAKH920104",
+      "AA composition of EXT2 of single-spanning proteins (Nakashima-Nishikawa, 1992)",
+      0.9966666666666667
+    ],
+    [
+      "NAKH920105",
+      "AA composition of MEM of single-spanning proteins (Nakashima-Nishikawa, 1992)",
+      0.9966666666666667
+    ],
+    [
+      "NAKH920106",
+      "AA composition of CYT of multi-spanning proteins (Nakashima-Nishikawa, 1992)",
+      0.9966666666666667
+    ],
+    [
+      "NAKH920107",
+      "AA composition of EXT of multi-spanning proteins (Nakashima-Nishikawa, 1992)",
+      0.9966666666666667
+    ],
+    [
+      "NAKH920108",
+      "AA composition of MEM of multi-spanning proteins (Nakashima-Nishikawa, 1992)",
+      0.9979999999999999
+    ],
+    [
+      "NISK800101",
+      "8 A contact number (Nishikawa-Ooi, 1980)",
+      0.9979999999999999
+    ],
+    [
+      "NISK860101",
+      "14 A contact number (Nishikawa-Ooi, 1986)",
+      0.9979999999999999
+    ],
+    [
+      "NOZY710101",
+      "Transfer energy, organic solvent/water (Nozaki-Tanford, 1971)",
+      0.9979999999999999
+    ],
+    [
+      "OOBM770101",
+      "Average non-bonded energy per atom (Oobatake-Ooi, 1977)",
+      0.9979999999999999
+    ],
+    [
+      "OOBM770102",
+      "Short and medium range non-bonded energy per atom (Oobatake-Ooi, 1977)",
+      0.9979999999999999
+    ],
+    [
+      "OOBM770103",
+      "Long range non-bonded energy per atom (Oobatake-Ooi, 1977)",
+      0.9979999999999999
+    ],
+    [
+      "OOBM770104",
+      "Average non-bonded energy per residue (Oobatake-Ooi, 1977)",
+      0.9979999999999999
+    ],
+    [
+      "OOBM770105",
+      "Short and medium range non-bonded energy per residue (Oobatake-Ooi, 1977)",
+      0.9983333333333334
+    ],
+    [
+      "OOBM850101",
+      "Optimized beta-structure-coil equilibrium constant (Oobatake et al., 1985)",
+      0.9983333333333334
+    ],
+    [
+      "OOBM850102",
+      "Optimized propensity to form reverse turn (Oobatake et al., 1985)",
+      0.9983333333333334
+    ],
+    [
+      "OOBM850103",
+      "Optimized transfer energy parameter (Oobatake et al., 1985)",
+      0.9983333333333334
+    ],
+    [
+      "OOBM850104",
+      "Optimized average non-bonded energy per atom (Oobatake et al., 1985)",
+      0.9983333333333334
+    ],
+    [
+      "OOBM850105",
+      "Optimized side chain interaction parameter (Oobatake et al., 1985)",
+      0.9983333333333334
+    ],
+    [
+      "PALJ810101",
+      "Normalized frequency of alpha-helix from LG (Palau et al., 1981)",
+      0.9983333333333334
+    ],
+    [
+      "PALJ810102",
+      "Normalized frequency of alpha-helix from CF (Palau et al., 1981)",
+      0.9983333333333334
+    ],
+    [
+      "PALJ810103",
+      "Normalized frequency of beta-sheet from LG (Palau et al., 1981)",
+      0.9976666666666666
+    ],
+    [
+      "PALJ810104",
+      "Normalized frequency of beta-sheet from CF (Palau et al., 1981)",
+      0.9976666666666666
+    ],
+    [
+      "PALJ810105",
+      "Normalized frequency of turn from LG (Palau et al., 1981)",
+      0.9976666666666666
+    ],
+    [
+      "PALJ810106",
+      "Normalized frequency of turn from CF (Palau et al., 1981)",
+      0.9976666666666666
+    ],
+    [
+      "PALJ810107",
+      "Normalized frequency of alpha-helix in all-alpha class (Palau et al., 1981)",
+      0.9976666666666666
+    ],
+    [
+      "PALJ810108",
+      "Normalized frequency of alpha-helix in alpha+beta class (Palau et al., 1981)",
+      0.9976666666666666
+    ],
+    [
+      "PALJ810109",
+      "Normalized frequency of alpha-helix in alpha/beta class (Palau et al., 1981)",
+      0.9976666666666666
+    ],
+    [
+      "PALJ810110",
+      "Normalized frequency of beta-sheet in all-beta class (Palau et al., 1981)",
+      0.9976666666666666
+    ],
+    [
+      "PALJ810111",
+      "Normalized frequency of beta-sheet in alpha+beta class (Palau et al., 1981)",
+      1.0
+    ],
+    [
+      "PALJ810112",
+      "Normalized frequency of beta-sheet in alpha/beta class (Palau et al., 1981)",
+      1.0
+    ],
+    [
+      "PALJ810113",
+      "Normalized frequency of turn in all-alpha class (Palau et al., 1981)",
+      1.0
+    ],
+    [
+      "PALJ810114",
+      "Normalized frequency of turn in all-beta class (Palau et al., 1981)",
+      1.0
+    ],
+    [
+      "PALJ810115",
+      "Normalized frequency of turn in alpha+beta class (Palau et al., 1981)",
+      1.0
+    ],
+    [
+      "PALJ810116",
+      "Normalized frequency of turn in alpha/beta class (Palau et al., 1981)",
+      1.0
+    ],
+    [
+      "PARJ860101",
+      "HPLC parameter (Parker et al., 1986)",
+      1.0
+    ],
+    [
+      "PLIV810101",
+      "Partition coefficient (Pliska et al., 1981)",
+      1.0
+    ],
+    [
+      "PONP800101",
+      "Surrounding hydrophobicity in folded form (Ponnuswamy et al., 1980)",
+      0.9976666666666666
+    ],
+    [
+      "PONP800102",
+      "Average gain in surrounding hydrophobicity (Ponnuswamy et al., 1980)",
+      0.9976666666666666
+    ],
+    [
+      "PONP800103",
+      "Average gain ratio in surrounding hydrophobicity (Ponnuswamy et al., 1980)",
+      0.9976666666666666
+    ],
+    [
+      "PONP800104",
+      "Surrounding hydrophobicity in alpha-helix (Ponnuswamy et al., 1980)",
+      0.9976666666666666
+    ],
+    [
+      "PONP800105",
+      "Surrounding hydrophobicity in beta-sheet (Ponnuswamy et al., 1980)",
+      0.9976666666666666
+    ],
+    [
+      "PONP800106",
+      "Surrounding hydrophobicity in turn (Ponnuswamy et al., 1980)",
+      0.9976666666666666
+    ],
+    [
+      "PONP800107",
+      "Accessibility reduction ratio (Ponnuswamy et al., 1980)",
+      0.9976666666666666
+    ],
+    [
+      "PONP800108",
+      "Average number of surrounding residues (Ponnuswamy et al., 1980)",
+      0.9976666666666666
+    ],
+    [
+      "PRAM820101",
+      "Intercept in regression analysis (Prabhakaran-Ponnuswamy, 1982)",
+      0.996
+    ],
+    [
+      "PRAM820102",
+      "Slope in regression analysis x 1.0E1 (Prabhakaran-Ponnuswamy, 1982)",
+      0.9963333333333333
+    ],
+    [
+      "PRAM820103",
+      "Correlation coefficient in regression analysis (Prabhakaran-Ponnuswamy, 1982)",
+      0.996
+    ],
+    [
+      "PRAM900101",
+      "Hydrophobicity (Prabhakaran, 1990)",
+      0.9943333333333334
+    ],
+    [
+      "PRAM900102",
+      "Relative frequency in alpha-helix (Prabhakaran, 1990)",
+      0.996
+    ],
+    [
+      "PRAM900103",
+      "Relative frequency in beta-sheet (Prabhakaran, 1990)",
+      0.996
+    ],
+    [
+      "PRAM900104",
+      "Relative frequency in reverse-turn (Prabhakaran, 1990)",
+      0.996
+    ],
+    [
+      "PTIO830101",
+      "Helix-coil equilibrium constant (Ptitsyn-Finkelstein, 1983)",
+      0.996
+    ],
+    [
+      "PTIO830102",
+      "Beta-coil equilibrium constant (Ptitsyn-Finkelstein, 1983)",
+      0.9979999999999999
+    ],
+    [
+      "QIAN880101",
+      "Weights for alpha-helix at the window position of -6 (Qian-Sejnowski, 1988)",
+      0.9979999999999999
+    ],
+    [
+      "QIAN880102",
+      "Weights for alpha-helix at the window position of -5 (Qian-Sejnowski, 1988)",
+      0.9979999999999999
+    ],
+    [
+      "QIAN880103",
+      "Weights for alpha-helix at the window position of -4 (Qian-Sejnowski, 1988)",
+      0.9979999999999999
+    ],
+    [
+      "QIAN880104",
+      "Weights for alpha-helix at the window position of -3 (Qian-Sejnowski, 1988)",
+      0.9979999999999999
+    ],
+    [
+      "QIAN880105",
+      "Weights for alpha-helix at the window position of -2 (Qian-Sejnowski, 1988)",
+      0.9979999999999999
+    ],
+    [
+      "QIAN880106",
+      "Weights for alpha-helix at the window position of -1 (Qian-Sejnowski, 1988)",
+      0.9979999999999999
+    ],
+    [
+      "QIAN880107",
+      "Weights for alpha-helix at the window position of 0 (Qian-Sejnowski, 1988)",
+      0.9979999999999999
+    ],
+    [
+      "QIAN880108",
+      "Weights for alpha-helix at the window position of 1 (Qian-Sejnowski, 1988)",
+      0.9983333333333334
+    ],
+    [
+      "QIAN880109",
+      "Weights for alpha-helix at the window position of 2 (Qian-Sejnowski, 1988)",
+      0.9983333333333334
+    ],
+    [
+      "QIAN880110",
+      "Weights for alpha-helix at the window position of 3 (Qian-Sejnowski, 1988)",
+      0.9983333333333334
+    ],
+    [
+      "QIAN880111",
+      "Weights for alpha-helix at the window position of 4 (Qian-Sejnowski, 1988)",
+      0.9983333333333334
+    ],
+    [
+      "QIAN880112",
+      "Weights for alpha-helix at the window position of 5 (Qian-Sejnowski, 1988)",
+      0.9983333333333334
+    ],
+    [
+      "QIAN880113",
+      "Weights for alpha-helix at the window position of 6 (Qian-Sejnowski, 1988)",
+      0.9983333333333334
+    ],
+    [
+      "QIAN880114",
+      "Weights for beta-sheet at the window position of -6 (Qian-Sejnowski, 1988)",
+      0.9983333333333334
+    ],
+    [
+      "QIAN880115",
+      "Weights for beta-sheet at the window position of -5 (Qian-Sejnowski, 1988)",
+      0.9983333333333334
+    ],
+    [
+      "QIAN880116",
+      "Weights for beta-sheet at the window position of -4 (Qian-Sejnowski, 1988)",
+      0.9986666666666667
+    ],
+    [
+      "QIAN880117",
+      "Weights for beta-sheet at the window position of -3 (Qian-Sejnowski, 1988)",
+      0.9986666666666667
+    ],
+    [
+      "QIAN880118",
+      "Weights for beta-sheet at the window position of -2 (Qian-Sejnowski, 1988)",
+      0.9986666666666667
+    ],
+    [
+      "QIAN880119",
+      "Weights for beta-sheet at the window position of -1 (Qian-Sejnowski, 1988)",
+      0.9986666666666667
+    ],
+    [
+      "QIAN880120",
+      "Weights for beta-sheet at the window position of 0 (Qian-Sejnowski, 1988)",
+      0.9986666666666667
+    ],
+    [
+      "QIAN880121",
+      "Weights for beta-sheet at the window position of 1 (Qian-Sejnowski, 1988)",
+      0.9986666666666667
+    ],
+    [
+      "QIAN880122",
+      "Weights for beta-sheet at the window position of 2 (Qian-Sejnowski, 1988)",
+      0.9986666666666667
+    ],
+    [
+      "QIAN880123",
+      "Weights for beta-sheet at the window position of 3 (Qian-Sejnowski, 1988)",
+      0.9986666666666667
+    ],
+    [
+      "QIAN880125",
+      "Weights for beta-sheet at the window position of 5 (Qian-Sejnowski, 1988)",
+      0.9976666666666666
+    ],
+    [
+      "QIAN880124",
+      "Weights for beta-sheet at the window position of 4 (Qian-Sejnowski, 1988)",
+      0.9976666666666666
+    ],
+    [
+      "QIAN880126",
+      "Weights for beta-sheet at the window position of 6 (Qian-Sejnowski, 1988)",
+      0.9976666666666666
+    ],
+    [
+      "QIAN880127",
+      "Weights for coil at the window position of -6 (Qian-Sejnowski, 1988)",
+      0.9973333333333333
+    ],
+    [
+      "QIAN880128",
+      "Weights for coil at the window position of -5 (Qian-Sejnowski, 1988)",
+      0.9976666666666666
+    ],
+    [
+      "QIAN880129",
+      "Weights for coil at the window position of -4 (Qian-Sejnowski, 1988)",
+      0.9976666666666666
+    ],
+    [
+      "QIAN880130",
+      "Weights for coil at the window position of -3 (Qian-Sejnowski, 1988)",
+      0.9976666666666666
+    ],
+    [
+      "QIAN880131",
+      "Weights for coil at the window position of -2 (Qian-Sejnowski, 1988)",
+      0.9976666666666666
+    ],
+    [
+      "QIAN880132",
+      "Weights for coil at the window position of -1 (Qian-Sejnowski, 1988)",
+      0.9983333333333334
+    ],
+    [
+      "QIAN880133",
+      "Weights for coil at the window position of 0 (Qian-Sejnowski, 1988)",
+      0.9983333333333334
+    ],
+    [
+      "QIAN880135",
+      "Weights for coil at the window position of 2 (Qian-Sejnowski, 1988)",
+      0.9983333333333334
+    ],
+    [
+      "QIAN880134",
+      "Weights for coil at the window position of 1 (Qian-Sejnowski, 1988)",
+      0.9983333333333334
+    ],
+    [
+      "QIAN880136",
+      "Weights for coil at the window position of 3 (Qian-Sejnowski, 1988)",
+      0.9983333333333334
+    ],
+    [
+      "QIAN880137",
+      "Weights for coil at the window position of 4 (Qian-Sejnowski, 1988)",
+      0.9983333333333334
+    ],
+    [
+      "QIAN880138",
+      "Weights for coil at the window position of 5 (Qian-Sejnowski, 1988)",
+      0.9983333333333334
+    ],
+    [
+      "QIAN880139",
+      "Weights for coil at the window position of 6 (Qian-Sejnowski, 1988)",
+      0.9983333333333334
+    ],
+    [
+      "RACS770101",
+      "Average reduced distance for C-alpha (Rackovsky-Scheraga, 1977)",
+      0.9993333333333334
+    ],
+    [
+      "RACS770102",
+      "Average reduced distance for side chain (Rackovsky-Scheraga, 1977)",
+      0.9993333333333334
+    ],
+    [
+      "RACS820101",
+      "Average relative fractional occurrence in A0(i) (Rackovsky-Scheraga, 1982)",
+      0.9993333333333334
+    ],
+    [
+      "RACS770103",
+      "Side chain orientational preference (Rackovsky-Scheraga, 1977)",
+      0.9993333333333334
+    ],
+    [
+      "RACS820102",
+      "Average relative fractional occurrence in AR(i) (Rackovsky-Scheraga, 1982)",
+      0.9993333333333334
+    ],
+    [
+      "RACS820103",
+      "Average relative fractional occurrence in AL(i) (Rackovsky-Scheraga, 1982)",
+      0.9993333333333334
+    ],
+    [
+      "RACS820104",
+      "Average relative fractional occurrence in EL(i) (Rackovsky-Scheraga, 1982)",
+      0.9986666666666667
+    ],
+    [
+      "RACS820105",
+      "Average relative fractional occurrence in E0(i) (Rackovsky-Scheraga, 1982)",
+      0.9993333333333334
+    ],
+    [
+      "RACS820106",
+      "Average relative fractional occurrence in ER(i) (Rackovsky-Scheraga, 1982)",
+      0.9986666666666667
+    ],
+    [
+      "RACS820107",
+      "Average relative fractional occurrence in A0(i-1) (Rackovsky-Scheraga, 1982)",
+      0.9986666666666667
+    ],
+    [
+      "RACS820109",
+      "Average relative fractional occurrence in AL(i-1) (Rackovsky-Scheraga, 1982)",
+      0.9986666666666667
+    ],
+    [
+      "RACS820108",
+      "Average relative fractional occurrence in AR(i-1) (Rackovsky-Scheraga, 1982)",
+      0.9986666666666667
+    ],
+    [
+      "RACS820110",
+      "Average relative fractional occurrence in EL(i-1) (Rackovsky-Scheraga, 1982)",
+      0.9986666666666667
+    ],
+    [
+      "RACS820111",
+      "Average relative fractional occurrence in E0(i-1) (Rackovsky-Scheraga, 1982)",
+      0.9986666666666667
+    ],
+    [
+      "RACS820112",
+      "Average relative fractional occurrence in ER(i-1) (Rackovsky-Scheraga, 1982)",
+      0.9986666666666667
+    ],
+    [
+      "RACS820113",
+      "Value of theta(i) (Rackovsky-Scheraga, 1982)",
+      0.9986666666666667
+    ],
+    [
+      "RACS820114",
+      "Value of theta(i-1) (Rackovsky-Scheraga, 1982)",
+      0.9976666666666668
+    ],
+    [
+      "RADA880101",
+      "Transfer free energy from chx to wat (Radzicka-Wolfenden, 1988)",
+      0.9973333333333333
+    ],
+    [
+      "RADA880102",
+      "Transfer free energy from oct to wat (Radzicka-Wolfenden, 1988)",
+      0.9976666666666668
+    ],
+    [
+      "RADA880103",
+      "Transfer free energy from vap to chx (Radzicka-Wolfenden, 1988)",
+      0.9986666666666667
+    ],
+    [
+      "RADA880104",
+      "Transfer free energy from chx to oct (Radzicka-Wolfenden, 1988)",
+      0.9976666666666668
+    ],
+    [
+      "RADA880105",
+      "Transfer free energy from vap to oct (Radzicka-Wolfenden, 1988)",
+      0.9976666666666666
+    ],
+    [
+      "RADA880106",
+      "Accessible surface area (Radzicka-Wolfenden, 1988)",
+      0.9976666666666668
+    ],
+    [
+      "RADA880107",
+      "Energy transfer from out to in(95%buried) (Radzicka-Wolfenden, 1988)",
+      0.9973333333333333
+    ],
+    [
+      "RADA880108",
+      "Mean polarity (Radzicka-Wolfenden, 1988)",
+      0.9986666666666667
+    ],
+    [
+      "RICJ880101",
+      "Relative preference value at N\" (Richardson-Richardson, 1988)",
+      0.9986666666666667
+    ],
+    [
+      "RICJ880102",
+      "Relative preference value at N' (Richardson-Richardson, 1988)",
+      0.9986666666666667
+    ],
+    [
+      "RICJ880103",
+      "Relative preference value at N-cap (Richardson-Richardson, 1988)",
+      0.9986666666666667
+    ],
+    [
+      "RICJ880104",
+      "Relative preference value at N1 (Richardson-Richardson, 1988)",
+      0.9986666666666667
+    ],
+    [
+      "RICJ880105",
+      "Relative preference value at N2 (Richardson-Richardson, 1988)",
+      0.9986666666666667
+    ],
+    [
+      "RICJ880106",
+      "Relative preference value at N3 (Richardson-Richardson, 1988)",
+      0.9986666666666667
+    ],
+    [
+      "RICJ880107",
+      "Relative preference value at N4 (Richardson-Richardson, 1988)",
+      0.9986666666666667
+    ],
+    [
+      "RICJ880108",
+      "Relative preference value at N5 (Richardson-Richardson, 1988)",
+      0.9996666666666667
+    ],
+    [
+      "RICJ880109",
+      "Relative preference value at Mid (Richardson-Richardson, 1988)",
+      0.9996666666666667
+    ],
+    [
+      "RICJ880110",
+      "Relative preference value at C5 (Richardson-Richardson, 1988)",
+      0.9996666666666667
+    ],
+    [
+      "RICJ880111",
+      "Relative preference value at C4 (Richardson-Richardson, 1988)",
+      0.9996666666666667
+    ],
+    [
+      "RICJ880112",
+      "Relative preference value at C3 (Richardson-Richardson, 1988)",
+      0.9996666666666667
+    ],
+    [
+      "RICJ880113",
+      "Relative preference value at C2 (Richardson-Richardson, 1988)",
+      0.9996666666666667
+    ],
+    [
+      "RICJ880115",
+      "Relative preference value at C-cap (Richardson-Richardson, 1988)",
+      0.9996666666666667
+    ],
+    [
+      "RICJ880114",
+      "Relative preference value at C1 (Richardson-Richardson, 1988)",
+      0.9996666666666667
+    ],
+    [
+      "RICJ880116",
+      "Relative preference value at C' (Richardson-Richardson, 1988)",
+      0.9973333333333333
+    ],
+    [
+      "RICJ880117",
+      "Relative preference value at C\" (Richardson-Richardson, 1988)",
+      0.9973333333333333
+    ],
+    [
+      "ROBB760101",
+      "Information measure for alpha-helix (Robson-Suzuki, 1976)",
+      0.9973333333333333
+    ],
+    [
+      "ROBB760102",
+      "Information measure for N-terminal helix (Robson-Suzuki, 1976)",
+      0.9973333333333333
+    ],
+    [
+      "ROBB760103",
+      "Information measure for middle helix (Robson-Suzuki, 1976)",
+      0.9973333333333333
+    ],
+    [
+      "ROBB760104",
+      "Information measure for C-terminal helix (Robson-Suzuki, 1976)",
+      0.9973333333333333
+    ],
+    [
+      "ROBB760105",
+      "Information measure for extended (Robson-Suzuki, 1976)",
+      0.9973333333333333
+    ],
+    [
+      "ROBB760106",
+      "Information measure for pleated-sheet (Robson-Suzuki, 1976)",
+      0.9973333333333333
+    ],
+    [
+      "ROBB760108",
+      "Information measure for turn (Robson-Suzuki, 1976)",
+      0.9983333333333334
+    ],
+    [
+      "ROBB760107",
+      "Information measure for extended without H-bond (Robson-Suzuki, 1976)",
+      0.9983333333333334
+    ],
+    [
+      "ROBB760109",
+      "Information measure for N-terminal turn (Robson-Suzuki, 1976)",
+      0.9983333333333334
+    ],
+    [
+      "ROBB760110",
+      "Information measure for middle turn (Robson-Suzuki, 1976)",
+      0.9983333333333334
+    ],
+    [
+      "ROBB760111",
+      "Information measure for C-terminal turn (Robson-Suzuki, 1976)",
+      0.9983333333333334
+    ],
+    [
+      "ROBB760112",
+      "Information measure for coil (Robson-Suzuki, 1976)",
+      0.9983333333333334
+    ],
+    [
+      "ROBB760113",
+      "Information measure for loop (Robson-Suzuki, 1976)",
+      0.9983333333333334
+    ],
+    [
+      "ROBB790101",
+      "Hydration free energy (Robson-Osguthorpe, 1979)",
+      0.9983333333333334
+    ],
+    [
+      "ROSG850102",
+      "Mean fractional area loss (Rose et al., 1985)",
+      0.9983333333333334
+    ],
+    [
+      "ROSG850101",
+      "Mean area buried on transfer (Rose et al., 1985)",
+      0.9983333333333334
+    ],
+    [
+      "ROSM880101",
+      "Side chain hydropathy, uncorrected for solvation (Roseman, 1988)",
+      0.9976666666666666
+    ],
+    [
+      "ROSM880102",
+      "Side chain hydropathy, corrected for solvation (Roseman, 1988)",
+      0.9980000000000001
+    ],
+    [
+      "ROSM880103",
+      "Loss of Side chain hydropathy by helix formation (Roseman, 1988)",
+      0.9983333333333334
+    ],
+    [
+      "SIMZ760101",
+      "Transfer free energy (Simon, 1976), Cited by Charton-Charton (1982)",
+      0.9983333333333334
+    ],
+    [
+      "SNEP660102",
+      "Principal component II (Sneath, 1966)",
+      0.9980000000000001
+    ],
+    [
+      "SNEP660101",
+      "Principal component I (Sneath, 1966)",
+      0.9983333333333334
+    ],
+    [
+      "SNEP660103",
+      "Principal component III (Sneath, 1966)",
+      0.999
+    ],
+    [
+      "SNEP660104",
+      "Principal component IV (Sneath, 1966)",
+      0.999
+    ],
+    [
+      "SUEM840101",
+      "Zimm-Bragg parameter s at 20 C (Sueki et al., 1984)",
+      0.999
+    ],
+    [
+      "SUEM840102",
+      "Zimm-Bragg parameter sigma x 1.0E4 (Sueki et al., 1984)",
+      0.999
+    ],
+    [
+      "SWER830101",
+      "Optimal matching hydrophobicity (Sweet-Eisenberg, 1983)",
+      0.999
+    ],
+    [
+      "TANS770101",
+      "Normalized frequency of alpha-helix (Tanaka-Scheraga, 1977)",
+      0.999
+    ],
+    [
+      "TANS770102",
+      "Normalized frequency of isolated helix (Tanaka-Scheraga, 1977)",
+      0.999
+    ],
+    [
+      "TANS770103",
+      "Normalized frequency of extended structure (Tanaka-Scheraga, 1977)",
+      0.999
+    ],
+    [
+      "TANS770104",
+      "Normalized frequency of chain reversal R (Tanaka-Scheraga, 1977)",
+      0.9986666666666667
+    ],
+    [
+      "TANS770105",
+      "Normalized frequency of chain reversal S (Tanaka-Scheraga, 1977)",
+      0.9986666666666667
+    ],
+    [
+      "TANS770106",
+      "Normalized frequency of chain reversal D (Tanaka-Scheraga, 1977)",
+      0.9979999999999999
+    ],
+    [
+      "TANS770107",
+      "Normalized frequency of left-handed helix (Tanaka-Scheraga, 1977)",
+      0.9986666666666667
+    ],
+    [
+      "TANS770108",
+      "Normalized frequency of zeta R (Tanaka-Scheraga, 1977)",
+      0.9986666666666667
+    ],
+    [
+      "TANS770109",
+      "Normalized frequency of coil (Tanaka-Scheraga, 1977)",
+      0.9979999999999999
+    ],
+    [
+      "TANS770110",
+      "Normalized frequency of chain reversal (Tanaka-Scheraga, 1977)",
+      0.9986666666666667
+    ],
+    [
+      "VASM830101",
+      "Relative population of conformational state A (Vasquez et al., 1983)",
+      0.9986666666666667
+    ],
+    [
+      "VASM830102",
+      "Relative population of conformational state C (Vasquez et al., 1983)",
+      0.9986666666666667
+    ],
+    [
+      "VASM830103",
+      "Relative population of conformational state E (Vasquez et al., 1983)",
+      0.9986666666666667
+    ],
+    [
+      "VELV850101",
+      "Electron-ion interaction potential (Veljkovic et al., 1985)",
+      0.9979999999999999
+    ],
+    [
+      "VENT840101",
+      "Bitterness (Venanzi, 1984)",
+      0.9986666666666667
+    ],
+    [
+      "VHEG790101",
+      "Transfer free energy to lipophilic phase (von Heijne-Blomberg, 1979)",
+      0.9986666666666667
+    ],
+    [
+      "WARP780101",
+      "Average interactions per side chain atom (Warme-Morgan, 1978)",
+      0.9986666666666667
+    ],
+    [
+      "WEBA780101",
+      "RF value in high salt chromatography (Weber-Lacey, 1978)",
+      0.9986666666666667
+    ],
+    [
+      "WERD780101",
+      "Propensity to be buried inside (Wertz-Scheraga, 1978)",
+      0.9986666666666667
+    ],
+    [
+      "WERD780102",
+      "Free energy change of epsilon(i) to epsilon(ex) (Wertz-Scheraga, 1978)",
+      0.9976666666666666
+    ],
+    [
+      "WERD780103",
+      "Free energy change of alpha(Ri) to alpha(Rh) (Wertz-Scheraga, 1978)",
+      0.9976666666666666
+    ],
+    [
+      "WERD780104",
+      "Free energy change of epsilon(i) to alpha(Rh) (Wertz-Scheraga, 1978)",
+      0.9976666666666666
+    ],
+    [
+      "WOEC730101",
+      "Polar requirement (Woese, 1973)",
+      0.9976666666666666
+    ],
+    [
+      "WOLR810101",
+      "Hydration potential (Wolfenden et al., 1981)",
+      0.9973333333333333
+    ],
+    [
+      "WOLS870101",
+      "Principal property value z1 (Wold et al., 1987)",
+      0.9976666666666666
+    ],
+    [
+      "WOLS870102",
+      "Principal property value z2 (Wold et al., 1987)",
+      0.9973333333333333
+    ],
+    [
+      "YUTK870101",
+      "Unfolding Gibbs energy in water, pH7.0 (Yutani et al., 1987)",
+      0.9973333333333333
+    ],
+    [
+      "WOLS870103",
+      "Principal property value z3 (Wold et al., 1987)",
+      0.9976666666666666
+    ],
+    [
+      "YUTK870102",
+      "Unfolding Gibbs energy in water, pH9.0 (Yutani et al., 1987)",
+      0.9976666666666666
+    ],
+    [
+      "YUTK870103",
+      "Activation Gibbs energy of unfolding, pH7.0 (Yutani et al., 1987)",
+      0.9973333333333333
+    ],
+    [
+      "YUTK870104",
+      "Activation Gibbs energy of unfolding, pH9.0 (Yutani et al., 1987)",
+      0.997
+    ],
+    [
+      "ZASB820101",
+      "Dependence of partition coefficient on ionic strength (Zaslavsky et al., 1982)",
+      0.9973333333333333
+    ],
+    [
+      "ZIMJ680101",
+      "Hydrophobicity (Zimmerman et al., 1968)",
+      0.9976666666666666
+    ],
+    [
+      "ZIMJ680102",
+      "Bulkiness (Zimmerman et al., 1968)",
+      0.9976666666666666
+    ],
+    [
+      "ZIMJ680104",
+      "Isoelectric point (Zimmerman et al., 1968)",
+      0.9973333333333333
+    ],
+    [
+      "ZIMJ680103",
+      "Polarity (Zimmerman et al., 1968)",
+      0.9976666666666666
+    ],
+    [
+      "AURR980101",
+      "Normalized positional residue frequency at helix termini N4'(Aurora-Rose, 1998)",
+      0.997
+    ],
+    [
+      "ZIMJ680105",
+      "RF rank (Zimmerman et al., 1968)",
+      0.997
+    ],
+    [
+      "AURR980102",
+      "Normalized positional residue frequency at helix termini N\"' (Aurora-Rose, 1998)",
+      0.997
+    ],
+    [
+      "AURR980103",
+      "Normalized positional residue frequency at helix termini N\" (Aurora-Rose, 1998)",
+      0.997
+    ],
+    [
+      "AURR980104",
+      "Normalized positional residue frequency at helix termini N'(Aurora-Rose, 1998)",
+      0.997
+    ],
+    [
+      "AURR980105",
+      "Normalized positional residue frequency at helix termini Nc (Aurora-Rose, 1998)",
+      0.997
+    ],
+    [
+      "AURR980106",
+      "Normalized positional residue frequency at helix termini N1 (Aurora-Rose, 1998)",
+      0.997
+    ],
+    [
+      "AURR980108",
+      "Normalized positional residue frequency at helix termini N3 (Aurora-Rose, 1998)",
+      0.9979999999999999
+    ],
+    [
+      "AURR980109",
+      "Normalized positional residue frequency at helix termini N4 (Aurora-Rose, 1998)",
+      0.9979999999999999
+    ],
+    [
+      "AURR980107",
+      "Normalized positional residue frequency at helix termini N2 (Aurora-Rose, 1998)",
+      0.9979999999999999
+    ],
+    [
+      "AURR980110",
+      "Normalized positional residue frequency at helix termini N5 (Aurora-Rose, 1998)",
+      0.9979999999999999
+    ],
+    [
+      "AURR980111",
+      "Normalized positional residue frequency at helix termini C5 (Aurora-Rose, 1998)",
+      0.9979999999999999
+    ],
+    [
+      "AURR980113",
+      "Normalized positional residue frequency at helix termini C3 (Aurora-Rose, 1998)",
+      0.9979999999999999
+    ],
+    [
+      "AURR980112",
+      "Normalized positional residue frequency at helix termini C4 (Aurora-Rose, 1998)",
+      0.9979999999999999
+    ],
+    [
+      "AURR980115",
+      "Normalized positional residue frequency at helix termini C1 (Aurora-Rose, 1998)",
+      0.9993333333333334
+    ],
+    [
+      "AURR980116",
+      "Normalized positional residue frequency at helix termini Cc (Aurora-Rose, 1998)",
+      0.9993333333333334
+    ],
+    [
+      "AURR980114",
+      "Normalized positional residue frequency at helix termini C2 (Aurora-Rose, 1998)",
+      0.9979999999999999
+    ],
+    [
+      "AURR980117",
+      "Normalized positional residue frequency at helix termini C' (Aurora-Rose, 1998)",
+      0.999
+    ],
+    [
+      "AURR980118",
+      "Normalized positional residue frequency at helix termini C\" (Aurora-Rose, 1998)",
+      0.9993333333333334
+    ],
+    [
+      "AURR980119",
+      "Normalized positional residue frequency at helix termini C\"' (Aurora-Rose, 1998)",
+      0.9993333333333334
+    ],
+    [
+      "AURR980120",
+      "Normalized positional residue frequency at helix termini C4' (Aurora-Rose, 1998)",
+      0.9993333333333334
+    ],
+    [
+      "ONEK900101",
+      "Delta G values for the peptides extrapolated to 0 M urea (O'Neil-DeGrado, 1990)",
+      0.9993333333333334
+    ],
+    [
+      "VINM940101",
+      "Normalized flexibility parameters (B-values), average (Vihinen et al., 1994)",
+      0.9979999999999999
+    ],
+    [
+      "ONEK900102",
+      "Helix formation parameters (delta delta G) (O'Neil-DeGrado, 1990)",
+      0.9979999999999999
+    ],
+    [
+      "VINM940103",
+      "Normalized flexibility parameters (B-values) for each residue surrounded by one rigid neighbours (Vihinen et al., 1994)",
+      0.9979999999999999
+    ],
+    [
+      "VINM940102",
+      "Normalized flexibility parameters (B-values) for each residue surrounded by none rigid neighbours (Vihinen et al., 1994)",
+      0.9993333333333334
+    ],
+    [
+      "VINM940104",
+      "Normalized flexibility parameters (B-values) for each residue surrounded by two rigid neighbours (Vihinen et al., 1994)",
+      0.9979999999999999
+    ],
+    [
+      "MUNV940101",
+      "Free energy in alpha-helical conformation (Munoz-Serrano, 1994)",
+      0.9979999999999999
+    ],
+    [
+      "MUNV940102",
+      "Free energy in alpha-helical region (Munoz-Serrano, 1994)",
+      0.9979999999999999
+    ],
+    [
+      "MUNV940103",
+      "Free energy in beta-strand conformation (Munoz-Serrano, 1994)",
+      0.9979999999999999
+    ],
+    [
+      "MUNV940104",
+      "Free energy in beta-strand region (Munoz-Serrano, 1994)",
+      0.9973333333333333
+    ],
+    [
+      "MUNV940105",
+      "Free energy in beta-strand region (Munoz-Serrano, 1994)",
+      0.9976666666666668
+    ],
+    [
+      "WIMW960101",
+      "Free energies of transfer of AcWl-X-LL peptides from bilayer interface to water (Wimley-White, 1996)",
+      0.9976666666666668
+    ],
+    [
+      "KIMC930101",
+      "Thermodynamic beta sheet propensity (Kim-Berg, 1993)",
+      0.9979999999999999
+    ],
+    [
+      "MONM990101",
+      "Turn propensity scale for transmembrane helices (Monne et al., 1999)",
+      0.9976666666666668
+    ],
+    [
+      "BLAM930101",
+      "Alpha helix propensity of position 44 in T4 lysozyme (Blaber et al., 1993)",
+      0.9976666666666668
+    ],
+    [
+      "PARS000101",
+      "p-Values of mesophilic proteins based on the distributions of B values (Parthasarathy-Murthy, 2000)",
+      0.9976666666666668
+    ],
+    [
+      "PARS000102",
+      "p-Values of thermophilic proteins based on the distributions of B values (Parthasarathy-Murthy, 2000)",
+      0.9976666666666668
+    ],
+    [
+      "KUMS000101",
+      "Distribution of amino acid residues in the 18 non-redundant families of thermophilic proteins (Kumar et al., 2000)",
+      1.0
+    ],
+    [
+      "KUMS000102",
+      "Distribution of amino acid residues in the 18 non-redundant families of mesophilic proteins (Kumar et al., 2000)",
+      1.0
+    ],
+    [
+      "KUMS000103",
+      "Distribution of amino acid residues in the alpha-helices in thermophilic proteins (Kumar et al., 2000)",
+      0.9996666666666667
+    ],
+    [
+      "KUMS000104",
+      "Distribution of amino acid residues in the alpha-helices in mesophilic proteins (Kumar et al., 2000)",
+      0.997
+    ],
+    [
+      "TAKK010101",
+      "Side-chain contribution to protein stability (kJ/mol) (Takano-Yutani, 2001)",
+      0.9996666666666667
+    ],
+    [
+      "FODM020101",
+      "Propensity of amino acids within pi-helices (Fodje-Al-Karadaghi, 2002)",
+      0.9996666666666667
+    ],
+    [
+      "NADH010101",
+      "Hydropathy scale based on self-information values in the two-state model (5% accessibility) (Naderi-Manesh et al., 2001)",
+      0.9993333333333334
+    ],
+    [
+      "NADH010102",
+      "Hydropathy scale based on self-information values in the two-state model (9% accessibility) (Naderi-Manesh et al., 2001)",
+      0.9996666666666667
+    ],
+    [
+      "NADH010104",
+      "Hydropathy scale based on self-information values in the two-state model (20% accessibility) (Naderi-Manesh et al., 2001)",
+      0.9976666666666666
+    ],
+    [
+      "NADH010103",
+      "Hydropathy scale based on self-information values in the two-state model (16% accessibility) (Naderi-Manesh et al., 2001)",
+      0.9976666666666666
+    ],
+    [
+      "NADH010106",
+      "Hydropathy scale based on self-information values in the two-state model (36% accessibility) (Naderi-Manesh et al., 2001)",
+      0.9996666666666667
+    ],
+    [
+      "NADH010105",
+      "Hydropathy scale based on self-information values in the two-state model (25% accessibility) (Naderi-Manesh et al., 2001)",
+      0.9976666666666666
+    ],
+    [
+      "NADH010107",
+      "Hydropathy scale based on self-information values in the two-state model (50% accessibility) (Naderi-Manesh et al., 2001)",
+      0.9976666666666666
+    ],
+    [
+      "MONM990201",
+      "Averaged turn propensities in a transmembrane helix (Monne et al., 1999)",
+      0.9976666666666666
+    ],
+    [
+      "KOEP990101",
+      "Alpha-helix propensity derived from designed sequences (Koehl-Levitt, 1999)",
+      0.9976666666666666
+    ],
+    [
+      "KOEP990102",
+      "Beta-sheet propensity derived from designed sequences (Koehl-Levitt, 1999)",
+      0.9976666666666666
+    ],
+    [
+      "CEDJ970101",
+      "Composition of amino acids in extracellular proteins (percent) (Cedano et al., 1997)",
+      0.9963333333333333
+    ],
+    [
+      "CEDJ970103",
+      "Composition of amino acids in membrane proteins (percent) (Cedano et al., 1997)",
+      0.9976666666666666
+    ],
+    [
+      "CEDJ970102",
+      "Composition of amino acids in anchored proteins (percent) (Cedano et al., 1997)",
+      0.9963333333333333
+    ],
+    [
+      "CEDJ970104",
+      "Composition of amino acids in intracellular proteins (percent) (Cedano et al., 1997)",
+      0.9963333333333333
+    ],
+    [
+      "CEDJ970105",
+      "Composition of amino acids in nuclear proteins (percent) (Cedano et al., 1997)",
+      0.9963333333333333
+    ],
+    [
+      "FUKS010101",
+      "Surface composition of amino acids in intracellular proteins of thermophiles (percent) (Fukuchi-Nishikawa, 2001)",
+      0.9963333333333333
+    ],
+    [
+      "FUKS010102",
+      "Surface composition of amino acids in intracellular proteins of mesophiles (percent) (Fukuchi-Nishikawa, 2001)",
+      0.9963333333333333
+    ],
+    [
+      "FUKS010103",
+      "Surface composition of amino acids in extracellular proteins of mesophiles (percent) (Fukuchi-Nishikawa, 2001)",
+      0.9963333333333333
+    ],
+    [
+      "FUKS010105",
+      "Interior composition of amino acids in intracellular proteins of thermophiles (percent) (Fukuchi-Nishikawa, 2001)",
+      0.9963333333333333
+    ],
+    [
+      "FUKS010104",
+      "Surface composition of amino acids in nuclear proteins (percent) (Fukuchi-Nishikawa, 2001)",
+      0.9983333333333334
+    ],
+    [
+      "FUKS010106",
+      "Interior composition of amino acids in intracellular proteins of mesophiles (percent) (Fukuchi-Nishikawa, 2001)",
+      0.9983333333333334
+    ],
+    [
+      "FUKS010107",
+      "Interior composition of amino acids in extracellular proteins of mesophiles (percent) (Fukuchi-Nishikawa, 2001)",
+      0.9986666666666667
+    ],
+    [
+      "FUKS010108",
+      "Interior composition of amino acids in nuclear proteins (percent) (Fukuchi-Nishikawa, 2001)",
+      0.9983333333333334
+    ],
+    [
+      "FUKS010109",
+      "Entire chain composition of amino acids in intracellular proteins of thermophiles (percent) (Fukuchi-Nishikawa, 2001)",
+      0.9983333333333334
+    ],
+    [
+      "FUKS010110",
+      "Entire chain composition of amino acids in intracellular proteins of mesophiles (percent) (Fukuchi-Nishikawa, 2001)",
+      0.9983333333333334
+    ],
+    [
+      "FUKS010111",
+      "Entire chain composition of amino acids in extracellular proteins of mesophiles (percent) (Fukuchi-Nishikawa, 2001)",
+      0.9983333333333334
+    ],
+    [
+      "MITS020101",
+      "Amphiphilicity index (Mitaku et al., 2002)",
+      0.9966666666666666
+    ],
+    [
+      "FUKS010112",
+      "Entire chain compositino of amino acids in nuclear proteins (percent) (Fukuchi-Nishikawa, 2001)",
+      0.9983333333333334
+    ],
+    [
+      "TSAJ990101",
+      "Volumes including the crystallographic waters using the ProtOr (Tsai et al., 1999)",
+      0.9966666666666666
+    ],
+    [
+      "COSI940101",
+      "Electron-ion interaction potential values (Cosic, 1994)",
+      0.9966666666666666
+    ],
+    [
+      "TSAJ990102",
+      "Volumes not including the crystallographic waters using the ProtOr (Tsai et al., 1999)",
+      0.9966666666666666
+    ],
+    [
+      "PONP930101",
+      "Hydrophobicity scales (Ponnuswamy, 1993)",
+      0.9966666666666666
+    ],
+    [
+      "WILM950101",
+      "Hydrophobicity coefficient in RP-HPLC, C18 with 0.1%TFA/MeCN/H2O (Wilce et al. 1995)",
+      0.9966666666666666
+    ],
+    [
+      "WILM950102",
+      "Hydrophobicity coefficient in RP-HPLC, C8 with 0.1%TFA/MeCN/H2O (Wilce et al. 1995)",
+      0.9966666666666666
+    ],
+    [
+      "WILM950103",
+      "Hydrophobicity coefficient in RP-HPLC, C4 with 0.1%TFA/MeCN/H2O (Wilce et al. 1995)",
+      0.9979999999999999
+    ],
+    [
+      "WILM950104",
+      "Hydrophobicity coefficient in RP-HPLC, C18 with 0.1%TFA/2-PrOH/MeCN/H2O (Wilce et al. 1995)",
+      0.9966666666666666
+    ],
+    [
+      "KUHL950101",
+      "Hydrophilicity scale (Kuhn et al., 1995)",
+      0.9976666666666666
+    ],
+    [
+      "GUOD860101",
+      "Retention coefficient at pH 2 (Guo et al., 1986)",
+      0.9979999999999999
+    ],
+    [
+      "JURD980101",
+      "Modified Kyte-Doolittle hydrophobicity scale (Juretic et al., 1998)",
+      0.9979999999999999
+    ],
+    [
+      "BASU050101",
+      "Interactivity scale obtained from the contact matrix (Bastolla et al., 2005)",
+      0.9979999999999999
+    ],
+    [
+      "BASU050102",
+      "Interactivity scale obtained by maximizing the mean of correlation coefficient over single-domain globular proteins (Bastolla et al., 2005)",
+      0.9979999999999999
+    ],
+    [
+      "BASU050103",
+      "Interactivity scale obtained by maximizing the mean of correlation coefficient over pairs of sequences sharing the TIM barrel fold (Bastolla et al., 2005)",
+      0.9979999999999999
+    ],
+    [
+      "SUYM030101",
+      "Linker propensity index (Suyama-Ohara, 2003)",
+      0.9963333333333333
+    ],
+    [
+      "PUNT030101",
+      "Knowledge-based membrane-propensity scale from 1D_Helix in MPtopo databases (Punta-Maritan, 2003)",
+      0.9979999999999999
+    ],
+    [
+      "PUNT030102",
+      "Knowledge-based membrane-propensity scale from 3D_Helix in MPtopo databases (Punta-Maritan, 2003)",
+      0.9963333333333333
+    ],
+    [
+      "GEOR030101",
+      "Linker propensity from all dataset (George-Heringa, 2003)",
+      0.9963333333333333
+    ],
+    [
+      "GEOR030102",
+      "Linker propensity from 1-linker dataset (George-Heringa, 2003)",
+      0.9963333333333333
+    ],
+    [
+      "GEOR030103",
+      "Linker propensity from 2-linker dataset (George-Heringa, 2003)",
+      0.9963333333333333
+    ],
+    [
+      "GEOR030104",
+      "Linker propensity from 3-linker dataset (George-Heringa, 2003)",
+      0.9963333333333333
+    ],
+    [
+      "GEOR030105",
+      "Linker propensity from small dataset (linker length is less than six residues) (George-Heringa, 2003)",
+      0.9963333333333333
+    ],
+    [
+      "GEOR030106",
+      "Linker propensity from medium dataset (linker length is between six and 14 residues) (George-Heringa, 2003)",
+      0.999
+    ],
+    [
+      "GEOR030107",
+      "Linker propensity from long dataset (linker length is greater than 14 residues) (George-Heringa, 2003)",
+      0.9963333333333333
+    ],
+    [
+      "GEOR030108",
+      "Linker propensity from helical (annotated by DSSP) dataset (George-Heringa, 2003)",
+      0.9993333333333334
+    ],
+    [
+      "GEOR030109",
+      "Linker propensity from non-helical (annotated by DSSP) dataset (George-Heringa, 2003)",
+      0.9993333333333334
+    ],
+    [
+      "ZHOH040101",
+      "The stability scale from the knowledge-based atom-atom potential (Zhou-Zhou, 2004)",
+      0.9993333333333334
+    ],
+    [
+      "ZHOH040102",
+      "The relative stability scale extracted from mutation experiments (Zhou-Zhou, 2004)",
+      0.9993333333333334
+    ],
+    [
+      "ZHOH040103",
+      "Buriability (Zhou-Zhou, 2004)",
+      0.9993333333333334
+    ],
+    [
+      "BAEK050101",
+      "Linker index (Bae et al., 2005)",
+      0.9993333333333334
+    ],
+    [
+      "HARY940101",
+      "Mean volumes of residues buried in protein interiors (Harpaz et al., 1994)",
+      0.999
+    ],
+    [
+      "PONJ960101",
+      "Average volumes of residues (Pontius et al., 1996)",
+      0.9993333333333334
+    ],
+    [
+      "DIGM050101",
+      "Hydrostatic pressure asymmetry index, PAI (Di Giulio, 2005)",
+      0.9983333333333334
+    ],
+    [
+      "WOLR790101",
+      "Hydrophobicity index (Wolfenden et al., 1979)",
+      0.9976666666666666
+    ],
+    [
+      "OLSK800101",
+      "Average internal preferences (Olsen, 1980)",
+      0.9983333333333334
+    ],
+    [
+      "KIDA850101",
+      "Hydrophobicity-related index (Kidera et al., 1985)",
+      0.9983333333333334
+    ],
+    [
+      "GUYH850102",
+      "Apparent partition energies calculated from Wertz-Scheraga index (Guy, 1985)",
+      0.9983333333333334
+    ],
+    [
+      "GUYH850104",
+      "Apparent partition energies calculated from Janin index (Guy, 1985)",
+      0.999
+    ],
+    [
+      "GUYH850105",
+      "Apparent partition energies calculated from Chothia index (Guy, 1985)",
+      0.9986666666666667
+    ],
+    [
+      "JACR890101",
+      "Weights from the IFH scale (Jacobs-White, 1989)",
+      0.999
+    ],
+    [
+      "COWR900101",
+      "Hydrophobicity index, 3.0 pH (Cowan-Whittaker, 1990)",
+      0.9979999999999999
+    ],
+    [
+      "CASG920101",
+      "Hydrophobicity scale from native protein structures (Casari-Sippl, 1992)",
+      0.9986666666666667
+    ],
+    [
+      "BLAS910101",
+      "Scaled side chain hydrophobicity values (Black-Mould, 1991)",
+      0.9986666666666667
+    ],
+    [
+      "CORJ870101",
+      "NNEIG index (Cornette et al., 1987)",
+      0.9986666666666667
+    ],
+    [
+      "CORJ870102",
+      "SWEIG index (Cornette et al., 1987)",
+      0.9986666666666667
+    ],
+    [
+      "CORJ870103",
+      "PRIFT index (Cornette et al., 1987)",
+      0.9986666666666667
+    ],
+    [
+      "CORJ870105",
+      "ALTFT index (Cornette et al., 1987)",
+      0.9986666666666667
+    ],
+    [
+      "CORJ870104",
+      "PRILS index (Cornette et al., 1987)",
+      0.9986666666666667
+    ],
+    [
+      "CORJ870106",
+      "ALTLS index (Cornette et al., 1987)",
+      0.9986666666666667
+    ],
+    [
+      "CORJ870108",
+      "TOTLS index (Cornette et al., 1987)",
+      0.9986666666666667
+    ],
+    [
+      "CORJ870107",
+      "TOTFT index (Cornette et al., 1987)",
+      0.9986666666666667
+    ],
+    [
+      "MIYS990101",
+      "Relative partition energies derived by the Bethe approximation (Miyazawa-Jernigan, 1999)",
+      0.9986666666666667
+    ],
+    [
+      "MIYS990102",
+      "Optimized relative partition energies - method A (Miyazawa-Jernigan, 1999)",
+      0.9986666666666667
+    ],
+    [
+      "MIYS990103",
+      "Optimized relative partition energies - method B (Miyazawa-Jernigan, 1999)",
+      0.9986666666666667
+    ],
+    [
+      "MIYS990105",
+      "Optimized relative partition energies - method D (Miyazawa-Jernigan, 1999)",
+      0.9986666666666667
+    ],
+    [
+      "MIYS990104",
+      "Optimized relative partition energies - method C (Miyazawa-Jernigan, 1999)",
+      0.9986666666666667
+    ],
+    [
+      "ENGD860101",
+      "Hydrophobicity index (Engelman et al., 1986)",
+      0.9986666666666667
+    ],
+    [
+      "KARS160101",
+      "Number of vertices (order of the graph) (Karkbara-Knisley, 2016)",
+      0.9986666666666667
+    ],
+    [
+      "FASG890101",
+      "Hydrophobicity index (Fasman, 1989)",
+      0.9986666666666667
+    ],
+    [
+      "KARS160103",
+      "Total weighted degree of the graph (obtained by adding all the weights of all the vertices) (Karkbara-Knisley, 2016)",
+      0.9986666666666667
+    ],
+    [
+      "KARS160102",
+      "Number of edges (size of the graph) (Karkbara-Knisley, 2016)",
+      0.9986666666666667
+    ],
+    [
+      "KARS160104",
+      "Weighted domination number (Karkbara-Knisley, 2016)",
+      0.9986666666666667
+    ],
+    [
+      "KARS160106",
+      "Radius (minimum eccentricity) (Karkbara-Knisley, 2016)",
+      0.9986666666666667
+    ],
+    [
+      "KARS160105",
+      "Average eccentricity (Karkbara-Knisley, 2016)",
+      0.9983333333333334
+    ],
+    [
+      "KARS160107",
+      "Diameter (maximum eccentricity) (Karkbara-Knisley, 2016)",
+      0.9983333333333334
+    ],
+    [
+      "KARS160108",
+      "Average weighted degree (total degree, divided by the number of vertices) (Karkbara-Knisley, 2016)",
+      0.9983333333333334
+    ],
+    [
+      "KARS160109",
+      "Maximum eigenvalue of the weighted Laplacian matrix of the graph (Karkbara-Knisley, 2016)",
+      0.9983333333333334
+    ],
+    [
+      "KARS160110",
+      "Minimum eigenvalue of the weighted Laplacian matrix of the graph (Karkbara-Knisley, 2016)",
+      0.9976666666666666
+    ],
+    [
+      "KARS160111",
+      "Average eigenvalue of the Laplacian matrix of the the graph (Karkbara-Knisley, 2016)",
+      0.9976666666666666
+    ],
+    [
+      "KARS160112",
+      "Second smallest eigenvalue of the Laplacian matrix of the graph (Karkbara-Knisley, 2016)",
+      0.9976666666666666
+    ],
+    [
+      "KARS160113",
+      "Weighted domination number using the atomic number (Karkbara-Knisley, 2016)",
+      0.9976666666666666
+    ],
+    [
+      "KARS160114",
+      "Average weighted eccentricity based on the the atomic number (Karkbara-Knisley, 2016)",
+      0.9993333333333334
+    ],
+    [
+      "KARS160115",
+      "Weighted radius based on the atomic number (minimum eccentricity) (Karkbara-Knisley, 2016)",
+      0.9986666666666667
+    ],
+    [
+      "KARS160116",
+      "Weighted diameter based on the atomic number (maximum eccentricity) (Karkbara-Knisley, 2016)",
+      0.9986666666666667
+    ],
+    [
+      "KARS160117",
+      "Total weighted atomic number of the graph (obtained by summing all the atomic number of each of the vertices in the graph) (Karkbara-Knisley, 2016)",
+      0.9993333333333334
+    ],
+    [
+      "KARS160118",
+      "Average weighted atomic number or degree based on atomic number in the graph (Karkbara-Knisley, 2016)",
+      0.9983333333333334
+    ],
+    [
+      "KARS160119",
+      "Weighted maximum eigenvalue based on the atomic numbers (Karkbara-Knisley, 2016)",
+      0.9993333333333334
+    ],
+    [
+      "KARS160120",
+      "Weighted minimum eigenvalue based on the atomic numbers (Karkbara-Knisley, 2016)",
+      0.9983333333333334
+    ],
+    [
+      "KARS160121",
+      "Weighted average eigenvalue based on the atomic numbers (Karkbara-Knisley, 2016)",
+      0.9993333333333334
+    ],
+    [
+      "KARS160122",
+      "Weighted second smallest eigenvalue of the weighted Laplacian matrix (Karkbara-Knisley, 2016)",
+      0.997
+    ]
+  ]
+}

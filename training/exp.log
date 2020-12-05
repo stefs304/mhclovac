@@ -1,0 +1,110 @@
+INFO:root:Starting exploration
+INFO:root:HLA-A*02:01
+INFO:root:Data shape: (64780, 8)
+INFO:root:exploring binding prediction
+2020-11-08 01:48:31,437: Starting exploration
+2020-11-08 01:48:33,163: HLA-A*02:01
+2020-11-08 01:48:33,234: Data shape: (64780, 8)
+2020-11-08 01:48:33,246: exploring binding prediction
+2020-11-09 15:47:51,507: Starting exploration
+2020-11-09 15:47:53,349: Patr-B*13:01
+2020-11-09 15:47:53,410: Data shape: (344, 8)
+2020-11-09 15:47:53,413: exploring binding prediction
+2020-11-09 15:47:53,484: exploring epitope prediction
+2020-11-09 15:47:53,558: file "Patr-B*13:01.json" saved
+2020-11-09 15:48:55,799: Starting exploration
+2020-11-09 15:48:57,437: Patr-B*13:01
+2020-11-09 15:48:57,496: Data shape: (344, 8)
+2020-11-09 15:48:57,499: exploring binding prediction
+2020-11-09 15:48:57,573: exploring epitope prediction
+2020-11-09 15:48:57,644: file "Patr-B*13:01.json" saved
+2020-11-09 15:49:06,943: Starting exploration
+2020-11-09 15:49:08,603: Patr-B*13:01
+2020-11-09 15:49:08,660: Data shape: (344, 8)
+2020-11-09 15:49:08,664: exploring binding prediction
+2020-11-09 15:49:08,733: exploring epitope prediction
+2020-11-09 15:49:08,803: file "Patr-B*13:01.json" saved
+2020-11-09 15:50:34,363: Starting exploration
+2020-11-09 15:50:36,026: Patr-B*13:01
+2020-11-09 15:50:36,084: Data shape: (344, 8)
+2020-11-09 15:50:36,087: exploring binding prediction
+2020-11-09 15:50:47,390: Starting exploration
+2020-11-09 15:50:49,027: Patr-B*13:01
+2020-11-09 15:50:49,084: Data shape: (344, 8)
+2020-11-09 15:50:49,088: exploring binding prediction
+2020-11-09 15:50:49,161: exploring epitope prediction
+2020-11-09 15:50:49,236: file "Patr-B*13:01.json" saved
+2020-11-09 15:51:01,231: Starting exploration
+2020-11-09 15:51:02,872: Patr-B*13:01
+2020-11-09 15:51:02,930: Data shape: (344, 8)
+2020-11-09 15:51:02,933: exploring binding prediction
+2020-11-09 15:51:55,480: Starting exploration
+2020-11-09 15:51:57,110: Patr-B*13:01
+2020-11-09 15:51:57,167: Data shape: (344, 8)
+2020-11-09 15:51:57,171: exploring binding prediction
+2020-11-09 15:51:57,445: exploring epitope prediction
+2020-11-09 15:51:57,518: file "Patr-B*13:01.json" saved
+2020-11-09 15:53:13,309: Starting exploration
+2020-11-09 15:53:14,963: Patr-B*13:01
+2020-11-09 15:53:15,021: Data shape: (344, 8)
+2020-11-09 15:53:15,025: exploring binding prediction
+2020-11-09 15:53:33,171: Starting exploration
+2020-11-09 15:53:35,253: Patr-B*13:01
+2020-11-09 15:53:35,375: Data shape: (344, 8)
+2020-11-09 15:53:35,381: exploring binding prediction
+2020-11-09 15:53:35,776: exploring epitope prediction
+2020-11-09 15:53:35,844: file "Patr-B*13:01.json" saved
+2020-11-09 16:00:33,585: Starting exploration
+2020-11-09 16:00:35,258: Patr-B*13:01
+2020-11-09 16:00:35,315: Data shape: (344, 8)
+2020-11-09 16:00:35,318: exploring binding prediction
+2020-11-09 16:00:35,580: exploring epitope prediction
+2020-11-09 16:00:35,649: file "Patr-B*13:01.json" saved
+2020-11-09 16:01:37,024: Starting exploration
+2020-11-09 16:01:38,684: Patr-B*13:01
+2020-11-09 16:01:38,742: Data shape: (344, 8)
+2020-11-09 16:01:38,746: exploring binding prediction
+2020-11-09 16:01:39,027: exploring epitope prediction
+2020-11-09 16:01:39,101: file "Patr-B*13:01.json" saved
+2020-11-09 16:05:57,179: Starting exploration
+2020-11-09 16:05:58,866: Patr-B*13:01
+2020-11-09 16:05:58,929: Data shape: (344, 8)
+2020-11-09 16:05:58,933: exploring binding prediction
+2020-11-09 16:05:59,277: exploring epitope prediction
+2020-11-09 16:05:59,347: file "Patr-B*13:01.json" saved
+2020-11-09 16:06:16,403: Starting exploration
+2020-11-09 16:06:18,045: Patr-B*13:01
+2020-11-09 16:06:18,103: Data shape: (344, 8)
+2020-11-09 16:06:18,106: exploring binding prediction
+2020-11-09 16:06:18,397: exploring epitope prediction
+2020-11-09 16:06:18,461: file "Patr-B*13:01.json" saved
+2020-11-09 16:07:27,694: Starting exploration
+2020-11-09 16:07:29,367: Patr-B*13:01
+2020-11-09 16:07:29,425: Data shape: (344, 8)
+2020-11-09 16:07:29,429: exploring binding prediction
+2020-11-09 16:07:40,144: exploring epitope prediction
+2020-11-09 16:07:40,222: file "Patr-B*13:01.json" saved
+2020-11-09 16:13:13,842: Starting exploration
+2020-11-09 16:13:15,580: Patr-B*13:01
+2020-11-09 16:13:15,640: Data shape: (344, 8)
+2020-11-09 16:13:15,644: exploring binding prediction
+2020-11-09 16:13:21,448: exploring epitope prediction
+2020-11-09 16:13:21,749: file "Patr-B*13:01.json" saved
+2020-11-09 16:14:19,290: Starting exploration
+2020-11-09 16:14:20,932: Patr-B*13:01
+2020-11-09 16:14:20,990: Data shape: (344, 8)
+2020-11-09 16:14:20,993: exploring binding prediction
+2020-11-09 16:14:26,905: exploring epitope prediction
+2020-11-09 16:14:30,980: file "Patr-B*13:01.json" saved
+2020-11-09 16:15:30,481: Starting exploration
+2020-11-09 16:15:32,238: Patr-B*13:01
+2020-11-09 16:15:32,299: Data shape: (344, 8)
+2020-11-09 16:15:32,303: exploring binding prediction
+2020-11-09 16:15:38,165: exploring epitope prediction
+2020-11-09 16:15:42,372: file "Patr-B*13:01.json" saved
+2020-11-09 16:16:11,297: Starting exploration
+2020-11-09 16:16:13,003: Patr-B*13:01
+2020-11-09 16:16:13,062: Data shape: (344, 8)
+2020-11-09 16:16:13,066: exploring binding prediction
+2020-11-09 16:16:19,462: exploring epitope prediction
+2020-11-09 16:16:23,954: file "Patr-B*13:01.json" saved
