@@ -34,7 +34,7 @@ dataset used for retraining the IEDB class I binding prediction tools [http://to
 and IEDB database [www.iedb.org](www.iedb.org). 
 Training results and a list of supported MHC alleles is available in [training/results](training/results) folder.
 
-![mhclovac-physicochemical-profile-peptide](research/figures/mhclovac-modeling-figure.png)
+![mhclovac-physicochemical-profile-peptide](research/figures/mhclovac-modeling-figure.png?s=200)
 
 ### Results
 
