@@ -1,5 +1,5 @@
 from .utils import load_model
-from .models import BindingModel, LigandModel
+from .models import BindingModel
 from .preprocessing import get_features, transform_ic50_measures, transform_qualitative_measures
 from .config import Config
 import os

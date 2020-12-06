@@ -22,9 +22,8 @@ def load_model(mhc: str):
         msg = f'"{mhc}" not supported.'
         raise ValueError(msg)
     model_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'models', f'{mhc}.model.gz')
-    data = joblib.load(model_path)
-    binding_model, ligand_model = data['binding_model'], data['ligand_model']
-    return binding_model, ligand_model
+    model = joblib.load(model_path)
+    return model
 
 
 def load_index_data(index_id_list: list = None) -> list or dict:

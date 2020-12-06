@@ -1,5 +1,7 @@
-from mhclovac.sequence import validate_sequence, chop_sequence, read_fasta
-from mhclovac.utils import load_model, load_index_data
+from .sequence import validate_sequence, chop_sequence, read_fasta
+from .utils import load_model, load_index_data
+from .preprocessing import get_features
+from .config import Config
 import pandas as pd
 import sys
 import argparse
@@ -14,29 +16,16 @@ def predict(sequence: list, mhc: str, sequence_name: str = "unknown") -> pd.Data
     :param sequence_name: sequence_name, defaults to "unknown"
     :return: pandas DataFrame
     """
-    bmodel, emodel = load_model(mhc)
-    index_list = load_index()
-
+    model = load_model(mhc)['binding_model']
     data = pd.DataFrame()
     data['sequence'] = sequence
     data['mhc'] = mhc
     data['peptide_length'] = data['sequence'].apply(len)
     data['sequence_name'] = sequence_name
-
-    features = data['sequence'].apply(lambda x: sequence_to_features(x, index_list))
-    features = pd.DataFrame(features.tolist())
-
-    data['binding_score'] = bmodel.predict(features) if bmodel else None
-    data['epitope_score'] = emodel.predict_proba(features) if emodel else None
-
-    if bmodel and emodel:
-        data['combined_score'] = data['binding_score'] + data['epitope_score']
-    else:
-        data['combined_score'] = data['binding_score'] if bmodel else data['epitope_score']
-
+    X = get_features(peptide_list=data['sequence'], index_id_list=Config.INDEX_ID_LIST)
+    data['binding_score'] = model.predict(X)
     # sort by combined_score
-    data.sort_values(by='combined_score', inplace=True, ascending=False)
-
+    data.sort_values(by='binding_score', inplace=True, ascending=False)
     return data
 
 
@@ -97,7 +86,7 @@ def run():
     if args.output:
         output.to_csv(args.output, sep='\t', index=False)
     else:
-        sys.stdout.write(output.to_string(index=False))
+        sys.stdout.write(output.to_string(index=False) + '\n')
 
     sys.exit()
 
