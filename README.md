@@ -7,7 +7,7 @@ MHC binding prediction based on modeled physicochemical properties of peptides.
 
 > Stojanovic S. MHCLovac 4.0: MHC binding prediction based on modeled physicochemical properties of peptides. https://pypi.org/project/mhclovac/4.0
 
-`bitcoin:bc1qrg7wku5g35kn0qyay4uwzugfmfqwnvz95g54pj`
+`bitcoin: bc1qrg7wku5g35kn0qyay4uwzugfmfqwnvz95g54pj`
 
 ### Table of content
 * [About](#about)
@@ -92,8 +92,3 @@ Columns:
 1. Vita R, Mahajan S, Overton JA, Dhanda SK, Martini S, Cantrell JR, Wheeler DK, Sette A, Peters B. The Immune Epitope Database (IEDB): 2018 update. Nucleic Acids Res. 2018 Oct 24. doi: 10.1093/nar/gky1006. [Epub ahead of print] PubMed PMID: [30357391](https://www.ncbi.nlm.nih.gov/pubmed/30357391).
 2. Benchmarking
 
-### Donate to support my work
-If you like this project and wish to support my work you can do so by donating Bitcoin. 
-Any amount donated will be appreciated! 
-
-BTC: `bc1qrg7wku5g35kn0qyay4uwzugfmfqwnvz95g54pj`
