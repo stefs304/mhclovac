@@ -1,5 +1,12 @@
 # MHCLovac
 
+<!--
+  Title: MHCLovac
+  Description: MHC binding prediction based on modeled physicochemical properties of peptides
+  Author: Stefan Stojanovic
+  Keywords: mhc, binding, predcition, ligand, immuno, physicochemical, peptides, modeling
+  -->
+
 [![Downloads](https://pepy.tech/badge/mhclovac)](https://pepy.tech/project/mhclovac)
 [![Downloads](https://pepy.tech/badge/mhclovac/week)](https://pepy.tech/project/mhclovac)
 
@@ -12,7 +19,7 @@ MHC binding prediction based on modeled physicochemical properties of peptides.
 ### Table of content
 * [Introduction](#about)
 * [Materials and methods](#materials-and-methods)
-  * [Modeling algorithm](#modeling-algorithm)
+  * [Modeling physicochemical properties](#modeling-physicochemical-properties)
 * [Results](#results)
 * [Installation](#installation)
 * [Usage](#example-usage)
@@ -38,8 +45,8 @@ For training the binding prediction models I combined data from the first datase
 For training ligand prediction models only the second dataset was used. 
 The physicochemical property index data was obtained from Aaindex<sup>[**[2]**](#references)</sup> database. 
 
-#### Modeling algorithm
-The modeling is implemented in the following way. 
+#### Modeling physicochemical properties
+The modeling algorithm is implemented in the following way. 
 The peptide of length `L` is model by creating a vector `S` containing `L*m + 2*m` data points, where `m` is an arbitrary multiplier. 
 Each amino acid residue gets a designated slice of the vector `S` corresponding to its relative position in the sequence. 
 The i<sup>th</sup> amino acid residue A<sub>i</sub> is modeled as a Gaussian curve G(A<sub>i</sub>) scaled by the corresponding index value G(A<sub>i</sub>) * I<sub>A</sub> (Figure 1.a, dashed colored lines). 
@@ -48,8 +55,11 @@ A physicochemical profile of the entire peptide is obtained by summing up indivi
 The leading and trailing slices, corresponding to `+ 2*m` term in the first expression, serve the role of placeholders when modeling the first and the last residue. 
 These slices are optionally removed to produce the final vector of length `L*m`.
 
-
 ![mhclovac-physicochemical-profile-peptide](research/figures/mhclovac-modeling-figure.png)
+
+Prior to modeling each physicochemical property index is normalized to range [-1, 1].
+This is done in order for values to reflect relative relations between different residues on opposite sides of spectrum.
+
 
 #### Prediction models
 
