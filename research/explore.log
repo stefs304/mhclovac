@@ -23,3 +23,5 @@
 2020-12-05 09:32:45,479: Pass index IDs
 2020-12-05 09:32:45,479: ARGP820101 - Hydrophobicity index (Argos et al., 1982) - 0.5661666666666668
 2020-12-05 09:32:45,479: BEGF750101 - Conformational parameter of inner helix (Beghin-Dirkx, 1975) - 0.5548333333333334
+2020-12-07 05:23:24,334: H2-Kb
+2020-12-07 05:23:24,410: Data shape: (11130, 8)

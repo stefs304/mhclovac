@@ -15,7 +15,7 @@ hydrophobicity_index_data = load_index_data()['PRAM900101']['index_data']
 
 
 def plot_distribution(sequence, index, label, legend=None, linewidth=3, ylabel=None, title=None):
-    multiplier = 40
+    multiplier = 20
     overlap_distance = 1
     sigma = 0.8
     dist_vector = np.zeros(multiplier * len(sequence) + 2 * overlap_distance * multiplier)
@@ -37,7 +37,7 @@ def plot_distribution(sequence, index, label, legend=None, linewidth=3, ylabel=N
     if ylabel:
         plt.ylabel(ylabel, fontsize='large')
     y = max(dist_vector) - max(dist_vector) / 20.0
-    plt.text(0, y, label)
+    plt.text(0, y, label, fontsize='large')
     if legend:
         plt.legend([k],[legend])
     if title:
@@ -59,7 +59,7 @@ def plot_discrete_values(distribution, title=None, label=None):
     plt.grid()
     y = max(y_axis) - max(y_axis) / 20.0
     if label:
-        plt.text(0, y, label)
+        plt.text(0, y, label, fontsize='large')
     if title:
         plt.title(title)
     return
@@ -70,14 +70,14 @@ example_sequence_1 = 'LLDVTAAV'
 example_sequence_2 = 'FLFDGSPTYVL'
 
 
-plt.figure(figsize=(15, 15), dpi=300)
+plt.figure(figsize=(12, 12), dpi=100)
 
 plt.subplot(3, 1, 1)
 plot_distribution(
     example_sequence_1,
     hydrophobicity_index_data,
     label='a)',
-    title='Hydrophobicity profile'
+    title='Modeled hydrophobicity profile'
 )
 
 n_discrete_points = 10
@@ -97,7 +97,7 @@ plot_distribution(
 plt.subplot(3, 2, 5)
 plot_discrete_values(
     distribution=dist_1,
-    title='8-mer discretized profile',
+    title='8-mer discrete profile',
     label='d)'
 )
 
@@ -117,7 +117,7 @@ plt.subplot(3, 2, 6)
 plot_discrete_values(
     distribution=dist_2,
     label='e)',
-    title='11-mer discretized profile'
+    title='11-mer discrete profile'
 )
 
 

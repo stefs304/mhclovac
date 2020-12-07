@@ -41,28 +41,7 @@ def get_features(peptide_list, index_id_list):
     return pd.DataFrame(features.tolist())
 
 
-def get_label(measure: str) -> int:
-    """
-    Transform qualitative measure.
-    """
-    positive_measures = [
-        'Positive-High',
-        'Positive-Intermediate',
-        'Positive',
-        'Positive-Low'
-    ]
-    if measure in positive_measures:
-        return 1
-    return 0
-
-
-def transform_ic50_measures(ic50_values):
+def transform_ic50_values(ic50_values):
     data = pd.DataFrame()
     data['values'] = ic50_values
     return data['values'].apply(lambda x: 1 - math.log(x, 50000))
-
-
-def transform_qualitative_measures(value_list):
-    data = pd.DataFrame()
-    data['values'] = value_list
-    return data['values'].apply(get_label)
