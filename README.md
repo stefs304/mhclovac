@@ -17,7 +17,7 @@ MHC binding prediction based on modeled physicochemical properties of peptides.
 `bitcoin: bc1qrg7wku5g35kn0qyay4uwzugfmfqwnvz95g54pj`
 
 ### Table of content
-* [Introduction](#about)
+* [Introduction](#introduction)
 * [Materials and methods](#materials-and-methods)
   * [Modeling physicochemical properties](#modeling-physicochemical-properties)
 * [Results](#results)
@@ -25,40 +25,45 @@ MHC binding prediction based on modeled physicochemical properties of peptides.
 * [Usage](#example-usage)
 * [References](#references)
 
-### About
+### Introduction
 
-MHCLovac uses physicochemical properties of peptides to predict binding affinity.
-One of the main challenges with MHC binding prediction, which MHCLovac aims to solve, is that target peptides don't have to be uniform in length. 
-Some alleles allow peptide lengths to span a wide range: H2-Kb epitopes are known to span 7 - 13 residues in length. 
-This poses a challenge when creating numerical feature representation of peptides for prediction algorithms. 
-MHCLovac solves this by modeling each peptide into a linear, wave-like representation of its physicochemical properties. 
-Modeled array can then be scaled up or down to a fixed length allowing MHCLovac to work with a fixed number of features. 
-The downside to this approach is that MHCLovac has to assume that peptides bind in linear conformation which may not always be the case.
+MHCLovac is a binding prediction tool which implements the newly developed method for peptide representation.
+This method is aimed at overcoming problems caused by variable length of MHC ligands.
+To achieve this goal I make a distinction between physicochemical properties of underlying amino acid residues and those of a peptide as a whole, under the following assumption: 
+physicochemical properties of adjacent residues in a peptide have additive effect on the local properties of the peptide as a whole and properties of a single residue affect the properties of the peptide at neighboring positions. 
+This assumption provides basis for obtaining physicochemical profiles of peptides, which allows for their direct comparison regardless of differences in length. 
+The prediction accuracy of MHCLovac comparable to that of the state-of-the-art prediction tools and its ability to make predictions for peptides of arbitrary lengths exemplify the practical advantage of this method. 
 
 ### Materials and methods
 
-For the training of MHCLovac I used two datasets obtained from IEDB<sup>[**[1]**](#references)</sup>. 
+To train MHCLovac I used two datasets obtained from IEDB<sup>[**[1]**](#references)</sup>. 
 The first is a dataset used for retraining the IEDB class I binding prediction tools, which contains only the binding affinity measurements ([http://tools.iedb.org/main/datasets](http://tools.iedb.org/main/datasets/)). 
 The second is exported MHC ligand dataset comprised of eluted MHC ligands ([https://www.iedb.org/database_export_v3.php](https://www.iedb.org/database_export_v3.php)). 
 This dataset contains both quantitative binding affinity measurements and qualitative measurements. 
-For training the binding prediction models I combined data from the first dataset and from the second where quantitative measurements were available. 
-For training ligand prediction models only the second dataset was used. 
-The physicochemical property index data was obtained from Aaindex<sup>[**[2]**](#references)</sup> database. 
+I combined data from two dataset where quantitative measurements were available into one hybrid dataset used for training the binding prediction model.
+For ligand prediction models I used the second dataset. 
+The list of all available physicochemical properties and the corresponding amino acid index data was obtained from Aaindex<sup>[**[2]**](#references)</sup> database ([https://www.genome.jp/aaindex](https://www.genome.jp/aaindex)). 
 
 #### Modeling physicochemical properties
-The modeling algorithm is implemented in the following way. 
 The peptide of length `L` is model by creating a vector `S` containing `L*m + 2*m` data points, where `m` is an arbitrary multiplier. 
 Each amino acid residue gets a designated slice of the vector `S` corresponding to its relative position in the sequence. 
 The i<sup>th</sup> amino acid residue A<sub>i</sub> is modeled as a Gaussian curve G(A<sub>i</sub>) scaled by the corresponding index value G(A<sub>i</sub>) * I<sub>A</sub> (Figure 1.a, dashed colored lines). 
-G(A<sub>i</sub>) is allowed to span one neighboring slice on each side and is shaped by sigma parameter with default value of 0.8.
-A physicochemical profile of the entire peptide is obtained by summing up individually modeled residues (Figure 1.a, black solid line). 
+Each G(A<sub>i</sub>) is spans one neighboring slice on each side and is shaped by sigma parameter with default value of 0.8.
+The physicochemical profile of peptide is obtained by taking the sum of individually modeled residues (Figure 1.a, black solid line). 
 The leading and trailing slices, corresponding to `+ 2*m` term in the first expression, serve the role of placeholders when modeling the first and the last residue. 
-These slices are optionally removed to produce the final vector of length `L*m`.
+These slices are optionally removed to produce the final vector of length `L*m` (not shown in the figure).
 
 ![mhclovac-physicochemical-profile-peptide](research/figures/mhclovac-modeling-figure.png)
 
 Prior to modeling each physicochemical property index is normalized to range [-1, 1].
-This is done in order for values to reflect relative relations between different residues on opposite sides of spectrum.
+This is done in order for values to reflect relations between different residues on opposite sides of the spectrum. 
+
+Once the profile is obtained it can be further reduced to fixed number of discrete values. 
+To give an example, I model two ligands of HLA-A*02:01, one an 8-mer and the other an 11-mer (Figure 1.b and 1.c).
+Their profiles are reduced to 10 discrete points each, by sampling the modeled profiles at equal intervals (Figure 1.d and 1.e). 
+This way the peptides of different lengths can be reduced to the same fixed number of features. 
+>From the Figure 1 it is evident that despite different sequences and lengths, peptides LLDVTAAV and FLFDGSPTYVL have very similar discrete hydrophobicity profiles which can be directly compared. 
+
 
 
 #### Prediction models
