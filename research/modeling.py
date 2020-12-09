@@ -11,7 +11,7 @@ rcParams['font.size'] = 16
 props = dict(boxstyle='round', facecolor='wheat', alpha=0.6)
 
 
-hydrophobicity_index_data = load_index_data()['PRAM900101']['index_data']
+hydrophobicity_index_data = load_index_data()['PRAM900101']['standardized_index_data']
 
 
 def plot_distribution(sequence, index, label, legend=None, linewidth=3, ylabel=None, title=None):
@@ -63,7 +63,6 @@ def plot_discrete_values(distribution, title=None, label=None):
     if title:
         plt.title(title)
     return
-
 
 
 example_sequence_1 = 'LLDVTAAV'

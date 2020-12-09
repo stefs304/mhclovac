@@ -7,16 +7,21 @@ import matplotlib.pyplot as plt
 from matplotlib import rcParams
 from sklearn.metrics import auc
 from mhcflurry import Class1PresentationPredictor
-predictor = Class1PresentationPredictor.load()
+
+
+N_SAMPLES = 200
+RANDOM_SEED = 0
+bench_fasta = '../data/CD8_epitopes.fsa'
+
+
+# load mhcflurry predictor
+mhcflurry = Class1PresentationPredictor.load()
 
 
 rcParams['font.family'] = 'sans-serif'
 # rcParams['font.sans-serif'] = ['Tahoma']
 rcParams['font.size'] = 12
 props = dict(boxstyle='round', facecolor='wheat', alpha=0.6)
-
-
-bench_fasta = '../data/CD8_epitopes.fsa'
 
 scores = {
     'mhclovac': {
@@ -29,7 +34,8 @@ scores = {
     }
 }
 
-random_selection = np.random.randint(low=0, high=1660, size=200)
+np.random.seed(RANDOM_SEED)
+random_selection = np.random.randint(low=0, high=1660, size=N_SAMPLES)
 
 for i, (sequence_name, sequence) in enumerate(read_fasta(bench_fasta)):
 
@@ -48,18 +54,9 @@ for i, (sequence_name, sequence) in enumerate(read_fasta(bench_fasta)):
     mhc_allele = '*'.join([mhc_class, mhc_sub])
 
     try:
-        model = load_model(mhc_allele)['binding_model']
-        if not model:
-            print(mhc_allele, 'skipped')
-            continue
-    except Exception as e:
-        print(e)
-        continue
-
-    try:
         peptides = chop_sequence(sequence=sequence, peptide_length=len(true_epitope))
         mhclovac_predictions = predict(peptides,  mhc_allele)
-        mhcflurry_predictions = predictor.predict(peptides=peptides, alleles=[allele])
+        mhcflurry_predictions = mhcflurry.predict(peptides=peptides, alleles=[allele], verbose=0)
     except Exception as e:
         print(e)
         continue
@@ -108,11 +105,11 @@ for key in scores:
     roc_data[key]['tpr_array'].append(0.0)
     roc_data[key]['fpr_array'].append(0.0)
 
-fig, ax = plt.subplots(1,1, figsize=(5, 5))
+fig, ax = plt.subplots(1,1, figsize=(5, 5), dpi=100)
 auc_mhclovac = round(auc(roc_data['mhclovac']['fpr_array'], roc_data['mhclovac']['tpr_array']), 3)
 auc_mhcfurry = round(auc(roc_data['mhcflurry']['fpr_array'], roc_data['mhcflurry']['tpr_array']), 3)
 
-ax.set_title('ROC curve')
+ax.set_title('ROC - AUC')
 ax.plot(roc_data['mhclovac']['fpr_array'], roc_data['mhclovac']['tpr_array'])
 ax.plot(roc_data['mhcflurry']['fpr_array'], roc_data['mhcflurry']['tpr_array'])
 
@@ -120,8 +117,8 @@ ax.grid()
 ax.set_xlabel('False positive rate')
 ax.set_ylabel('True positive rate')
 ax.legend(labels=(
-    f'MHCLovac AUC = {auc_mhclovac}',
-    f'MHCflurry AUC = {auc_mhcfurry}'
+    f'MHCLovac 4.0 AUC = {auc_mhclovac}',
+    f'MHCflurry 2.0 AUC = {auc_mhcfurry}'
 ))
 
 plt.savefig('figures/binding-roc-auc.png', bbox_inches='tight')
