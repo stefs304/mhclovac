@@ -7,19 +7,20 @@ def model_distribution(sequence: str, encoding_scheme: dict, overlap_distance: i
     """
     Models distribution of physicochemical property across a peptide sequence.
     """
-    scaling_factor = 40
+    multiplier = 20
     sequence = sequence.upper()
-    dist_vector = np.zeros(scaling_factor*len(sequence)+2*overlap_distance*scaling_factor)
-    for i, aa in enumerate(sequence):
+    dist_vector = np.zeros(multiplier*len(sequence)+2*overlap_distance*multiplier)
+    for i, A in enumerate(sequence):
         try:
-            value = encoding_scheme[aa]
+            value = encoding_scheme[A]
         except KeyError:
-            msg = 'Unrecognized amino acid: {}'.format(aa)
+            msg = 'Unrecognized amino acid: {}'.format(A)
             raise KeyError(msg)
-        x = np.linspace(-2.3263, 2.3263, (2*overlap_distance+1)*scaling_factor)
-        aa_dist = pdf(x, sigma) * value
-        dist_vector[int(i*scaling_factor):int((i+(2*overlap_distance+1))*scaling_factor)] += aa_dist
-    dist_vector = dist_vector[overlap_distance*scaling_factor:-overlap_distance*scaling_factor]
+        x = np.linspace(-2.3263, 2.3263, (2*overlap_distance+1)*multiplier)
+        A_dist = pdf(x, sigma) * value
+        dist_vector[int(i*multiplier):int((i+(2*overlap_distance+1))*multiplier)] += A_dist
+    # trim leading and trailing slices
+    dist_vector = dist_vector[overlap_distance*multiplier:-overlap_distance*multiplier]
     if n_discrete_points:
         discrete_vector = []
         step = int(len(dist_vector) / n_discrete_points)
@@ -44,7 +45,7 @@ def encode_sequence(sequence: str, encoding_scheme: dict):
     return encoded_sequence
 
 
-def validate_sequence(sequence: str, sequence_name: str, silent: bool = True) -> bool:
+def validate_sequence(sequence: str, sequence_name: str = None, silent: bool = True) -> bool:
     """
     Checks if sequence contains only valid amino acid letter codes.
 

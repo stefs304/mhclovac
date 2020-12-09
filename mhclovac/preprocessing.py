@@ -16,6 +16,16 @@ def normalize_index_data(index: dict) -> dict:
     return normalized_index
 
 
+def standardize_index_data(index: dict) -> dict:
+    standardized_index = dict(index)
+    values = np.array([index[k] for k in index])
+    mu = np.mean(values)
+    std = np.std(values)
+    for k, v in index.items():
+        standardized_index[k] = (v - mu) / std
+    return standardized_index
+
+
 def sequence_to_features(sequence: str, index_list: list) -> list:
     """
     Convert sequence string to list of features.

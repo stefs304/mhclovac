@@ -35,7 +35,7 @@ def load_index_data(index_id_list: list = None) -> list or dict:
     if index_id_list:
         index_data = []
         for index_id in index_id_list:
-            index_data.append(data[index_id]['index_data'])
+            index_data.append(data[index_id]['standardized_index_data'])
         return index_data
     return data
 
