@@ -1,11 +1,4 @@
-# MHCLovac :serbia:
-
-<!--
-  Title: MHCLovac
-  Description: MHC binding prediction based on modeled physicochemical properties of peptides
-  Author: Stefan Stojanovic
-  Keywords: mhc, binding, predcition, ligand, immuno, physicochemical, peptides, modeling
-  -->
+# MHCLovac
 
 [![Downloads](https://pepy.tech/badge/mhclovac)](https://pepy.tech/project/mhclovac)
 [![Downloads](https://pepy.tech/badge/mhclovac/week)](https://pepy.tech/project/mhclovac)
@@ -19,7 +12,7 @@ MHC binding prediction based on modeled physicochemical properties of peptides.
 * Models are trained on MHC binding affinity data and eluted ligand data.
 * Allele specific set of physicochemical properties, determined based on individual prediction ability.
 * Ligand prediction from the previous version was removed due to training data not being properly curated. 
-* `binding_score` is reported as the log transformed binding affinity: `1 - log50k(ic50)`, as per NetMHC standard.
+* `binding_score` is reported as the log transformed binding affinity: `1 - log50k(ic50)`.
 
 
 ### Installation
