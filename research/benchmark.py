@@ -1,124 +1,98 @@
-from mhclovac import predict
+import subprocess
 from mhclovac.sequence import read_fasta, chop_sequence
-from mhclovac.utils import load_model
-import numpy as np
-import re
+import mhclovac
+import pandas as pd
+import mhcnames
+import os
+from io import StringIO
+import seaborn as sns
 import matplotlib.pyplot as plt
-from matplotlib import rcParams
-from sklearn.metrics import auc
-from mhcflurry import Class1PresentationPredictor
 
 
 N_SAMPLES = 200
 RANDOM_SEED = 0
+IEDB_SCRIPT_PATH = '/home/stefan/mhc_i/src/predict_binding.py'
 bench_fasta = '../data/CD8_epitopes.fsa'
+IEDB_METHODS = [
+    'ann',
+    'comblib_sidney2008',
+    'consensus',
+    # 'IEDB_recommended',
+    'netmhcpan_ba',
+    'netmhcpan_el',
+    'smm',
+    'smmpmbec',
+    'pickpocket',
+    'netmhccons',
+    'netmhcstabpan'
+]
 
 
-# load mhcflurry predictor
-mhcflurry = Class1PresentationPredictor.load()
+def get_iedb_method_frank(fasta, mhc, epitope, method):
+    peptide_length = str(len(epitope))
+    first = subprocess.Popen(['/bin/echo', '-e', fasta], stdout=subprocess.PIPE)
+    second = subprocess.Popen(['python', IEDB_SCRIPT_PATH, method, mhc, peptide_length], stdin=first.stdout, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    stdout, stderr = second.communicate()
+    dataframe = pd.read_csv(StringIO(str(stdout, 'utf-8')), sep='\t')
+    count = 0.0
+    for i, row in dataframe.iterrows():
+        if row['peptide'] == epitope:
+            break
+        count += 1
+    return count / len(dataframe)
 
 
-rcParams['font.family'] = 'sans-serif'
-# rcParams['font.sans-serif'] = ['Tahoma']
-rcParams['font.size'] = 12
-props = dict(boxstyle='round', facecolor='wheat', alpha=0.6)
+def get_mhclovac_frank(sequence, mhc, epitope):
+    peptides = chop_sequence(sequence, len(epitope))
+    dataframe = mhclovac.predict(sequence=peptides, mhc=mhc)
+    count = 0.0
+    for i, row in dataframe.iterrows():
+        if row['peptide'] == epitope:
+            break
+        count += 1
+    return count / len(dataframe)
 
-scores = {
-    'mhclovac': {
-        'positives': [],
-        'negatives': []
-    },
-    'mhcflurry': {
-        'positives': [],
-        'negatives': []
-    }
-}
 
-np.random.seed(RANDOM_SEED)
-random_selection = np.random.randint(low=0, high=1660, size=N_SAMPLES)
+frank_scores = {'mhclovac': []}
+frank_scores.update({k: [] for k in IEDB_METHODS})
 
 for i, (sequence_name, sequence) in enumerate(read_fasta(bench_fasta)):
+    if i > N_SAMPLES:
+        break
 
-    if i not in random_selection:
-        continue
-
-    print(sequence_name)
-    # True positive, extracted from sequence name
+    print(i, sequence_name)
     true_epitope = sequence_name.split()[0]
+    mhc_allele = mhcnames.normalize_allele_name(sequence_name.split()[1])
+    with open('temp.fasta', 'w') as f:
+        f.write(f'>{sequence_name}\n{sequence}')
+    fasta = os.path.join(os.getcwd(), 'temp.fasta')
 
-    # Convert MHC allele to compatible format
-    # Example: HLA-A02:01 to HLA-A*02:01 (asterisk is missing)
-    allele = sequence_name.split()[1]
-    mhc_class = re.findall('HLA-[A-Z]', allele)[0]
-    mhc_sub = allele.split(mhc_class)[1]
-    mhc_allele = '*'.join([mhc_class, mhc_sub])
-
+    for method in IEDB_METHODS:
+        try:
+            frank = get_iedb_method_frank(fasta, mhc_allele, true_epitope, method)
+            frank_scores[method].append(frank)
+        except Exception as e:
+            print(method, e)
+            frank_scores[method].append(None)
     try:
-        peptides = chop_sequence(sequence=sequence, peptide_length=len(true_epitope))
-        mhclovac_predictions = predict(peptides,  mhc_allele)
-        mhcflurry_predictions = mhcflurry.predict(peptides=peptides, alleles=[allele], verbose=0)
+        frank = get_mhclovac_frank(sequence, mhc_allele, true_epitope)
+        frank_scores['mhclovac'].append(frank)
     except Exception as e:
-        print(e)
-        continue
+        print('mhclovac', e)
+        frank_scores['mhclovac'].append(None)
 
-    for i, row in mhclovac_predictions.iterrows():
-        if row['sequence'] == true_epitope:
-            scores['mhclovac']['positives'].append(row['binding_score'])
-        else:
-            scores['mhclovac']['negatives'].append(row['binding_score'])
 
-    for i, row in mhcflurry_predictions.iterrows():
-        if row['peptide'] == true_epitope:
-            scores['mhcflurry']['positives'].append(row['presentation_score'])
-        else:
-            scores['mhcflurry']['negatives'].append(row['presentation_score'])
+data = pd.DataFrame.from_dict(frank_scores)
 
-# TPR - true positive rate, fraction of true positives out of all real positives
-# FPR - false positive rate, fraction of false positives out of all real negatives
 
-roc_data = {
-    'mhclovac': {
-        'tpr_array': [],
-        'fpr_array': []
-    },
-    'mhcflurry': {
-        'tpr_array': [],
-        'fpr_array': []
-    },
-}
+plt.figure(figsize=(10, 6), dpi=100)
 
-for key in scores:
-    t_min = min([min(scores[key]['positives']), min(scores[key]['negatives'])])
-    t_max = max([max(scores[key]['positives']), max(scores[key]['negatives'])])
-
-    roc_data[key]['tpr_array'].append(1.0)
-    roc_data[key]['fpr_array'].append(1.0)
-
-    for t in sorted(scores[key]['positives']):
-        true_pos = len([x for x in scores[key]['positives'] if x >= t])
-        false_pos = len([x for x in scores[key]['negatives'] if x >= t])
-        tpr = float(true_pos) / len(scores[key]['positives'])
-        fpr = float(false_pos) / len(scores[key]['negatives'])
-        roc_data[key]['tpr_array'].append(tpr)
-        roc_data[key]['fpr_array'].append(fpr)
-
-    roc_data[key]['tpr_array'].append(0.0)
-    roc_data[key]['fpr_array'].append(0.0)
-
-fig, ax = plt.subplots(1,1, figsize=(5, 5), dpi=100)
-auc_mhclovac = round(auc(roc_data['mhclovac']['fpr_array'], roc_data['mhclovac']['tpr_array']), 3)
-auc_mhcfurry = round(auc(roc_data['mhcflurry']['fpr_array'], roc_data['mhcflurry']['tpr_array']), 3)
-
-ax.set_title('ROC - AUC')
-ax.plot(roc_data['mhclovac']['fpr_array'], roc_data['mhclovac']['tpr_array'])
-ax.plot(roc_data['mhcflurry']['fpr_array'], roc_data['mhcflurry']['tpr_array'])
-
-ax.grid()
-ax.set_xlabel('False positive rate')
-ax.set_ylabel('True positive rate')
-ax.legend(labels=(
-    f'MHCLovac 4.0 AUC = {auc_mhclovac}',
-    f'MHCflurry 2.0 AUC = {auc_mhcfurry}'
-))
-
-plt.savefig('figures/binding-roc-auc.png', bbox_inches='tight')
+sns.set_theme(style="whitegrid")
+palette = {k: 'blue' for k in data.columns}
+palette['mhclovac'] = 'red'
+ax = sns.boxplot(data=data, color='#4c72b0')
+ax.artists[0].set_facecolor('red')
+ax.set_xticklabels([k for k in data.columns], rotation=30)
+ax.set_yscale('log')
+ax.set_ylim([0.0005, 1.0])
+plt.savefig('figures/frank.png', bbox_inches='tight')
