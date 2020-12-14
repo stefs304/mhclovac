@@ -102,7 +102,7 @@ for mhc_key in list(data['mhc'].unique()):
     exploration_output[mhc_key] = mhc_results
 
 
-joblib.dump(exploration_output, 'exploration_output.gz', compress=('gzip', 5))
+joblib.dump(exploration_output, 'results/exploration_output.gz', compress=('gzip', 5))
 logger.info(f'Data saved.')
 
 # --------------
@@ -147,5 +147,5 @@ for index_id, average_prediction_score in pass_index_list:
     title = index_data[index_id]['title']
     logger.info(f'{index_id} - {title} - {average_prediction_score}')
 
-joblib.dump(pass_index_list, 'pass_index_list.gz', compress=('gzip', 5))
+joblib.dump(pass_index_list, 'results/pass_index_list.gz', compress=('gzip', 5))
 
