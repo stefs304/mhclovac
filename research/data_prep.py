@@ -2,12 +2,15 @@ import pandas as pd
 import mhcnames
 from mhclovac.sequence import validate_sequence
 
+INVALID_ALLELE_NAMES = set()
+
 
 def parse_allele_name(allele_name):
     try:
         name = mhcnames.normalize_allele_name(allele_name)
         return name
     except:
+        INVALID_ALLELE_NAMES.add(allele_name)
         return None
 
 
@@ -23,8 +26,12 @@ print(f'original binding_data n_samples: {binding_data.shape[0]}')
 
 ligand_data = ligand_data[ligand_data['class'] == 'I']
 ligand_data.drop(columns=['class'], inplace=True)
+print('before name parse', ligand_data.shape[0])
 ligand_data['mhc'] = ligand_data['mhc'].apply(parse_allele_name)
 ligand_data.dropna(inplace=True)
+print('after name parse', ligand_data.shape[0])
+print(INVALID_ALLELE_NAMES)
+
 
 binding_data['mhc'] = binding_data['mhc'].apply(parse_allele_name)
 binding_data.dropna(inplace=True)
@@ -42,4 +49,4 @@ combined_data.drop_duplicates(inplace=True)
 combined_data.dropna(inplace=True)
 print(f'combined_data n_samples: {combined_data.shape[0]}')
 
-combined_data.to_csv('../data/combined_data.csv', index=False)
+# combined_data.to_csv('../data/combined_data.csv', index=False)

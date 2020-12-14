@@ -7,7 +7,7 @@ RANDOM_SEED = 0
 
 data = pd.read_csv(f'data/combined_data.csv')
 
-print(f'Total number of samples: {data.shape[0]}')
+# print(f'Total number of samples: {data.shape[0]}')
 
 
 for mhc_key in list(data['mhc'].unique()):

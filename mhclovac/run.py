@@ -18,11 +18,11 @@ def predict(sequence: list, mhc: str, sequence_name: str = "unknown") -> pd.Data
     """
     model = load_model(mhc)['binding_model']
     data = pd.DataFrame()
-    data['sequence'] = sequence
+    data['peptide'] = sequence
     data['mhc'] = mhc
-    data['peptide_length'] = data['sequence'].apply(len)
+    data['peptide_length'] = data['peptide'].apply(len)
     data['sequence_name'] = sequence_name
-    X = get_features(peptide_list=data['sequence'], index_id_list=Config.INDEX_ID_LIST)
+    X = get_features(peptide_list=data['peptide'], index_id_list=Config.INDEX_ID_LIST)
     data['binding_score'] = model.predict(X)
     # sort by combined_score
     data.sort_values(by='binding_score', inplace=True, ascending=False)

@@ -28,6 +28,7 @@ index_data = load_index_data()
 
 
 def worker(data, index_id, n_iterations, result_queue):
+    logger = logging.getLogger('exp')
     index_prediction_scores = []
     mhc_key = list(data['mhc'].unique())[0]
 
@@ -37,7 +38,6 @@ def worker(data, index_id, n_iterations, result_queue):
 
         x_train = get_features(peptide_list=train['peptide'], index_id_list=[index_id])
         y_train = transform_ic50_values(train['ic50'])
-
         try:
             model = BindingModel(n_jobs=1)
             model.fit(x_train, y_train)
@@ -56,7 +56,6 @@ def worker(data, index_id, n_iterations, result_queue):
 
     mean_prediction_score = np.mean(index_prediction_scores)
     result_data = (index_id, mean_prediction_score)
-    logger = logging.getLogger('exp')
     logger.debug(f'{mhc_key}:{index_id}:{mean_prediction_score}')
     result_queue.put(result_data)
     return None
