@@ -3,16 +3,29 @@
 [![Downloads](https://pepy.tech/badge/mhclovac)](https://pepy.tech/project/mhclovac)
 [![Downloads](https://pepy.tech/badge/mhclovac/week)](https://pepy.tech/project/mhclovac)
 
-MHC binding prediction based on modeled physicochemical properties of peptides.
+> MHC binding prediction based on modeled physicochemical properties of peptides
 
 `bitcoin: bc1qrg7wku5g35kn0qyay4uwzugfmfqwnvz95g54pj`
 
-### What's new in version 4
-* Training data is better curated, duplicate samples are removed and MHC allele names are standardized.
-* Models are trained on MHC binding affinity data and eluted ligand data.
-* Allele specific set of physicochemical properties, determined based on individual prediction ability.
-* Ligand prediction from the previous version was removed due to training data not being properly curated. 
-* `binding_score` is reported as the log transformed binding affinity: `1 - log50k(ic50)`.
+### Table of content
+* [Introduction](#introduction)
+* [Methods and materials](#methods-and-materials)
+  * [Modeling physicochemical properties](#)
+* [Results](#results)
+* [Installation](#installation)
+* [Usage](#usage)
+* [References](#references)
+
+### Introduction
+
+### Methods and materials
+
+### Results
+
+### What's new in version 4.*
+* Training data is better cleaned and prepared, duplicate samples are removed and MHC allele names are standardized.
+* Ligand prediction from the previous version was removed due to training data not being properly cleaned. 
+* Binding score is reported as the log transformed binding affinity: `1 - log50k(ic50)`.
 
 
 ### Installation
@@ -58,4 +71,7 @@ Columns:
 4. `mhc` - MHC allele name
 5. `binding_score` - Higher score means better binding
 
+### References
+1. sdasd
+2. afasfsafsafsa
 
