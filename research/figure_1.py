@@ -13,7 +13,7 @@ rcParams['font.size'] = 16
 props = dict(boxstyle='round', facecolor='wheat', alpha=0.6)
 
 
-hydrophobicity_index_data = load_index_data()['PRAM900101']['standardized_index_data']
+hydrophobicity_index_data = load_index_data()['HOPT810101']['standardized_index_data']
 
 
 def plot_distribution(sequence, index, label, legend=None, linewidth=3, ylabel=None, title=None):
@@ -76,7 +76,7 @@ plot_distribution(
     example_sequence_1,
     hydrophobicity_index_data,
     label='a)',
-    title='Modeled hydrophobicity profile'
+    title='Modeled hydrophilicity profile'
 )
 
 dist_1 = model_distribution(example_sequence_1, hydrophobicity_index_data)
@@ -89,7 +89,7 @@ plot_distribution(
     # legend=example_sequence_1,
     linewidth=2,
     title='8-mer profile',
-    ylabel='Normalized hydrophobicity index'
+    ylabel='Hydrophilicity index'
 )
 
 plt.subplot(3, 2, 5)

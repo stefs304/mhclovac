@@ -5,8 +5,7 @@ import pandas as pd
 import mhcnames
 import os
 from io import StringIO
-import seaborn as sns
-import matplotlib.pyplot as plt
+import numpy as np
 
 
 N_SAMPLES = 200
@@ -56,9 +55,12 @@ def get_mhclovac_frank(sequence, mhc, epitope):
 frank_scores = {'mhclovac': []}
 frank_scores.update({k: [] for k in IEDB_METHODS})
 
+np.random.seed(0)
+random_selection = np.random.randint(0, 1659, N_SAMPLES)
+
 for i, (sequence_name, sequence) in enumerate(read_fasta(bench_fasta)):
-    if i > N_SAMPLES:
-        break
+    if i not in random_selection:
+        continue
 
     print(i, sequence_name)
     true_epitope = sequence_name.split()[0]
@@ -83,16 +85,4 @@ for i, (sequence_name, sequence) in enumerate(read_fasta(bench_fasta)):
 
 
 data = pd.DataFrame.from_dict(frank_scores)
-
-
-plt.figure(figsize=(10, 6), dpi=100)
-
-sns.set_theme(style="whitegrid")
-palette = {k: 'blue' for k in data.columns}
-palette['mhclovac'] = 'red'
-ax = sns.boxplot(data=data, color='#4c72b0')
-ax.artists[0].set_facecolor('red')
-ax.set_xticklabels([k for k in data.columns], rotation=30)
-ax.set_yscale('log')
-ax.set_ylim([0.0005, 1.0])
-plt.savefig('figures/mhclovac-frank-benchmark.png', bbox_inches='tight')
+data.to_csv('./results/benchmarking_results.csv', index=False)
