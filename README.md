@@ -53,7 +53,7 @@ These slices are optionally removed to produce the final vector of length L * m 
 
 Once the physicochemical profile is obtained, it can be further reduced to the fixed number of discrete points. 
 To give an example, two ligands of HLA-A*02:01 are modeled, an 8-mer LLDVTAAV  and 11-mer FLFDGSPTYVL (Figure 1.b and 1.c). 
-By sampling the modeled profiles at equal intervals their profiles are reduced to 10 discrete points each (Figure 1.d and 1.e) which are used as input features for prediction model. 
+By sampling the modeled profiles at equal intervals their profiles are reduced to 10 discrete points each (Figure 1.d and 1.e), which are used as input features for prediction model. 
 
 #### Prediction model
 MHCLovac uses a collection of out-of-the-box machine learning algorithms from scikit-learn python library. 
@@ -61,11 +61,11 @@ The prediction model returns binding scores in form of log transformed binding a
 
 #### Feature selection
 Since the Aaidex database contains more than 500 entries, to reduce the number of physicochemical properties needed to model, the following selection method is implemented. 
-For each physicochemical property index, the binding model was trained and evaluated using r2 score for all MHC alleles, and the average score across the alleles was calculated. 
+For each physicochemical property index, the binding model was trained and evaluated using r2 score for each MHC allele, and the average score across all alleles was calculated. 
 The indexes were sorted based on the average score in decreasing order. 
 Starting from the top scoring index (selected by default), each next index was compared to the previously selected ones for correlation coefficient. 
 Only if correlation coefficient with all indexes from selection was in range [-0.3, 0.3] the new index was added to the selection. 
-This resulted in total of 9 indexes (table 1) which had high average scoring potential and were also low-correlated between themselves. 
+This resulted in total of 9 indexes (table 1) which had high scoring potential and were also low-correlated between themselves. 
 
 | Accession number  | Title | Average r2 score |
 | ------------- | ------------- | ------------ |
@@ -80,7 +80,7 @@ This resulted in total of 9 indexes (table 1) which had high average scoring pot
 | CHAM830102  | A parameter defined from the residuals obtained from the best correlation of the Chou-Fasman parameter of beta-sheet (Charton-Charton, 1983) | 0.1709 |
 
 ### Results
-Prediction accuracy of MHCLovac is evaluated using the same FRANK method and data set that was used to evaluate NetMHCPan 4.1 (Reynisson, B. et. al., 2020). 
+Prediction accuracy of MHCLovac is evaluated using the same FRANK method and subset of data set that was used to evaluate NetMHCPan 4.1 (Reynisson, B. et. al., 2020). 
 In short, FRANK method is used to calculate a fraction of non-epitopes from the same sequence as the epitope which score higher than the epitope. 
 The non-epitopes are represented by all overlapping peptides of the same length as the epitope derived from the same protein sequence. 
 The FRANK score ranges from 0 to 1, 0 being the best possible score meaning that the epitope is the highest scoring peptide in the sequence.
