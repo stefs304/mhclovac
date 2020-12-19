@@ -7,6 +7,11 @@ MHC binding prediction based on modeled physicochemical properties of peptides.
 
 `bitcoin: bc1qrg7wku5g35kn0qyay4uwzugfmfqwnvz95g54pj`
 
+### Release notes (version 4.0)
+* Training data is better cleaned and prepared, duplicate samples are removed and MHC allele names are standardized.
+* Ligand prediction from the previous version was removed due to training data not being properly cleaned. 
+* Binding score is reported as the log transformed binding affinity: `1 - log50k(ic50)`.
+
 ### Table of content
 * [Introduction](#introduction)
 * [Methods and materials](#methods-and-materials)
@@ -14,7 +19,6 @@ MHC binding prediction based on modeled physicochemical properties of peptides.
   * [Prediction model](#prediction-model)
   * [Feature selection](#feature-selection)
 * [Results](#results)
-* [Release notes](#release-notes-version-40)
 * [Installation](#installation)
 * [Usage](#usage)
 * [References](#references)
@@ -86,11 +90,6 @@ The non-epitopes are represented by all overlapping peptides of the same length 
 The FRANK score ranges from 0 to 1, 0 being the best possible score meaning that the epitope is the highest scoring peptide in the sequence.
 
 ![mhclovac-benchmark.png](research/figures/mhclovac-benchmark.png)
-
-### Release notes (version 4.0)
-* Training data is better cleaned and prepared, duplicate samples are removed and MHC allele names are standardized.
-* Ligand prediction from the previous version was removed due to training data not being properly cleaned. 
-* Binding score is reported as the log transformed binding affinity: `1 - log50k(ic50)`.
 
 ### Installation
 
