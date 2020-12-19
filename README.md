@@ -83,11 +83,9 @@ This resulted in total of 9 indexes (table 1) which had high average scoring pot
 Prediction accuracy of MHCLovac is evaluated using the same FRANK method and data set that was used to evaluate NetMHCPan 4.1 (Reynisson, B. et. al., 2020). 
 In short, FRANK method is used to calculate a fraction of non-epitopes from the same sequence as the epitope which score higher than the epitope. 
 The non-epitopes are represented by all overlapping peptides of the same length as the epitope derived from the same protein sequence. 
-The FRANK score ranges from 0 to 1, 0 being the best possible score meaning that the epitope is the highest scoring peptide from the sequence. 
-MHCLovac is compared to collection of MHC class I prediction tools from IEDB toolkit bundle including ANN, …  
-The results are shown on the figure 2. 
+The FRANK score ranges from 0 to 1, 0 being the best possible score meaning that the epitope is the highest scoring peptide from the sequence.
 
-![mhclovac-benchmark-frank.png](research/figures/mhclovac-frank-benchmark.png)
+![mhclovac-benchmark.png](research/figures/mhclovac-benchmark.png)
 
 ### Release notes (version 4.0)
 * Training data is better cleaned and prepared, duplicate samples are removed and MHC allele names are standardized.

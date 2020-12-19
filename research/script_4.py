@@ -3,59 +3,31 @@ from mhclovac.sequence import read_fasta, chop_sequence
 import mhclovac
 import pandas as pd
 import mhcnames
-import os
-from io import StringIO
+import joblib
 import numpy as np
 
 
 N_SAMPLES = 200
-RANDOM_SEED = 0
-IEDB_SCRIPT_PATH = '/home/stefan/mhc_i/src/predict_binding.py'
+RANDOM_SEED = 2077
 bench_fasta = '../data/CD8_epitopes.fsa'
-IEDB_METHODS = [
-    'ann',
-    'comblib_sidney2008',
-    'consensus',
-    # 'IEDB_recommended',
-    'netmhcpan_ba',
-    'netmhcpan_el',
-    'smm',
-    'smmpmbec',
-    'pickpocket',
-    'netmhccons',
-    'netmhcstabpan'
-]
 
 
-def get_iedb_method_frank(fasta, mhc, epitope, method):
-    peptide_length = str(len(epitope))
-    first = subprocess.Popen(['/bin/echo', '-e', fasta], stdout=subprocess.PIPE)
-    second = subprocess.Popen(['python', IEDB_SCRIPT_PATH, method, mhc, peptide_length], stdin=first.stdout, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    stdout, stderr = second.communicate()
-    dataframe = pd.read_csv(StringIO(str(stdout, 'utf-8')), sep='\t')
+def get_mhclovac_frank(predictions, epitope):
     count = 0.0
-    for i, row in dataframe.iterrows():
+    for i, row in predictions.iterrows():
         if row['peptide'] == epitope:
             break
         count += 1
-    return count / len(dataframe)
+    return count / len(predictions)
 
 
-def get_mhclovac_frank(sequence, mhc, epitope):
-    peptides = chop_sequence(sequence, len(epitope))
-    dataframe = mhclovac.predict(sequence=peptides, mhc=mhc)
-    count = 0.0
-    for i, row in dataframe.iterrows():
-        if row['peptide'] == epitope:
-            break
-        count += 1
-    return count / len(dataframe)
+scores = {
+    'true_positive_score': [],
+    'true_negative_score': []
+}
+frank_scores = []
 
-
-frank_scores = {'mhclovac': []}
-frank_scores.update({k: [] for k in IEDB_METHODS})
-
-np.random.seed(0)
+np.random.seed(RANDOM_SEED)
 random_selection = np.random.randint(0, 1659, N_SAMPLES)
 
 for i, (sequence_name, sequence) in enumerate(read_fasta(bench_fasta)):
@@ -65,24 +37,46 @@ for i, (sequence_name, sequence) in enumerate(read_fasta(bench_fasta)):
     print(i, sequence_name)
     true_epitope = sequence_name.split()[0]
     mhc_allele = mhcnames.normalize_allele_name(sequence_name.split()[1])
-    with open('temp.fasta', 'w') as f:
-        f.write(f'>{sequence_name}\n{sequence}')
-    fasta = os.path.join(os.getcwd(), 'temp.fasta')
 
-    for method in IEDB_METHODS:
-        try:
-            frank = get_iedb_method_frank(fasta, mhc_allele, true_epitope, method)
-            frank_scores[method].append(frank)
-        except Exception as e:
-            print(method, e)
-            frank_scores[method].append(None)
     try:
-        frank = get_mhclovac_frank(sequence, mhc_allele, true_epitope)
-        frank_scores['mhclovac'].append(frank)
+        peptides = chop_sequence(sequence, len(true_epitope))
+        predictions = mhclovac.predict(sequence=peptides, mhc=mhc_allele)
+        frank = get_mhclovac_frank(predictions, true_epitope)
+        frank_scores.append(frank)
+        for _, row in predictions.iterrows():
+            if row['peptide'] == true_epitope:
+                scores['true_positive_score'].append(row['binding_score'])
+            else:
+                scores['true_negative_score'].append(row['binding_score'])
     except Exception as e:
         print('mhclovac', e)
-        frank_scores['mhclovac'].append(None)
+
+data = pd.DataFrame()
+data['mhclovac'] = frank_scores
+data.to_csv('./results/benchmarking_frank.csv', index=False)
+
+roc_data = {
+    'tpr_array': [],
+    'fpr_array': []
+}
+
+t_min = min([min(scores['true_positive_score']), min(scores['true_negative_score'])])
+t_max = max([max(scores['true_positive_score']), max(scores['true_negative_score'])])
+
+roc_data['tpr_array'].append(1.0)
+roc_data['fpr_array'].append(1.0)
+
+for t in sorted(scores['true_positive_score']):
+    true_pos = len([x for x in scores['true_positive_score'] if x >= t])
+    false_pos = len([x for x in scores['true_negative_score'] if x >= t])
+    tpr = float(true_pos) / len(scores['true_positive_score'])
+    fpr = float(false_pos) / len(scores['true_negative_score'])
+    roc_data['tpr_array'].append(tpr)
+    roc_data['fpr_array'].append(fpr)
+
+roc_data['tpr_array'].append(0.0)
+roc_data['fpr_array'].append(0.0)
 
 
-data = pd.DataFrame.from_dict(frank_scores)
-data.to_csv('./results/benchmarking_results.csv', index=False)
+joblib.dump(roc_data, 'results/benchmarking_roc.gzip', compress=('gzip', 5))
+
