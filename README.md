@@ -26,22 +26,22 @@ MHC binding prediction based on modeled physicochemical properties of peptides.
 ### Introduction
 
 Molecules of major histocompatibility complex (MHC) help the adaptive immune system recognize the foreign peptides by presenting them on the surface of the cells where they are accessible to the surveillance activity of the T cells.
-The interaction of MHC molecules and the peptides  depends on number of factors including position of the charged residues in the peptide and interactions with the hydrophobic pocket of MHC molecules (Rothbard, J. B., Gefter, M. L., 1991). 
+The interaction of MHC molecules and the peptides  depends on number of factors including position of the charged residues in the peptide and interactions with the hydrophobic pocket of MHC molecules [(Rothbard, J. B., Gefter, M. L., 1991)](https://doi.org/10.1146/annurev.iy.09.040191.002523). 
 Here I present a MHC binding prediction method that focuses on those physicochemical properties of peptides which facilitate interaction with MHC molecules.
 This method is based on modeling physicochemical properties of peptides in a way that reflects the nearest neighbor effects of amino acid properties. 
 In other words this method assumes the following: physicochemical properties of adjacent amino acid residues have additive effect on the local properties of the peptide as a whole and properties of a single residue affect the properties of the peptide as a whole at the neighboring positions. 
 This assumption implies a distinction between the properties of underlying amino acid residues and those of a peptide as a whole. 
-While the nearest neighbor effect has been suggested in case of hydrophobicity of amino acid residues (Kovacs J. M. et al, 2006) the same principle is here applied to other phycicochemical properties. 
+While the nearest neighbor effect has been suggested in case of hydrophobicity of amino acid residues [(Kovacs J. M. et al, 2006)](https://doi.org/10.1002/bip.20417) the same principle is here applied to other phycicochemical properties. 
 Using this approach each peptide is represented by a set of modeled physicochemical profiles which can be further reduced to the fixed number of discrete data points. 
 This allows for direct comparison of physicochemical profiles of peptides regardless of sequence lengths which is one major advantage of MHCLovac over other binding prediction tools. 
 
 ### Methods and materials
 
-Quantitative binding data was obtained in two parts from IEDB (Vita R et. al., 2018). 
+Quantitative binding data was obtained in two parts from IEDB [(Vita R et. al., 2018)](https://doi.org/10.1093/nar/gky1006). 
 The first is the dataset  used for retraining the IEDBs class I MHC binding prediction tools, obtained from IEDB website, which contains some 189000 data samples. 
 The second is the MHC ligand assay dataset from which some 160000 samples were identified as class I MHC ligands and had quantitative binding measurements available. 
 Data from the two datasets were combined to yield 286144 unique samples which were used to train MHCLovac. 
-The list of physicochemical properties and corresponding amino acid index data was obtained from the Aaindex database (Kawashima, S. et. al, 2008). 
+The list of physicochemical properties and corresponding amino acid index data was obtained from the Aaindex database [(Kawashima, S. et. al, 2008)](https://doi.org/10.1093/nar/gkm998). 
 As a preprocessing step, every index was standardized in order to emphasize the distinction between index values of different amino acid residues on same or opposite sides of the spectrum.  
 
 #### Modeling physicochemical properties
@@ -84,7 +84,7 @@ This resulted in total of 9 indexes (table 1) which had high scoring potential a
 | CHAM830102  | A parameter defined from the residuals obtained from the best correlation of the Chou-Fasman parameter of beta-sheet (Charton-Charton, 1983) | 0.1709 |
 
 ### Results
-Prediction accuracy of MHCLovac is evaluated using the same FRANK method and subset of data set that was used to evaluate NetMHCPan 4.1 (Reynisson, B. et. al., 2020). 
+Prediction accuracy of MHCLovac is evaluated using the same FRANK method and subset of data set that was used to evaluate NetMHCPan 4.1 [(Reynisson, B. et. al., 2020)](https://doi.org/10.1093/nar/gkaa379). 
 In short, FRANK method is used to calculate a fraction of non-epitopes from the same sequence as the epitope which score higher than the epitope. 
 The non-epitopes are represented by all overlapping peptides of the same length as the epitope derived from the same protein sequence. 
 The FRANK score ranges from 0 to 1, 0 being the best possible score meaning that the epitope is the highest scoring peptide in the sequence.
@@ -136,10 +136,10 @@ Columns:
 5. `binding_score` - Higher score means better binding
 
 ### References
-* Rothbard, J. B., & Gefter, M. L. (1991). Interactions between immunogenic peptides and MHC proteins. Annual review of immunology, 9(1), 527-565.
-* Kovacs, J. M., Mant, C. T., & Hodges, R. S. (2006). Determination of intrinsic hydrophilicity/hydrophobicity of amino acid side chains in peptides in the absence of nearest‐neighbor or conformational effects. Peptide Science: Original Research on Biomolecules, 84(3), 283-297.
-* Vita R, Mahajan S, Overton JA, Dhanda SK, Martini S, Cantrell JR, Wheeler DK, Sette A, Peters B. The Immune Epitope Database (IEDB): 2018 update. Nucleic Acids Res. 2018 Oct 24. doi: 10.1093/nar/gky1006. [Epub ahead of print] PubMed PMID: 30357391.
-* Kawashima, S., Pokarowski, P., Pokarowska, M., Kolinski, A., Katayama, T., and Kanehisa, M.; AAindex: amino acid index database, progress report 2008. Nucleic Acids Res. 36, D202-D205 (2008). [PMID:17998252]
-* Reynisson, B., Alvarez, B., Paul, S., Peters, B., & Nielsen, M. (2020). NetMHCpan-4.1 and NetMHCIIpan-4.0: improved predictions of MHC antigen presentation by concurrent motif deconvolution and integration of MS MHC eluted ligand data. Nucleic Acids Research.
+* [Rothbard, J. B., & Gefter, M. L. (1991). Interactions between immunogenic peptides and MHC proteins. Annual review of immunology, 9(1), 527-565.](https://doi.org/10.1146/annurev.iy.09.040191.002523)
+* [Kovacs, J. M., Mant, C. T., & Hodges, R. S. (2006). Determination of intrinsic hydrophilicity/hydrophobicity of amino acid side chains in peptides in the absence of nearest‐neighbor or conformational effects. Peptide Science: Original Research on Biomolecules, 84(3), 283-297.](https://doi.org/10.1002/bip.20417)
+* [Vita R, Mahajan S, Overton JA, Dhanda SK, Martini S, Cantrell JR, Wheeler DK, Sette A, Peters B. The Immune Epitope Database (IEDB): 2018 update. Nucleic Acids Res. 2018 Oct 24. doi: 10.1093/nar/gky1006. [Epub ahead of print] PubMed PMID: 30357391.](https://doi.org/10.1093/nar/gky1006)
+* [Kawashima, S., Pokarowski, P., Pokarowska, M., Kolinski, A., Katayama, T., and Kanehisa, M.; AAindex: amino acid index database, progress report 2008. Nucleic Acids Res. 36, D202-D205 (2008). [PMID:17998252]](https://doi.org/10.1093/nar/gkm998)
+* [Reynisson, B., Alvarez, B., Paul, S., Peters, B., & Nielsen, M. (2020). NetMHCpan-4.1 and NetMHCIIpan-4.0: improved predictions of MHC antigen presentation by concurrent motif deconvolution and integration of MS MHC eluted ligand data. Nucleic Acids Research.](https://doi.org/10.1093/nar/gkaa379)
 
 
