@@ -60,10 +60,10 @@ MHCLovac uses a collection of out-of-the-box machine learning algorithms from sc
 The prediction model returns binding scores in form of log transformed binding affinity (1 – log50k(ic50)). 
 
 #### Feature selection
-Since the Aaidex database contains more than 500 entries, to reduce the number of physicochemical properties needed to model, I implemented the following evaluation method. 
+Since the Aaidex database contains more than 500 entries, to reduce the number of physicochemical properties needed to model, the following selection method is implemented. 
 For each physicochemical property index, the binding model was trained and evaluated using r2 score for all MHC alleles, and the average score across the alleles was calculated. 
 The indexes were sorted based on the average score in decreasing order. 
-Starting from the top scoring index, each next index was compared to the previously selected ones for correlation coefficient. 
+Starting from the top scoring index (selected by default), each next index was compared to the previously selected ones for correlation coefficient. 
 Only if correlation coefficient with all indexes from selection was in range [-0.3, 0.3] the new index was added to the selection. 
 This resulted in total of 9 indexes (table 1) which had high average scoring potential and were also low-correlated between themselves. 
 
@@ -83,7 +83,7 @@ This resulted in total of 9 indexes (table 1) which had high average scoring pot
 Prediction accuracy of MHCLovac is evaluated using the same FRANK method and data set that was used to evaluate NetMHCPan 4.1 (Reynisson, B. et. al., 2020). 
 In short, FRANK method is used to calculate a fraction of non-epitopes from the same sequence as the epitope which score higher than the epitope. 
 The non-epitopes are represented by all overlapping peptides of the same length as the epitope derived from the same protein sequence. 
-The FRANK score ranges from 0 to 1, 0 being the best possible score meaning that the epitope is the highest scoring peptide from the sequence.
+The FRANK score ranges from 0 to 1, 0 being the best possible score meaning that the epitope is the highest scoring peptide in the sequence.
 
 ![mhclovac-benchmark.png](research/figures/mhclovac-benchmark.png)
 
@@ -91,7 +91,6 @@ The FRANK score ranges from 0 to 1, 0 being the best possible score meaning that
 * Training data is better cleaned and prepared, duplicate samples are removed and MHC allele names are standardized.
 * Ligand prediction from the previous version was removed due to training data not being properly cleaned. 
 * Binding score is reported as the log transformed binding affinity: `1 - log50k(ic50)`.
-
 
 ### Installation
 
@@ -131,9 +130,9 @@ LELPTGSLEKS  HLA-B*44:02              11  MEIFIEVFSHF HLA-B44:02       0.324328
 ```
 
 Columns:
-1. `peptide` 
+1. `peptide` - peptide sequence
 2. `sequence_name` - Fasta sequence name or name provided by `-n` argument
-3. `peptide_length` -
+3. `peptide_length` - length of peptide sequence
 4. `mhc` - MHC allele name
 5. `binding_score` - Higher score means better binding
 
