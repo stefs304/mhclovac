@@ -19,14 +19,13 @@ required_packages = [
 
 setuptools.setup(
     name="mhclovac",
-    version="3.3",
+    version="4.0",
     author="Stefan Stojanovic",
     author_email="stefs304@gmail.com",
-    description="MHC class I binding and epitope prediction based on modeled "
-                "physicochemical properties of peptides",
+    description="MHC binding prediction based on modeled physicochemical properties of peptides",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://gitlab.com/stojanovicbg/mhclovac",
+    url="https://github.com/stojanovicbg/mhclovac",
     packages=[
         'mhclovac',
     ],

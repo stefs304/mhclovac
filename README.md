@@ -112,7 +112,7 @@ from mhclovac.utils import list_mhc_alleles
 alleles = list_mhc_alleles()
 # returns list of supported MHC alleles
 
-predictions = predict(sequence=['MEIFIEVFSHF', 'ELTLNMCL'], mhc='HLA-B*44:02')
+predictions = predict(peptides=['MEIFIEVFSHF', 'ELTLNMCL'], mhc_allele='HLA-B*44:02')
 # returns pandas DataFrame with prediction results
 
 ```
