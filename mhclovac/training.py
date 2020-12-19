@@ -26,7 +26,8 @@ def train_binding_model(peptide_list, ic50_values, mhc_name, verbose=False, rand
         print('Modeling physicochemical properties... This may take a while...')
     t0 = time.time()
     X = get_features(peptide_list, Config.INDEX_ID_LIST)
-    y = transform_ic50_values(ic50_values)
+    # y = transform_ic50_values(ic50_values)
+    y = ic50_values
     t_elapsed = round(time.time() - t0, 1)
     if verbose:
         print(f'features: {X.shape[0]} x {X.shape[1]} in {t_elapsed} seconds.')
