@@ -85,7 +85,6 @@ for mhc_key in list(data['mhc'].unique()):
     pool = mp.Pool(processes=N_PROC)
 
     for i, index_id in enumerate(index_data):
-        if i > 5: break
         r = pool.apply_async(worker, args=(mhc_data, index_id, N_ITERATIONS, result_queue,), error_callback=print)
 
     pool.close()
