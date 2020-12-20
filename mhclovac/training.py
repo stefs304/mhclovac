@@ -15,7 +15,7 @@ def create_model_template(mhc_name):
     return model
 
 
-def train_binding_model(peptide_list, ic50_values, mhc_name, verbose=False, random_state=None):
+def train_binding_model(peptide_list, ic50_values, mhc_name, verbose=False, random_state=None, n_jobs=-1):
     try:
         model = load_model(mhc_name)
     except:
@@ -31,7 +31,7 @@ def train_binding_model(peptide_list, ic50_values, mhc_name, verbose=False, rand
     t_elapsed = round(time.time() - t0, 1)
     if verbose:
         print(f'features: {X.shape[0]} x {X.shape[1]} in {t_elapsed} seconds.')
-    binding_model = BindingModel(verbose=verbose, random_state=random_state)
+    binding_model = BindingModel(verbose=verbose, random_state=random_state, n_jobs=n_jobs)
     binding_model.fit(X, y)
     model['binding_model'] = binding_model
     dir_path = os.path.dirname(os.path.abspath(__file__))
