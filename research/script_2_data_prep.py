@@ -9,7 +9,6 @@ with open('/home/stefan/Downloads/NetMHCpan_train/allelelist') as f:
     for line in f:
         key = line.split()[0]
         alist = line.split()[1].split(',')
-        print(key, alist)
         if len(alist) == 1:
             allele_list.append(alist[0])
 
@@ -31,13 +30,13 @@ for file_name in os.listdir('/home/stefan/Downloads/NetMHCpan_train'):
     if file_name in ['MHC_pseudo.dat', 'allelelist']:
         continue
     print(file_name)
-    df = pd.read_csv(os.path.join('/home/stefan/Downloads/NetMHCpan_train', file_name), sep=' ', names=['peptide', 'ic50', 'mhc'])
+    df = pd.read_csv(os.path.join('/home/stefan/Downloads/NetMHCpan_train', file_name), sep=' ', names=['peptide', 'target', 'mhc'])
     df['mhc'] = df['mhc'].apply(parse_allele_name)
     df.dropna(inplace=True)
     data.append(df)
 
 combined_data = pd.concat(data)
-combined_data['ic50'] = combined_data['ic50'].apply(lambda x: 0.00001 if x == 0 else x)
+combined_data['target'] = combined_data['target'].apply(lambda x: 0.00001 if x == 0 else x)
 
 combined_data['valid_peptide'] = combined_data['peptide'].apply(lambda x: validate_sequence(x, silent=True))
 combined_data = combined_data[combined_data['valid_peptide'] == True]

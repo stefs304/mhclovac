@@ -1,5 +1,5 @@
 from mhclovac.models import BindingModel
-from mhclovac.preprocessing import get_features, transform_ic50_values
+from mhclovac.preprocessing import get_features
 from mhclovac.utils import load_index_data, get_index_correlation
 from sklearn.metrics import r2_score
 import numpy as np
@@ -38,14 +38,14 @@ def worker(data, index_id, n_iterations, result_queue):
 
         x_train = get_features(peptide_list=train['peptide'], index_id_list=[index_id])
         # y_train = transform_ic50_values(train['ic50'])
-        y_train = train['ic50']
+        y_train = train['target']
         try:
             model = BindingModel(n_jobs=1)
             model.fit(x_train, y_train)
 
             x_test = get_features(peptide_list=test['peptide'], index_id_list=[index_id])
             # y_test = transform_ic50_values(test['ic50'])
-            y_test = test['ic50']
+            y_test = test['target']
 
             predictions = model.predict(x_test)
             r2 = round(r2_score(y_test, predictions), 3)
