@@ -28,7 +28,6 @@ index_data = load_index_data()
 
 
 def worker(data, index_id, n_iterations, result_queue):
-    logger = logging.getLogger('exp')
     index_prediction_scores = []
     mhc_key = list(data['mhc'].unique())[0]
 
@@ -37,14 +36,13 @@ def worker(data, index_id, n_iterations, result_queue):
         test = data.drop(index=train.index)
 
         x_train = get_features(peptide_list=train['peptide'], index_id_list=[index_id])
-        # y_train = transform_ic50_values(train['ic50'])
         y_train = train['target']
+
         try:
             model = BindingModel(n_jobs=1)
             model.fit(x_train, y_train)
 
             x_test = get_features(peptide_list=test['peptide'], index_id_list=[index_id])
-            # y_test = transform_ic50_values(test['ic50'])
             y_test = test['target']
 
             predictions = model.predict(x_test)
@@ -53,12 +51,12 @@ def worker(data, index_id, n_iterations, result_queue):
             index_prediction_scores.append(r2)
 
         except Exception as e:
-            logging.error(e)
-            pass
+            log = logging.getLogger('exp')
+            log.error(f'{mhc_key}: {e}')
+            return None
 
     mean_prediction_score = np.mean(index_prediction_scores)
     result_data = (index_id, mean_prediction_score)
-    logger.debug(f'{mhc_key}:{index_id}:{mean_prediction_score}')
     result_queue.put(result_data)
     return None
 
@@ -74,7 +72,7 @@ for mhc_key in list(data['mhc'].unique()):
         'results': None
     }
 
-    mhc_data = data[data['mhc'] == mhc_key].sample(frac=0.1)
+    mhc_data = data[data['mhc'] == mhc_key].sample(0.1)
 
     if len(mhc_data) < TRAINING_SET_SIZE_THRESHOLD:
         continue
@@ -103,7 +101,7 @@ for mhc_key in list(data['mhc'].unique()):
     exploration_output[mhc_key] = mhc_results
 
 
-joblib.dump(exploration_output, 'results/exploration_output.gz', compress=('gzip', 5))
+joblib.dump(exploration_output, 'results/feature_exploration_output.gz', compress=('gzip', 5))
 logger.info(f'Data saved.')
 
 # --------------
@@ -148,5 +146,5 @@ for index_id, average_prediction_score in pass_index_list:
     title = index_data[index_id]['title']
     logger.info(f'{index_id} - {title} - {average_prediction_score}')
 
-joblib.dump(pass_index_list, 'results/pass_index_list.gz', compress=('gzip', 5))
+joblib.dump(pass_index_list, 'results/feature_selection_output.gz', compress=('gzip', 5))
 
