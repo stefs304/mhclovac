@@ -8,9 +8,9 @@ MHC binding prediction based on modeled physicochemical properties of peptides.
 `bitcoin: bc1qrg7wku5g35kn0qyay4uwzugfmfqwnvz95g54pj`
 
 ### Release notes (version 4.0)
-* Training data is better cleaned and prepared, duplicate samples are removed and MHC allele names are standardized.
-* Ligand prediction from the previous version was removed due to training data not being properly cleaned. 
-* Binding score is reported as the log transformed binding affinity: `1 - log50k(ic50)`.
+* Training data is obtained from [NetMHCPan website](http://www.cbs.dtu.dk/suppl/immunology/NAR_NetMHCpan_NetMHCIIpan/). This data set is better prepared and has more than 4 million samples where binding affinity measurements are directly available.
+* Ligand prediction from the previous version was removed due to training data not being properly prepared. 
+* Binding score is reported as the log transformed binding affinity: `1 - log50k(affinity)`.
 
 ### Table of content
 * [Introduction](#introduction)
@@ -26,23 +26,20 @@ MHC binding prediction based on modeled physicochemical properties of peptides.
 ### Introduction
 
 Molecules of major histocompatibility complex (MHC) help the adaptive immune system recognize the foreign peptides by presenting them on the surface of the cells where they are accessible to the surveillance activity of the T cells.
-The interaction of MHC molecules and the peptides  depends on number of factors including position of the charged residues in the peptide and interactions with the hydrophobic pocket of MHC molecules [(Rothbard, J. B., Gefter, M. L., 1991)](https://doi.org/10.1146/annurev.iy.09.040191.002523). 
-Here I present a MHC binding prediction method that focuses on those physicochemical properties of peptides which facilitate interaction with MHC molecules.
-This method is based on modeling physicochemical properties of peptides in a way that reflects the nearest neighbor effects of amino acid residues. 
-In other words this method assumes the following: physicochemical properties of adjacent amino acid residues have additive effect on the local properties of the peptide as a whole, and properties of a single residue affect the properties of the peptide as a whole at the neighboring positions. 
-This assumption implies a distinction between the properties of underlying amino acid residues and those of a peptide as a whole. 
-While the nearest neighbor effect has been suggested in case of hydrophobicity of amino acid residues [(Kovacs J. M. et al, 2006)](https://doi.org/10.1002/bip.20417), the same principle is here extended to other phycicochemical properties. 
-Using this approach each peptide is represented by a set of modeled physicochemical profiles (distributions of certain property) which can be further reduced to the fixed number of discrete data points. 
-This allows for direct comparison of physicochemical profiles of peptides regardless of sequence lengths, which is one major advantage of MHCLovac over other binding prediction tools. 
+The interaction of MHC molecules and the peptides depends on number of factors including position of the charged residues in the peptide and interactions with the hydrophobic pocket of MHC molecules [(Rothbard, J. B., Gefter, M. L., 1991)](https://doi.org/10.1146/annurev.iy.09.040191.002523). 
+MHCLovac is an MHC binding prediction method that focuses on physicochemical properties that facilitate interaction between a peptide and MHC molecules.
+MHCLovac method is based on modeling physicochemical properties of peptides in a way that captures the nearest neighbor effect of amino acid residues. 
+In other words this method is based on the following hypothesis: physicochemical properties of adjacent amino acid residues have additive effect on the local properties of the peptide as a whole, and properties of a single residue affect the properties of the peptide at the neighboring positions. 
+Using this approach each peptide is represented by a set of modeled physicochemical profiles (distributions of certain property) which are further reduced to the fixed number of discrete data points to obtain the discrete physicochemical profiles. 
+Discrete profiles are used as input features for binding prediction models.
+This method allows for direct comparison of physicochemical profiles of peptides of different sequence lengths, which is an important feature of MHCLovac. 
 
 ### Methods and materials
 
-Quantitative binding data was obtained in two parts from IEDB [(Vita R et. al., 2018)](https://doi.org/10.1093/nar/gky1006). 
-The first is the dataset  used for retraining the IEDBs class I MHC binding prediction tools, obtained from IEDB website, which contains some 189000 data samples. 
-The second is the MHC ligand assay dataset from which some 160000 samples were identified as class I MHC ligands and had quantitative binding measurements available. 
-Data from the two datasets were combined to yield 286144 unique samples which were used to train MHCLovac. 
+Quantitative binding data was obtained from two sources: quantitative binding measurements from IEDB database [(Vita R et. al., 2018)](https://doi.org/10.1093/nar/gky1006) and data set used for training NetMHCPan 4.1 [(Reynisson, B. et. al., 2020)](https://doi.org/10.1093/nar/gkaa379).
+The IEDB data set was used to select the set of physicochemical properties that will be used for prediction. 
+The NetMHCPan data set was used to train prediction models. 
 The list of physicochemical properties and corresponding amino acid index data was obtained from the Aaindex database [(Kawashima, S. et. al, 2008)](https://doi.org/10.1093/nar/gkm998). 
-As a preprocessing step, every index was standardized in order to emphasize the distinction between index values of different amino acid residues on same or opposite sides of the spectrum.  
 
 #### Modeling physicochemical properties
 A peptide of length L is model by creating a vector S containing L * m + 2 * m data points, where m is an arbitrary multiplier. 
@@ -55,21 +52,21 @@ These slices are optionally removed to produce the final vector of length L * m 
 
 ![mhclovac-modeling-method-figure.png](research/figures/mhclovac-modeling-figure.png)
 
-Once the physicochemical profile is obtained, it can be further reduced to the fixed number of discrete points. 
+Once the physicochemical profile is obtained, it is further reduced to the fixed number of discrete points. 
 To give an example, two ligands of HLA-A*02:01 are modeled, an 8-mer LLDVTAAV  and 11-mer FLFDGSPTYVL (Figure 1.b and 1.c). 
 By sampling the modeled profiles at equal intervals their profiles are reduced to 10 discrete points each (Figure 1.d and 1.e), which are used as input features for prediction model. 
 
 #### Prediction model
-MHCLovac uses a collection of out-of-the-box machine learning algorithms from scikit-learn python library. 
-The prediction model returns binding scores in form of log transformed binding affinity (1 – log50k(ic50)). 
+MHCLovac uses a collection of out-of-the-box regression algorithms from `scikit-learn` python library with mostly default parameters.
+The prediction model returns binding scores in form of log transformed binding affinity (1 – log50k(affinity)). 
 
 #### Feature selection
 Since the Aaidex database contains more than 500 entries, to reduce the number of physicochemical properties needed to model, the following selection method is implemented. 
 For each physicochemical property index, the binding model was trained and evaluated using r2 score for each MHC allele, and the average score across all alleles was calculated. 
-The indexes were sorted based on the average score in decreasing order. 
-Starting from the top scoring index (selected by default), each next index was compared to the previously selected ones for correlation coefficient. 
-Only if correlation coefficient with all indexes from selection was in range [-0.3, 0.3] the new index was added to the selection. 
-This resulted in total of 9 indexes (table 1) which had high scoring potential and were also low-correlated between themselves. 
+The indexes were sorted based on the average score in descending order. 
+Starting from the highest scoring index (selected by default), each next index was compared to the previously selected ones for correlation coefficient. 
+Only if correlation coefficients with all indexes from selection were in range [-0.3, 0.3] the new index was added to the selection. 
+This resulted in total of 9 indexes (table 1) which had high prediction potential and were also low-correlated between themselves. 
 
 | Accession number  | Title | Average r2 score |
 | ------------- | ------------- | ------------ |
@@ -84,10 +81,8 @@ This resulted in total of 9 indexes (table 1) which had high scoring potential a
 | CHAM830102  | A parameter defined from the residuals obtained from the best correlation of the Chou-Fasman parameter of beta-sheet (Charton-Charton, 1983) | 0.1709 |
 
 ### Results
-Prediction accuracy of MHCLovac is evaluated using the same FRANK method and subset of data set that was used to evaluate NetMHCPan 4.1 [(Reynisson, B. et. al., 2020)](https://doi.org/10.1093/nar/gkaa379). 
-In short, FRANK method is used to calculate a fraction of non-epitopes from the same sequence as the epitope which score higher than the epitope. 
-The non-epitopes are represented by all overlapping peptides of the same length as the epitope derived from the same protein sequence. 
-The FRANK score ranges from 0 to 1, 0 being the best possible score meaning that the epitope is the highest scoring peptide in the sequence.
+MHCLovac is evaluated using the FRANK method from NetMHCPan paper. The same dataset was used as well, containing some 1600 sequences and epitopes of which a subset of 200 was randomly selected for this benchmark. 
+The FRANK score ranges from 0 to 1, where 0 is the best possible score meaning that the epitope is the highest scoring peptide in the sequence.
 
 ![mhclovac-benchmark.png](research/figures/mhclovac-benchmark.png)
 
