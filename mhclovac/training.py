@@ -1,6 +1,6 @@
 from .utils import load_model
 from .models import BindingModel
-from .preprocessing import get_features, transform_ic50_values
+from .preprocessing import get_features
 from .config import Config
 import os
 import joblib
