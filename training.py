@@ -7,7 +7,7 @@ TRAINING_SET_SIZE_THRESHOLD = 50
 RANDOM_SEED = 0
 N_PROC = 16
 
-data = pd.read_csv(f'data/train_data.zip')
+data = pd.read_csv(f'data/training_data.zip')
 
 pool = mp.Pool(processes=N_PROC)
 
