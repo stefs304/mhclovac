@@ -36,7 +36,7 @@ for file_name in os.listdir('/home/stefan/Downloads/NetMHCpan_train'):
     data.append(df)
 
 combined_data = pd.concat(data)
-combined_data['target'] = combined_data['target'].apply(lambda x: 0.00001 if x == 0 else x)
+# combined_data['target'] = combined_data['target'].apply(lambda x: 0.00001 if x == 0 else x)
 
 combined_data['valid_peptide'] = combined_data['peptide'].apply(lambda x: validate_sequence(x, silent=True))
 combined_data = combined_data[combined_data['valid_peptide'] == True]
