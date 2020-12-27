@@ -7,7 +7,7 @@ import numpy as np
 
 
 N_SAMPLES = 200
-RANDOM_SEED = 2077
+RANDOM_SEED = 0
 bench_fasta = '../data/CD8_epitopes.fsa'
 
 

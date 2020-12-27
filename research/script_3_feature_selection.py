@@ -11,7 +11,7 @@ import joblib
 
 TRAINING_SET_FRACTION = 0.8
 TRAINING_SET_SIZE_THRESHOLD = 50
-DATA_FILE = '../data/train_data.zip'
+DATA_FILE = '../data/training_data.zip'
 N_PROC = 16
 N_ITERATIONS = 3
 CORRELATION_THRESHOLD = 0.3

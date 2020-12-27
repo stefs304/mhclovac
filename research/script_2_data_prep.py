@@ -44,5 +44,5 @@ combined_data.drop(columns=['valid_peptide'], inplace=True)
 
 print(len(combined_data))
 
-combined_data.to_csv('../data/train_data.zip', index=False)
+combined_data.to_csv('../data/training_data.zip', index=False)
 
