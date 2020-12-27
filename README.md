@@ -26,9 +26,9 @@ MHC binding prediction based on modeled physicochemical properties of peptides.
 ### Introduction
 
 Molecules of major histocompatibility complex (MHC) help the adaptive immune system recognize the foreign peptides by presenting them on the surface of the cells where they are accessible to the surveillance activity of the T cells.
-The interaction of MHC molecules and the peptides depends on number of factors including position of the charged residues in the peptide and interactions with the hydrophobic pocket of MHC molecules [(Rothbard, J. B., Gefter, M. L., 1991)](https://doi.org/10.1146/annurev.iy.09.040191.002523). 
+The interaction of MHC molecules and the peptides depends on number of factors including position of the charged residues in the peptide and hydrophobic interactions with the pocket of MHC molecules [(Rothbard, J. B., Gefter, M. L., 1991)](https://doi.org/10.1146/annurev.iy.09.040191.002523). 
 MHCLovac is an MHC binding prediction method that focuses on physicochemical properties that facilitate interaction between a peptide and MHC molecules.
-MHCLovac method is based on modeling physicochemical properties of peptides in a way that captures the nearest neighbor effect of amino acid residues. 
+This method is based on modeling physicochemical properties of peptides in a way that captures the nearest neighbor effect of amino acid residues. 
 In other words this method is based on the following hypothesis: physicochemical properties of adjacent amino acid residues have additive effect on the local properties of the peptide as a whole, and properties of a single residue affect the properties of the peptide at the neighboring positions. 
 Using this approach each peptide is represented by a set of modeled physicochemical profiles (distributions of certain property) which are further reduced to the fixed number of discrete data points to obtain the discrete physicochemical profiles. 
 Discrete profiles are used as input features for binding prediction models.
@@ -42,13 +42,13 @@ The NetMHCPan data set was used to train prediction models.
 The list of physicochemical properties and corresponding amino acid index data was obtained from the Aaindex database [(Kawashima, S. et. al, 2008)](https://doi.org/10.1093/nar/gkm998). 
 
 #### Modeling physicochemical properties
-A peptide of length L is model by creating a vector S containing L * m + 2 * m data points, where m is an arbitrary multiplier. 
-Each amino acid residue gets a designated slice of the vector S corresponding to its relative position in the sequence. 
-The ith amino acid residue Ai is modeled as a Gaussian curve G(Ai) scaled by the corresponding index value G(Ai) * IA (Figure 1.a, dashed colored lines). 
-Each G(Ai) is shaped by sigma parameter with default value of 0.8  and spans one neighboring slice on each side of the slice of Ai , ex. S[Ai-1:Ai+1]. 
+A peptide of length `L` is model by creating a vector `S` containing `L*m + 2*m` data points, where `m` is an arbitrary multiplier. 
+Each amino acid residue gets a designated slice of the vector `S` corresponding to its relative position in the sequence. 
+The ith amino acid residue `Ai` is modeled by a Gaussian curve `G(Ai)` scaled by the corresponding index value `G(Ai)*IA` (Figure 1.a, dashed colored lines). 
+Each `G(Ai)` is shaped by sigma parameter with default value of 0.8  and spans one neighboring slice on each side of the slice of `Ai` , ex. `S[Ai-1:Ai+1]`. 
 The physicochemical profile of the peptide is obtained by taking the sum of individually modeled residues (Figure 1.a, black solid line). 
-The leading and trailing slices, corresponding to + 2 * m term in the first expression, are used as placeholders for modeling the first and the last residue. 
-These slices are optionally removed to produce the final vector of length L * m (not shown in the figure).
+The leading and trailing slices, corresponding to `+ 2*m` term in the first expression, are used as placeholders for modeling the first and the last residue. 
+These slices are optionally removed to produce the final vector of length `L*m` (not shown in the figure).
 
 ![mhclovac-modeling-method-figure.png](research/figures/mhclovac-modeling-figure.png)
 
@@ -132,7 +132,6 @@ Columns:
 
 ### References
 * Rothbard, J. B., & Gefter, M. L. (1991). Interactions between immunogenic peptides and MHC proteins. Annual review of immunology, 9(1), 527-565. [https://doi.org/10.1146/annurev.iy.09.040191.002523](https://doi.org/10.1146/annurev.iy.09.040191.002523)
-* Kovacs, J. M., Mant, C. T., & Hodges, R. S. (2006). Determination of intrinsic hydrophilicity/hydrophobicity of amino acid side chains in peptides in the absence of nearest‐neighbor or conformational effects. Peptide Science: Original Research on Biomolecules, 84(3), 283-297. [https://doi.org/10.1002/bip.20417](https://doi.org/10.1002/bip.20417)
 * Vita R, Mahajan S, Overton JA, Dhanda SK, Martini S, Cantrell JR, Wheeler DK, Sette A, Peters B. The Immune Epitope Database (IEDB): 2018 update. Nucleic Acids Res. 2018 Oct 24. doi: 10.1093/nar/gky1006. [Epub ahead of print] PubMed PMID: 30357391. [https://doi.org/10.1093/nar/gky1006](https://doi.org/10.1093/nar/gky1006)
 * Kawashima, S., Pokarowski, P., Pokarowska, M., Kolinski, A., Katayama, T., and Kanehisa, M.; AAindex: amino acid index database, progress report 2008. Nucleic Acids Res. 36, D202-D205 (2008). [PMID:17998252] [https://doi.org/10.1093/nar/gkm998](https://doi.org/10.1093/nar/gkm998)
 * Reynisson, B., Alvarez, B., Paul, S., Peters, B., & Nielsen, M. (2020). NetMHCpan-4.1 and NetMHCIIpan-4.0: improved predictions of MHC antigen presentation by concurrent motif deconvolution and integration of MS MHC eluted ligand data. Nucleic Acids Research. [https://doi.org/10.1093/nar/gkaa379](https://doi.org/10.1093/nar/gkaa379)
