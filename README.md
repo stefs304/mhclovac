@@ -8,7 +8,7 @@ MHC binding prediction based on modeled physicochemical properties of peptides.
 `bitcoin: bc1qrg7wku5g35kn0qyay4uwzugfmfqwnvz95g54pj`
 
 ### Release notes (version 4.0)
-* Training data is obtained from [NetMHCPan website](http://www.cbs.dtu.dk/suppl/immunology/NAR_NetMHCpan_NetMHCIIpan/). This data set is better prepared and has more than 4 million samples where binding affinity measurements are directly available.
+* Training data is obtained from [NetMHCPan website](http://www.cbs.dtu.dk/suppl/immunology/NAR_NetMHCpan_NetMHCIIpan/). This data set contains more than 4 million samples for which binding affinity measurements are directly available.
 * Ligand prediction from the previous version was removed due to training data not being properly prepared. 
 * Binding score is reported as the log transformed binding affinity: `1 - log50k(affinity)`.
 
@@ -26,11 +26,11 @@ MHC binding prediction based on modeled physicochemical properties of peptides.
 ### Introduction
 
 Molecules of major histocompatibility complex (MHC) help the adaptive immune system recognize the foreign peptides by presenting them on the surface of the cells where they are accessible to the surveillance activity of the T cells.
-The interaction of MHC molecules and the peptides depends on number of factors including position of the charged residues in the peptide and hydrophobic interactions with the pocket of MHC molecules [(Rothbard, J. B., Gefter, M. L., 1991)](https://doi.org/10.1146/annurev.iy.09.040191.002523). 
+The interaction of MHC molecules and the peptides depends on number of factors including position of the charged residues in the peptide and hydrophobic interactions with the pocket of MHC molecules. 
 MHCLovac is an MHC binding prediction method that focuses on physicochemical properties that facilitate interaction between a peptide and MHC molecules.
 This method is based on modeling physicochemical properties of peptides in a way that captures the nearest neighbor effect of amino acid residues. 
-In other words this method is based on the following hypothesis: physicochemical properties of adjacent amino acid residues have additive effect on the local properties of the peptide as a whole, and properties of a single residue affect the properties of the peptide at the neighboring positions. 
-Using this approach each peptide is represented by a set of modeled physicochemical profiles (distributions of certain property) which are further reduced to the fixed number of discrete data points to obtain the discrete physicochemical profiles. 
+In other words, this method is based on the following hypothesis: physicochemical properties of adjacent amino acid residues have additive effect on the local properties of the peptide as a whole, and properties of a single residue affect the properties of the peptide at the neighboring positions. 
+Using this approach each peptide is represented by a set of modeled physicochemical profiles (distributions of certain property) which are further reduced to the fixed number of discrete data points to obtain discrete physicochemical profiles. 
 Discrete profiles are used as input features for binding prediction models.
 This method allows for direct comparison of physicochemical profiles of peptides of different sequence lengths, which is an important feature of MHCLovac. 
 
@@ -49,12 +49,11 @@ Each `G(Ai)` is shaped by sigma parameter with default value of 0.8  and spans o
 The physicochemical profile of the peptide is obtained by taking the sum of individually modeled residues (Figure 1.a, black solid line). 
 The leading and trailing slices, corresponding to `+ 2*m` term in the first expression, are used as placeholders for modeling the first and the last residue. 
 These slices are optionally removed to produce the final vector of length `L*m` (not shown in the figure).
-
-![mhclovac-modeling-method-figure.png](research/figures/mhclovac-modeling-figure.png)
-
 Once the physicochemical profile is obtained, it is further reduced to the fixed number of discrete points. 
 To give an example, two ligands of HLA-A*02:01 are modeled, an 8-mer LLDVTAAV  and 11-mer FLFDGSPTYVL (Figure 1.b and 1.c). 
 By sampling the modeled profiles at equal intervals their profiles are reduced to 10 discrete points each (Figure 1.d and 1.e), which are used as input features for prediction model. 
+
+![mhclovac-modeling-method-figure.png](research/figures/mhclovac-modeling-figure.png)
 
 #### Prediction model
 MHCLovac uses a collection of out-of-the-box regression algorithms from `scikit-learn` python library with mostly default parameters.
@@ -130,8 +129,7 @@ Columns:
 5. `binding_score` - Higher score means better binding
 
 ### References
-* Rothbard, J. B., & Gefter, M. L. (1991). Interactions between immunogenic peptides and MHC proteins. Annual review of immunology, 9(1), 527-565. [https://doi.org/10.1146/annurev.iy.09.040191.002523](https://doi.org/10.1146/annurev.iy.09.040191.002523)
 * Vita R, Mahajan S, Overton JA, Dhanda SK, Martini S, Cantrell JR, Wheeler DK, Sette A, Peters B. The Immune Epitope Database (IEDB): 2018 update. Nucleic Acids Res. 2018 Oct 24. doi: 10.1093/nar/gky1006. [Epub ahead of print] PubMed PMID: 30357391. [https://doi.org/10.1093/nar/gky1006](https://doi.org/10.1093/nar/gky1006)
-* Kawashima, S., Pokarowski, P., Pokarowska, M., Kolinski, A., Katayama, T., and Kanehisa, M.; AAindex: amino acid index database, progress report 2008. Nucleic Acids Res. 36, D202-D205 (2008). [PMID:17998252] [https://doi.org/10.1093/nar/gkm998](https://doi.org/10.1093/nar/gkm998)
 * Reynisson, B., Alvarez, B., Paul, S., Peters, B., & Nielsen, M. (2020). NetMHCpan-4.1 and NetMHCIIpan-4.0: improved predictions of MHC antigen presentation by concurrent motif deconvolution and integration of MS MHC eluted ligand data. Nucleic Acids Research. [https://doi.org/10.1093/nar/gkaa379](https://doi.org/10.1093/nar/gkaa379)
+* Kawashima, S., Pokarowski, P., Pokarowska, M., Kolinski, A., Katayama, T., and Kanehisa, M.; AAindex: amino acid index database, progress report 2008. Nucleic Acids Res. 36, D202-D205 (2008). [PMID:17998252] [https://doi.org/10.1093/nar/gkm998](https://doi.org/10.1093/nar/gkm998)
 
