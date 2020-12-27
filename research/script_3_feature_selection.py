@@ -12,7 +12,7 @@ import joblib
 TRAINING_SET_FRACTION = 0.8
 TRAINING_SET_SIZE_THRESHOLD = 50
 DATA_FILE = '../data/train_data.zip'
-N_PROC = 6
+N_PROC = 16
 N_ITERATIONS = 3
 CORRELATION_THRESHOLD = 0.3
 
@@ -72,7 +72,7 @@ for mhc_key in list(data['mhc'].unique()):
         'results': None
     }
 
-    mhc_data = data[data['mhc'] == mhc_key].sample(0.1)
+    mhc_data = data[data['mhc'] == mhc_key].sample(frac=0.1)
 
     if len(mhc_data) < TRAINING_SET_SIZE_THRESHOLD:
         continue
