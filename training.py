@@ -5,7 +5,7 @@ import multiprocessing as mp
 
 TRAINING_SET_SIZE_THRESHOLD = 50
 RANDOM_SEED = 0
-N_PROC = 2
+N_PROC = 16
 
 data = pd.read_csv(f'data/train_data.zip')
 
@@ -13,9 +13,9 @@ pool = mp.Pool(processes=N_PROC)
 
 for mhc_key in list(data['mhc'].unique()):
 
-    if mhc_key not in ['HLA-B*44:02']: continue
+    # if mhc_key not in ['HLA-B*44:02']: continue
 
-    mhc_data = data[data['mhc'] == mhc_key]
+    mhc_data = data[data['mhc'] == mhc_key].sample(frac=1.0)
 
     if len(mhc_data) < TRAINING_SET_SIZE_THRESHOLD:
         # skip if less than TRAINING_SET_SIZE_THRESHOLD peptides
