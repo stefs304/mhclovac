@@ -54,4 +54,4 @@ def get_features(peptide_list, index_id_list):
 def transform_ic50_values(ic50_values):
     data = pd.DataFrame()
     data['values'] = ic50_values
-    return data['values'].apply(lambda x: 1 - math.log(x, 50000))
+    return data['values'].apply(lambda x: 1 - math.log(x, 50000) if x > 0 else 0)

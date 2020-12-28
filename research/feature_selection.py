@@ -1,5 +1,5 @@
 from mhclovac.models import BindingModel
-from mhclovac.preprocessing import get_features
+from mhclovac.preprocessing import get_features, transform_ic50_values
 from mhclovac.utils import load_index_data, get_index_correlation
 from sklearn.metrics import r2_score
 import numpy as np
@@ -11,12 +11,13 @@ import joblib
 
 TRAINING_SET_FRACTION = 0.8
 TRAINING_SET_SIZE_THRESHOLD = 50
-DATA_FILE = '../data/combined_new.zip'
-N_PROC = 16
+DATA_FILE = '../data/combined_data.zip'
+N_PROC = 6
 N_ITERATIONS = 3
 CORRELATION_THRESHOLD = 0.3
 
-#create a logger
+
+# create a logger
 logger = logging.getLogger('exp')
 logger.setLevel(logging.DEBUG)
 handler = logging.FileHandler('exp.log')
@@ -36,14 +37,14 @@ def worker(data, index_id, n_iterations, result_queue):
         test = data.drop(index=train.index)
 
         x_train = get_features(peptide_list=train['peptide'], index_id_list=[index_id])
-        y_train = train['target']
+        y_train = transform_ic50_values(train['target'])
 
         try:
             model = BindingModel(n_jobs=1)
             model.fit(x_train, y_train)
 
             x_test = get_features(peptide_list=test['peptide'], index_id_list=[index_id])
-            y_test = test['target']
+            y_test = transform_ic50_values(test['target'])
 
             predictions = model.predict(x_test)
             r2 = round(r2_score(y_test, predictions), 3)
@@ -72,7 +73,7 @@ for mhc_key in list(data['mhc'].unique()):
         'results': None
     }
 
-    mhc_data = data[data['mhc'] == mhc_key].sample(frac=0.1)
+    mhc_data = data[data['mhc'] == mhc_key].sample(frac=0.1).copy()
 
     if len(mhc_data) < TRAINING_SET_SIZE_THRESHOLD:
         continue
