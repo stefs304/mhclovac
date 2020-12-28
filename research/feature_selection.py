@@ -12,7 +12,7 @@ import joblib
 TRAINING_SET_FRACTION = 0.8
 TRAINING_SET_SIZE_THRESHOLD = 50
 DATA_FILE = '../data/combined_data.zip'
-N_PROC = 6
+N_CPU = 16
 N_ITERATIONS = 3
 CORRELATION_THRESHOLD = 0.3
 
@@ -30,21 +30,21 @@ index_data = load_index_data()
 
 def worker(data, index_id, n_iterations, result_queue):
     index_prediction_scores = []
-    mhc_key = list(data['mhc'].unique())[0]
+    mhc_key = list(data['mhc_allele'].unique())[0]
 
     for _ in range(n_iterations):
         train = data.sample(frac=TRAINING_SET_FRACTION)
         test = data.drop(index=train.index)
 
         x_train = get_features(peptide_list=train['peptide'], index_id_list=[index_id])
-        y_train = transform_ic50_values(train['target'])
+        y_train = transform_ic50_values(train['affinity'])
 
         try:
             model = BindingModel(n_jobs=1)
             model.fit(x_train, y_train)
 
             x_test = get_features(peptide_list=test['peptide'], index_id_list=[index_id])
-            y_test = transform_ic50_values(test['target'])
+            y_test = transform_ic50_values(test['affinity'])
 
             predictions = model.predict(x_test)
             r2 = round(r2_score(y_test, predictions), 3)
@@ -64,7 +64,7 @@ def worker(data, index_id, n_iterations, result_queue):
 
 exploration_output = {}
 
-for mhc_key in list(data['mhc'].unique()):
+for mhc_key in list(data['mhc_allele'].unique()):
 
     logger.info(mhc_key)
 
@@ -73,7 +73,7 @@ for mhc_key in list(data['mhc'].unique()):
         'results': None
     }
 
-    mhc_data = data[data['mhc'] == mhc_key].sample(frac=0.1).copy()
+    mhc_data = data[data['mhc_allele'] == mhc_key].sample(frac=1.0).copy()
 
     if len(mhc_data) < TRAINING_SET_SIZE_THRESHOLD:
         continue
@@ -81,7 +81,7 @@ for mhc_key in list(data['mhc'].unique()):
     logger.info(f'Data shape: {mhc_data.shape}')
     manager = mp.Manager()
     result_queue = manager.Queue()
-    pool = mp.Pool(processes=N_PROC)
+    pool = mp.Pool(processes=N_CPU-1)
 
     for i, index_id in enumerate(index_data):
         r = pool.apply_async(worker, args=(mhc_data, index_id, N_ITERATIONS, result_queue,), error_callback=print)
