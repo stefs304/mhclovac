@@ -21,6 +21,8 @@ binding_data = pd.read_csv(
     usecols=[1, 3, 5],
     names=['mhc_allele', 'peptide', 'affinity']
 )
+
+binding_data['mhc_allele'] = binding_data['mhc_allele'].apply(parse_allele_name)
 binding_data.dropna(inplace=True)
 print(f'BA data, n_samples={len(binding_data)}')
 
