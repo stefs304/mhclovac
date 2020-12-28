@@ -9,7 +9,7 @@ with open(readme_path, "r") as f:
 
 
 required_packages = [
-    "scikit-learn>=0.23.2",
+    "scikit-learn==0.23.2",
     "numpy>=1.19.4",
     "pandas>=1.1.4",
     "joblib>=0.17.0",
