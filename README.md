@@ -8,8 +8,10 @@ MHC binding prediction based on modeled physicochemical properties of peptides.
 `bitcoin: bc1qrg7wku5g35kn0qyay4uwzugfmfqwnvz95g54pj`
 
 ### Release notes (version 4.0)
-* Training data is obtained from [NetMHCPan website](http://www.cbs.dtu.dk/suppl/immunology/NAR_NetMHCpan_NetMHCIIpan/). This data set contains more than 4 million samples for which binding affinity measurements are directly available.
-* Ligand prediction from the previous version was removed due to training data not being properly prepared. 
+* Training data is obtained from [NetMHCPan website](http://www.cbs.dtu.dk/suppl/immunology/NAR_NetMHCpan_NetMHCIIpan/). 
+  This data set contains more than 4 million samples for which binding affinity measurements are directly available.
+* Separate ligand prediction from the previous version was removed due to training data not being properly prepared. 
+  New prediction models are trained on combined binding affinity and eluted ligand data. 
 * Binding score is reported as the log transformed binding affinity: `1 - log50k(affinity)`.
 
 ### Table of content
