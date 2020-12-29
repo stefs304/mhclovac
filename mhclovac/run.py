@@ -7,11 +7,11 @@ import sys
 import argparse
 
 
-def predict(peptides: list, mhc_allele: str, sequence_name: str = "unknown") -> pd.DataFrame:
+def predict(peptides: list, mhc_allele: str, sequence_name: str = "unknown", sort: bool = False) -> pd.DataFrame:
     """
     Predicts binding score (affinity). Returns pandas DataFrame.
     """
-    model = load_model(mhc_allele)['binding_model']
+    model = load_model(mhc_allele)
     data = pd.DataFrame()
     data['peptide'] = peptides
     data['mhc'] = mhc_allele
@@ -19,8 +19,9 @@ def predict(peptides: list, mhc_allele: str, sequence_name: str = "unknown") -> 
     data['sequence_name'] = sequence_name
     x = get_features(peptide_list=data['peptide'], index_id_list=Config.INDEX_ID_LIST)
     data['binding_score'] = model.predict(x)
-    # sort values
-    data.sort_values(by='binding_score', inplace=True, ascending=False)
+    # sort values optionally
+    if sort:
+        data.sort_values(by='binding_score', inplace=True, ascending=False)
     return data
 
 
@@ -32,7 +33,7 @@ MHC binding prediction based on modeled physicochemical properties of peptides.
 https://github.com/stojanovicbg/mhclovac
 Version: 4.0
 Author: Stefan Stojanovic
-    """
+"""
     parser = argparse.ArgumentParser(description=description, formatter_class=argparse.RawTextHelpFormatter)
     parser.add_argument('-s', '--sequence', type=str, help='Sequence')
     parser.add_argument('-n', '--sequence_name', type=str, help='Sequence name', default='Unknown')
@@ -40,6 +41,7 @@ Author: Stefan Stojanovic
     parser.add_argument('-m', '--mhc', type=str, help='MHC allele', required=True)
     parser.add_argument('-l', '--peptide_length', type=int, help='Peptide length', required=True)
     parser.add_argument('-o', '--output', type=str, help='Output file name. By default, output is printed to STDOUT')
+    parser.add_argument('--sort', action='store_true', help='Sort output based on prediction score')
 
     return parser.parse_args(argv)
 
@@ -57,7 +59,7 @@ def run():
             try:
                 validate_sequence(sequence, seq_name, silent=False)
                 peptide_list = chop_sequence(sequence, args.peptide_length)
-                p = predict(peptides=peptide_list, mhc_allele=args.mhc, sequence_name=seq_name)
+                p = predict(peptides=peptide_list, mhc_allele=args.mhc, sequence_name=seq_name, sort=args.sort)
                 predictions.append(p)
             except Exception as e:
                 msg = f'Error encountered while processing sequence "{seq_name}": {e}'
@@ -67,7 +69,7 @@ def run():
         try:
             validate_sequence(args.sequence, args.sequence_name, silent=False)
             peptide_list = chop_sequence(args.sequence, args.peptide_length)
-            p = predict(peptides=peptide_list, mhc_allele=args.mhc, sequence_name=args.sequence_name)
+            p = predict(peptides=peptide_list, mhc_allele=args.mhc, sequence_name=args.sequence_name, sort=args.sort)
             predictions.append(p)
         except Exception as e:
             msg = f'Error encountered while processing sequence "{args.sequence_name}": {e}'
