@@ -7,11 +7,9 @@ MHC binding prediction based on modeled physicochemical properties of peptides.
 
 `bitcoin: bc1qrg7wku5g35kn0qyay4uwzugfmfqwnvz95g54pj`
 
-### Release notes (version 4.0)
-* Training data is obtained from [NetMHCPan website](http://www.cbs.dtu.dk/suppl/immunology/NAR_NetMHCpan_NetMHCIIpan/). 
-  This data set contains more than 4 million samples for which binding affinity measurements are directly available.
-* Separate ligand prediction from the previous version was removed due to training data not being properly prepared. 
-  New prediction models are trained on combined binding affinity and eluted ligand data. 
+### New in version 4.0
+* Training data is properly prepared, cleaned and deduplicated and contains both binding affinity and eluted ligand data.
+* Separate ligand prediction from the previous version was removed due to training data not being properly prepared.
 * Binding score is reported as the log transformed binding affinity: `1 - log50k(affinity)`.
 
 ### Table of content
@@ -26,7 +24,6 @@ MHC binding prediction based on modeled physicochemical properties of peptides.
 * [References](#references)
 
 ### Introduction
-
 Molecules of major histocompatibility complex (MHC) help the adaptive immune system recognize the foreign peptides by presenting them on the surface of the cells where they are accessible to the surveillance activity of the T cells.
 The interaction of MHC molecules and the peptides depends on number of factors including position of the charged residues in the peptide and hydrophobic interactions with the pocket of MHC molecules. 
 MHCLovac is an MHC binding prediction method that focuses on physicochemical properties that facilitate interaction between a peptide and MHC molecules.
@@ -37,10 +34,8 @@ Discrete profiles are used as input features for binding prediction models.
 This method allows for direct comparison of physicochemical profiles of peptides of different sequence lengths, which is an important feature of MHCLovac. 
 
 ### Methods and materials
-
-Quantitative binding data was obtained from two sources: quantitative binding measurements from IEDB database [(Vita R et. al., 2018)](https://doi.org/10.1093/nar/gky1006) and data set used for training NetMHCPan 4.1 [(Reynisson, B. et. al., 2020)](https://doi.org/10.1093/nar/gkaa379).
-The IEDB data set was used to select the set of physicochemical properties that will be used for prediction. 
-The NetMHCPan data set was used to train prediction models. 
+Quantitative binding data was obtained in two parts from IEDB [(Vita R et. al., 2018)](https://doi.org/10.1093/nar/gky1006): first is a data set used for retraining IEDB tools and second is eluted ligand data set.
+Data from these two data sets were combined into single data set containing around 260.000 data samples. 
 The list of physicochemical properties and corresponding amino acid index data was obtained from the Aaindex database [(Kawashima, S. et. al, 2008)](https://doi.org/10.1093/nar/gkm998). 
 
 #### Modeling physicochemical properties
@@ -71,21 +66,26 @@ This resulted in total of 9 indexes (table 1) which had high prediction potentia
 
 | Accession number  | Title | Average r2 score |
 | ------------- | ------------- | ------------ |
-| HOPT810101  | Hydrophilicity value (Hopp-Woods, 1981)  | 0.2790 |
-| ZIMJ680104  | Isoelectric point (Zimmerman et al., 1968)  | 0.2662 |
-| KARS160105  | Average eccentricity (Karkbara-Knisley, 2016)  | 0.2466 |
-| TANS770107  | Normalized frequency of left-handed helix (Tanaka-Scheraga, 1977)  | 0.2306 |
-| ISOY800104  | Normalized relative frequency of bend R (Isogai et al., 1980)  | 0.2224 |
-| VELV850101  | Electron-ion interaction potential (Veljkovic et al., 1985)  | 0.2001 |
-| MAXF760103  | Normalized frequency of zeta R (Maxfield-Scheraga, 1976)  | 0.1916 |
-| RACS820104  | Average relative fractional occurrence in EL(i) (Rackovsky-Scheraga, 1982)  | 0.1827 |
-| CHAM830102  | A parameter defined from the residuals obtained from the best correlation of the Chou-Fasman parameter of beta-sheet (Charton-Charton, 1983) | 0.1709 |
+| ROSM880102  | Side chain hydropathy, corrected for solvation (Roseman, 1988)  | 0.2819 |
+| ZIMJ680104  | Isoelectric point (Zimmerman et al., 1968)  | 0.2740 |
+| OOBM770104  | Average non-bonded energy per residue (Oobatake-Ooi, 1977)  | 0.2498 |
+| SNEP660101  | Principal component I (Sneath, 1966)  | 0.2454 |
+| ROBB760111  | Information measure for C-terminal turn (Robson-Suzuki, 1976)  | 0.2353 |
+| CHAM830102  | A parameter defined from the residuals obtained from the best correlation of the Chou-Fasman parameter of beta-sheet (Charton-Charton, 1983)  | 0.2062 |
+| RACS820104  | Average relative fractional occurrence in EL(i) (Rackovsky-Scheraga, 1982)  | 0.1833 |
+| WERD780103  | Free energy change of alpha(Ri) to alpha(Rh) (Wertz-Scheraga, 1978)  | 0.1704 |
+| KARS160120  | Weighted minimum eigenvalue based on the atomic numbers (Karkbara-Knisley, 2016) | 0.1413 |
 
 ### Results
-MHCLovac is evaluated using the FRANK method from NetMHCPan paper. The same dataset was used as well, containing some 1600 sequences and epitopes of which a subset of 200 was randomly selected for this benchmark. 
-The FRANK score ranges from 0 to 1, where 0 is the best possible score meaning that the epitope is the highest scoring peptide in the sequence.
+Here are shown results for 3 alleles: HLA-A02:01, HLA-B27:05 and H-2-Kb. 
+Results for the rest are available in [research/training_results](research/training_results) folder.
+To make sure the models are not over-fitting the data, each model was first trained on 20%, 40%, 60% and 80% of the available data (subplots in the middle).
+The rest of data was used for testing and calculating r2 scores, so in case of 20% training data, the remaining 80% was used for testing, and so on.
+Final models were trained on all the available data (subplots on the right).
 
-![mhclovac-benchmark.png](research/figures/mhclovac-benchmark.png)
+![mhclovac-HLA-A-02-01-stats.png](research/training_results/HLA-A*02:01.png)
+![mhclovac-HLA-B-27-05-stats.png](research/training_results/HLA-B*27:05.png)
+![mhclovac-H-2-Kb-stats.png](research/training_results/H-2-Kb.png)
 
 ### Installation
 
@@ -132,6 +132,5 @@ Columns:
 
 ### References
 * Vita R, Mahajan S, Overton JA, Dhanda SK, Martini S, Cantrell JR, Wheeler DK, Sette A, Peters B. The Immune Epitope Database (IEDB): 2018 update. Nucleic Acids Res. 2018 Oct 24. doi: 10.1093/nar/gky1006. [Epub ahead of print] PubMed PMID: 30357391. [https://doi.org/10.1093/nar/gky1006](https://doi.org/10.1093/nar/gky1006)
-* Reynisson, B., Alvarez, B., Paul, S., Peters, B., & Nielsen, M. (2020). NetMHCpan-4.1 and NetMHCIIpan-4.0: improved predictions of MHC antigen presentation by concurrent motif deconvolution and integration of MS MHC eluted ligand data. Nucleic Acids Research. [https://doi.org/10.1093/nar/gkaa379](https://doi.org/10.1093/nar/gkaa379)
 * Kawashima, S., Pokarowski, P., Pokarowska, M., Kolinski, A., Katayama, T., and Kanehisa, M.; AAindex: amino acid index database, progress report 2008. Nucleic Acids Res. 36, D202-D205 (2008). [PMID:17998252] [https://doi.org/10.1093/nar/gkm998](https://doi.org/10.1093/nar/gkm998)
 
