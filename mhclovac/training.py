@@ -1,7 +1,5 @@
 from .utils import save_trained_model
 from .models import BindingModel
-from .preprocessing import get_features
-from .config import Config
 import time
 
 
