@@ -1,6 +1,7 @@
 import pandas as pd
 import mhcnames
 from mhclovac.sequence import validate_sequence
+import math
 
 
 def parse_allele_name(allele_name):
@@ -64,8 +65,10 @@ print(f'EL data, n_samples={len(ligand_data)}')
 
 combined_data = pd.concat([binding_data, ligand_data])
 combined_data = combined_data[combined_data['peptide'].apply(lambda x: validate_sequence(x, silent=True))]
+combined_data['target'] = combined_data['affinity'].apply(lambda x: 1 - math.log(x, 50000) if x > 0 else 0)
+combined_data.drop(columns=['affinity'], inplace=True)
 combined_data.drop_duplicates(inplace=True)
 combined_data.dropna(inplace=True)
 print(f'Combined data, n_samples={len(combined_data)}')
 
-combined_data.to_csv('../data/combined_data.zip', index=False)
+combined_data.to_csv('../data/ba_data.zip', index=False)
