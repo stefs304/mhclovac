@@ -19,7 +19,7 @@ MHC binding prediction based on modeled physicochemical properties of peptides
 ### About
 MHCLovac is an MHC binding prediction method that focuses on physicochemical properties of peptides responsible for interaction with MHC molecules.
 This method is based on modeling physicochemical properties of peptides in a way that captures the nearest neighbor effect of amino acid residues. 
-In other words, this method is based on the following hypothesis: physicochemical properties of adjacent amino acid residues have additive effect on the local properties of the peptide as a whole, and properties of a single residue affect the properties of the peptide at the neighboring positions.
+In other words, this method is based on the following assumption: physicochemical properties of adjacent amino acid residues have additive effect on the local properties of the peptide as a whole, and properties of a single residue affect the properties of the peptide at the neighboring positions.
 Using this approach each peptide is represented by a set of modeled physicochemical profiles (distributions of certain property, figure 1, upper subplots) which are further reduced to predetermined number of discrete data points to obtain discrete physicochemical profiles (figure 1, bottom subplots). 
 Discrete profiles are used as input features for binding prediction models.
 This method allows for direct comparison of physicochemical profiles of peptides of different sequence lengths. 
@@ -29,13 +29,13 @@ This method allows for direct comparison of physicochemical profiles of peptides
 ### Materials
 Training data was obtained from NetMHCPan 4.1 [(Reynisson, B. et. al., 2020)](https://doi.org/10.1093/nar/gkaa379) website and contains preprocessed binding affinity and eluted ligand data.
 In addition, binding affinity data was obtained directly from IEDB [(Vita R et. al., 2018)](https://doi.org/10.1093/nar/gky1006), and this dataset was used to narrow down the set of physicochemical indexes which are used for prediction. 
-The list of physicochemical properties and corresponding amino acid index data was obtained from the Aaindex database [(Kawashima, S. et. al, 2008)](https://doi.org/10.1093/nar/gkm998). 
+The list of physicochemical properties and corresponding amino acid index data was obtained from the AAindex database [(Kawashima, S. et. al, 2008)](https://doi.org/10.1093/nar/gkm998). 
 
 ### Methods
 MHCLovac uses a collection of out-of-the-box regression algorithms from `scikit-learn` python library with mostly default parameters.
 The prediction model returns binding scores in form of log transformed binding affinity (1 – log50k(affinity)). 
 Input features for prediction models are discrete physicochemical profiles of peptides. 
-Since the Aaidex database contains more than 500 entries, to reduce the number of physicochemical properties needed to model, the following selection method is implemented: 
+Since the AAindex database contains more than 500 entries, to reduce the number of physicochemical properties needed to model, the following selection method is implemented: 
 for each physicochemical property index, the binding model was trained and evaluated using r2 score for each MHC allele, and the average score across all alleles was calculated. 
 The indexes were sorted based on the average score in descending order. 
 Starting from the highest scoring index (selected by default), each next index was compared to the previously selected ones for correlation coefficient. 
