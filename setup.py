@@ -25,7 +25,7 @@ setuptools.setup(
     description="MHC binding prediction based on modeled physicochemical properties of peptides",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/stojanovicbg/mhclovac",
+    url="https://github.com/stefs304/mhclovac",
     packages=[
         'mhclovac',
     ],
@@ -42,6 +42,7 @@ setuptools.setup(
         "Programming Language :: Python :: 3.8",
         "License :: OSI Approved :: MIT License",
         "Intended Audience :: Science/Research",
-        "Topic :: Scientific/Engineering :: Bio-Informatics"
+        "Topic :: Scientific/Engineering :: Bio-Informatics",
+        "Operating System :: POSIX :: Linux"
     )
 )
