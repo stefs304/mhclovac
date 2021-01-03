@@ -4,6 +4,7 @@ from mhclovac.sequence import model_distribution
 from .utils import load_index_data
 from .config import Config
 import math
+from pandarallel import pandarallel
 
 
 def normalize_index_data(index: dict) -> dict:
@@ -43,11 +44,16 @@ def sequence_to_features(sequence: str, index_list: list) -> list:
     return sequence_features
 
 
-def get_features(peptide_list, index_id_list):
+def get_features(peptide_list, index_id_list, n_cpu=1):
+    if n_cpu != 1:
+        pandarallel.initialize(nb_workers=n_cpu, verbose=0)
     index_data = load_index_data(index_id_list=index_id_list)
     peptide_df = pd.DataFrame()
     peptide_df['peptide'] = peptide_list
-    features = peptide_df['peptide'].apply(lambda x: sequence_to_features(x, index_data))
+    if n_cpu == 1:
+        features = peptide_df['peptide'].apply(lambda x: sequence_to_features(x, index_data))
+    else:
+        features = peptide_df['peptide'].parallel_apply(lambda x: sequence_to_features(x, index_data))
     return pd.DataFrame(features.tolist())
 
 

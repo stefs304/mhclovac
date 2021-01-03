@@ -7,7 +7,7 @@ import sys
 import argparse
 
 
-def predict(peptides: list, mhc_allele: str, sequence_name: str = "unknown", sort: bool = False) -> pd.DataFrame:
+def predict(peptides: list, mhc_allele: str, sequence_name: str = "unknown", sort: bool = False, n_cpu=1) -> pd.DataFrame:
     """
     Predicts binding score (affinity). Returns pandas DataFrame.
     """
@@ -17,7 +17,7 @@ def predict(peptides: list, mhc_allele: str, sequence_name: str = "unknown", sor
     data['mhc'] = mhc_allele
     data['peptide_length'] = data['peptide'].apply(len)
     data['sequence_name'] = sequence_name
-    x = get_features(peptide_list=data['peptide'], index_id_list=Config.INDEX_ID_LIST)
+    x = get_features(peptide_list=data['peptide'], index_id_list=Config.INDEX_ID_LIST, n_cpu=n_cpu)
     data['binding_score'] = model.predict(x)
     # sort values optionally
     if sort:
@@ -42,6 +42,7 @@ Author: Stefan Stojanovic
     parser.add_argument('-l', '--peptide_length', type=int, help='Peptide length', required=True)
     parser.add_argument('-o', '--output', type=str, help='Output file name. By default, output is printed to STDOUT')
     parser.add_argument('--sort', action='store_true', help='Sort output based on prediction score')
+    parser.add_argument('--cpu', type=int, help='Number of CPU cores to use', default=1)
 
     return parser.parse_args(argv)
 
@@ -59,7 +60,7 @@ def run():
             try:
                 validate_sequence(sequence, seq_name, silent=False)
                 peptide_list = chop_sequence(sequence, args.peptide_length)
-                p = predict(peptides=peptide_list, mhc_allele=args.mhc, sequence_name=seq_name, sort=args.sort)
+                p = predict(peptides=peptide_list, mhc_allele=args.mhc, sequence_name=seq_name, sort=args.sort, n_cpu=args.cpu)
                 predictions.append(p)
             except Exception as e:
                 msg = f'Error encountered while processing sequence "{seq_name}": {e}'
@@ -69,7 +70,7 @@ def run():
         try:
             validate_sequence(args.sequence, args.sequence_name, silent=False)
             peptide_list = chop_sequence(args.sequence, args.peptide_length)
-            p = predict(peptides=peptide_list, mhc_allele=args.mhc, sequence_name=args.sequence_name, sort=args.sort)
+            p = predict(peptides=peptide_list, mhc_allele=args.mhc, sequence_name=args.sequence_name, sort=args.sort, n_cpu=args.cpu)
             predictions.append(p)
         except Exception as e:
             msg = f'Error encountered while processing sequence "{args.sequence_name}": {e}'
