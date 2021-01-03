@@ -17,9 +17,9 @@ MHC binding prediction based on modeled physicochemical properties of peptides
 * [References](#references)
 
 ### About
-MHCLovac is an MHC binding prediction method that focuses on physicochemical properties of peptides responsible for interaction with MHC molecules.
+MHCLovac is MHC binding prediction method that focuses on physicochemical properties of peptides responsible for interaction with MHC molecules.
 This method is based on modeling physicochemical properties of peptides in a way that captures the nearest neighbor effect of amino acid residues. 
-In other words, this method is based on the following assumption: physicochemical properties of adjacent amino acid residues have additive effect on the local properties of the peptide as a whole, and properties of a single residue affect the properties of the peptide at the neighboring positions.
+In other words, the method is based on the following assumption: physicochemical properties of adjacent amino acid residues have additive effect on the local properties of the peptide as a whole, and properties of a single residue affect the properties of the peptide at the neighboring positions.
 Using this approach each peptide is represented by a set of modeled physicochemical profiles (distributions of certain property, figure 1, upper subplots) which are further reduced to predetermined number of discrete data points to obtain discrete physicochemical profiles (figure 1, bottom subplots). 
 Discrete profiles are used as input features for binding prediction models.
 This method allows for direct comparison of physicochemical profiles of peptides of different sequence lengths. 
@@ -40,7 +40,7 @@ for each physicochemical property index, the binding model was trained and evalu
 The indexes were sorted based on the average score in descending order. 
 Starting from the highest scoring index (selected by default), each next index was compared to the previously selected ones for correlation coefficient. 
 Only if correlation coefficients with all indexes from selection were in range [-0.3, 0.3] the new index was added to the selection. 
-This resulted in total of 9 indexes (table 1) which had high prediction potential and were also low-correlated between themselves. 
+This resulted in total of 9 indexes (table 1) which had high prediction potential for most alleles and were also low-correlated between themselves. 
 
 | Accession number  | Title | Average r2 score |
 | ------------- | ------------- | ------------ |
