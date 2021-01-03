@@ -39,7 +39,7 @@ for i, (sequence_name, sequence) in enumerate(read_fasta(bench_fasta)):
 
     try:
         peptides = chop_sequence(sequence, len(true_epitope))
-        predictions = mhclovac.predict(peptides=peptides, mhc_allele=mhc_allele)
+        predictions = mhclovac.predict(peptides=peptides, mhc_allele=mhc_allele, sort=True, n_cpu=5)
         frank = get_mhclovac_frank(predictions, true_epitope)
         frank_scores.append(frank)
         for _, row in predictions.iterrows():
