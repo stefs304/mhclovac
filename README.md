@@ -26,7 +26,7 @@ Using this approach each peptide is represented by a set of modeled physicochemi
 Discrete profiles are used as input features for binding prediction models.
 This method allows for direct comparison of physicochemical profiles of peptides of different sequence lengths. 
 
-![mhclovac-modeling-method-figure.png](research/figures/mhclovac-modeling-figure.png)
+![mhclovac-modeling-method-figure.png](https://raw.githubusercontent.com/stefs304/mhclovac/master/research/figures/mhclovac-modeling-figure.png)
 
 ### Materials
 Training data was obtained from NetMHCPan 4.1 [(Reynisson, B. et. al., 2020)](https://doi.org/10.1093/nar/gkaa379) website and contains preprocessed binding affinity and eluted ligand data.
@@ -61,7 +61,7 @@ Prediction is evaluated using FRANK method from NetMHCPan 4.1 paper.
 Dataset was also obtained from NetMHCPan website and contains some 1600 sequences and corresponding epitopes of which 200 were randomly selected for this benchmark. 
 FRANK score measures the fraction of non-epitopes scoring higher than the epitope (from same sequence), and the best possible score is 0.
 
-![mhclovac-4-0-benchmark.png](research/figures/mhclovac-benchmark.png)
+![mhclovac-4-0-benchmark.png](https://raw.githubusercontent.com/stefs304/mhclovac/master/research/figures/mhclovac-benchmark.png)
 
 ### Installation
 ```
