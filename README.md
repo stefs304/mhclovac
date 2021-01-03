@@ -9,7 +9,6 @@ MHC binding prediction based on modeled physicochemical properties of peptides
 * Separate ligand prediction from the previous version is removed.
 * Binding score is reported as the log transformed binding affinity: `1 - log50k(affinity)`.
 
-
 ### Table of content
 * [About](#about)
 * [Materials](#materials)
@@ -20,7 +19,7 @@ MHC binding prediction based on modeled physicochemical properties of peptides
 * [References](#references)
 
 ### About
-MHCLovac is an MHC binding prediction method that focuses on physicochemical properties of peptides that are responsible for interaction with MHC molecules.
+MHCLovac is an MHC binding prediction method that focuses on physicochemical properties of peptides responsible for interaction with MHC molecules.
 This method is based on modeling physicochemical properties of peptides in a way that captures the nearest neighbor effect of amino acid residues. 
 In other words, this method is based on the following hypothesis: physicochemical properties of adjacent amino acid residues have additive effect on the local properties of the peptide as a whole, and properties of a single residue affect the properties of the peptide at the neighboring positions.
 Using this approach each peptide is represented by a set of modeled physicochemical profiles (distributions of certain property, figure 1, upper subplots) which are further reduced to predetermined number of discrete data points to obtain discrete physicochemical profiles (figure 1, bottom subplots). 
@@ -38,8 +37,8 @@ The list of physicochemical properties and corresponding amino acid index data w
 MHCLovac uses a collection of out-of-the-box regression algorithms from `scikit-learn` python library with mostly default parameters.
 The prediction model returns binding scores in form of log transformed binding affinity (1 – log50k(affinity)). 
 Input features for prediction models are discrete physicochemical profiles of peptides. 
-Since the Aaidex database contains more than 500 entries, to reduce the number of physicochemical properties needed to model, the following selection method is implemented. 
-For each physicochemical property index, the binding model was trained and evaluated using r2 score for each MHC allele, and the average score across all alleles was calculated. 
+Since the Aaidex database contains more than 500 entries, to reduce the number of physicochemical properties needed to model, the following selection method is implemented: 
+for each physicochemical property index, the binding model was trained and evaluated using r2 score for each MHC allele, and the average score across all alleles was calculated. 
 The indexes were sorted based on the average score in descending order. 
 Starting from the highest scoring index (selected by default), each next index was compared to the previously selected ones for correlation coefficient. 
 Only if correlation coefficients with all indexes from selection were in range [-0.3, 0.3] the new index was added to the selection. 
@@ -65,13 +64,11 @@ FRANK score measures the fraction of non-epitopes scoring higher than the epitop
 ![mhclovac-4-0-benchmark.png](research/figures/mhclovac-benchmark.png)
 
 ### Installation
-
 ```
 pip install mhclovac
 ```
 
 ### Usage
-
 As command line tool:
 ```
 mhclovac -f example.fasta -m HLA-B*44:02 -l 11 --sort
