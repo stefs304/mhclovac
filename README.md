@@ -2,8 +2,6 @@
 
 MHC binding prediction based on modeled physicochemical properties of peptides
 
-`bitcoin: bc1qrg7wku5g35kn0qyay4uwzugfmfqwnvz95g54pj`
-
 ### New in version 4.0
 * Training data with 4+ million data samples, binding affinity + eluted ligands.
 * Separate ligand prediction from the previous version is removed.
@@ -110,3 +108,4 @@ Columns:
 * Vita R, Mahajan S, Overton JA, Dhanda SK, Martini S, Cantrell JR, Wheeler DK, Sette A, Peters B. The Immune Epitope Database (IEDB): 2018 update. Nucleic Acids Res. 2018 Oct 24. doi: 10.1093/nar/gky1006. [Epub ahead of print] PubMed PMID: 30357391. [https://doi.org/10.1093/nar/gky1006](https://doi.org/10.1093/nar/gky1006)
 * Kawashima, S., Pokarowski, P., Pokarowska, M., Kolinski, A., Katayama, T., and Kanehisa, M.; AAindex: amino acid index database, progress report 2008. Nucleic Acids Res. 36, D202-D205 (2008). [PMID:17998252] [https://doi.org/10.1093/nar/gkm998](https://doi.org/10.1093/nar/gkm998)
 
+<hr>
