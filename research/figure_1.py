@@ -1,24 +1,12 @@
 import matplotlib.pyplot as plt
-from matplotlib import rcParams
-from matplotlib.gridspec import GridSpec
 import numpy as np
 from mhclovac.utils import load_index_data, pdf
 from mhclovac.sequence import model_distribution
 import seaborn as sns
 
-sns.set_theme(style="whitegrid")
-# Setup plot formatting, fonts etc.
-# rcParams['font.family'] = 'sans-serif'
-# rcParams['font.sans-serif'] = ['Tahoma']
-# rcParams['font.size'] = 16
-# props = dict(boxstyle='round', facecolor='wheat', alpha=0.6)
 
-
-hydrophobicity_index_data = load_index_data()['HOPT810101']['standardized_index_data']
-
-
-def plot_distribution(ax, sequence, index, label, legend=None, linewidth=3, ylabel=None, title=None):
-    multiplier = 24
+def plot_distribution(ax, sequence, index, ylabel=None, title=None):
+    multiplier = 20
     overlap_distance = 1
     sigma = 0.8
     dist_vector = np.zeros(multiplier * len(sequence) + 2 * overlap_distance * multiplier)
@@ -33,96 +21,64 @@ def plot_distribution(ax, sequence, index, label, legend=None, linewidth=3, ylab
         dist_vector[int(i * multiplier):int((i + (2 * overlap_distance + 1)) * multiplier)] += aa_dist
         x_ticks.append(np.argmax(np.abs(current_vector)))
         x_labels.append(aa)
-        ax.plot(current_vector, '--', linewidth=linewidth)
-    k, = ax.plot(dist_vector, 'k', linewidth=linewidth)
-    plt.xticks(x_ticks, x_labels)
+        ax.plot(current_vector, '--', linewidth=2)
+    ax.plot(dist_vector, 'k', linewidth=3)
+    ax.set_xticks(x_ticks)
+    ax.set_xticklabels(x_labels)
     if ylabel:
         ax.set_ylabel(ylabel)
-    y = max(dist_vector) - max(dist_vector) / 20.0
-    ax.text(0, y, label, fontsize='large')
-    if legend:
-        ax.set_legend([k],[legend])
     if title:
         ax.set_title(title)
     return
 
 
-def plot_discrete_values(ax, distribution, title=None, label=None):
-    n_discrete_points = 10
-    step = int(len(distribution) / n_discrete_points)
-    x_axis = []
-    y_axis = []
-    for i in range(0, len(distribution), step):
-        x_axis.append(i)
-        y_axis.append(distribution[i])
-
-    ax.bar(range(n_discrete_points), y_axis)
-    plt.xticks(range(n_discrete_points), range(n_discrete_points))
-    y = max(y_axis) - max(y_axis) / 20.0
-    if label:
-        ax.text(0, y, label)
+def plot_discrete_profile(ax, sequence, index, title=None, ylabel=None):
+    discrete_profile = model_distribution(sequence, index, n_discrete_points=10)
+    ax.bar(range(len(discrete_profile)), discrete_profile)
+    ax.set_xticks(range(len(discrete_profile)))
+    ax.set_xticklabels(range(len(discrete_profile)))
     if title:
         ax.set_title(title)
+    if ylabel:
+        ax.set_ylabel(ylabel)
     return
 
 
+sns.set_theme(style="whitegrid")
+hydrophobicity_index_data = load_index_data()['ROSM880102']['standardized_index_data']
 example_sequence_1 = 'LLDVTAAV'
 example_sequence_2 = 'FLFDGSPTYVL'
 
 
-fig = plt.figure(constrained_layout=True)
-gs = GridSpec(3, 2, figure=fig)
+fig, ax = plt.subplots(2, 2, figsize=(10, 5), constrained_layout=True)
 
-ax1 = fig.add_subplot(gs[0, :])
 plot_distribution(
-    ax1,
-    example_sequence_1,
-    hydrophobicity_index_data,
-    label='a)',
-    title='Modeled hydrophilicity profile'
-)
-
-dist_1 = model_distribution(example_sequence_1, hydrophobicity_index_data)
-
-ax2 = fig.add_subplot(gs[1, 0])
-plot_distribution(
-    ax2,
-    example_sequence_1,
-    hydrophobicity_index_data,
-    label='b)',
-    # legend=example_sequence_1,
-    linewidth=2,
+    ax=ax[0][0],
+    sequence='LLDVTAAV',
+    index=hydrophobicity_index_data,
     title='8-mer profile',
-    ylabel='Hydrophilicity index'
+    ylabel='Hydropathy index'
 )
 
-ax3 = fig.add_subplot(gs[2, 0])
-plot_discrete_values(
-    ax3,
-    distribution=dist_1,
-    title='8-mer discrete profile',
-    label='d)'
-)
-
-
-dist_2 = model_distribution(example_sequence_2, hydrophobicity_index_data)
-
-ax4 = fig.add_subplot(gs[1, 1])
 plot_distribution(
-    ax4,
-    example_sequence_2,
-    hydrophobicity_index_data,
-    label='c)',
-    # legend=example_sequence_2,
-    linewidth=2,
+    ax=ax[0][1],
+    sequence='FLFDGSPTYVL',
+    index=hydrophobicity_index_data,
     title='11-mer profile'
 )
 
-ax5 = fig.add_subplot(gs[2, 1])
-plot_discrete_values(
-    ax5,
-    distribution=dist_2,
-    label='e)',
+plot_discrete_profile(
+    ax=ax[1][0],
+    sequence='LLDVTAAV',
+    index=hydrophobicity_index_data,
+    title='8-mer discrete profile',
+    ylabel='Hydropathy index'
+)
+
+plot_discrete_profile(
+    ax=ax[1][1],
+    sequence='FLFDGSPTYVL',
+    index=hydrophobicity_index_data,
     title='11-mer discrete profile'
 )
 
