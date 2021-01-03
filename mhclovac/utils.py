@@ -7,9 +7,10 @@ def list_mhc_alleles():
     """
     Returns the list of available MHC alleles.
     """
-    model_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'models', 'trained_models.gz')
-    model_dict = joblib.load(model_path)
-    mhc_alleles = [key for key in model_dict.keys()]
+    mhc_alleles = []
+    for fname in os.listdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'models')):
+        mhc_name = fname.split('.model.gz')[0]
+        mhc_alleles.append(mhc_name)
     return mhc_alleles
 
 
@@ -20,21 +21,9 @@ def load_model(mhc: str):
     if mhc not in list_mhc_alleles():
         msg = f'"{mhc}" not supported.'
         raise ValueError(msg)
-    model_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'models', 'trained_models.gz')
-    model_dict = joblib.load(model_path)
-    model = model_dict[mhc]
+    model_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'models', f'{mhc}.model.gz')
+    model = joblib.load(model_path)
     return model
-
-
-def save_trained_model(mhc_allele, trained_model):
-    model_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'models', 'trained_models.gz')
-    try:
-        model_dict = joblib.load(model_path)
-    except:
-        model_dict = {}
-    model_dict[mhc_allele] = trained_model
-    joblib.dump(model_dict, model_path, compress=('gzip', 5))
-    return None
 
 
 def load_index_data(index_id_list: list = None) -> list or dict:
