@@ -80,7 +80,12 @@ from mhclovac.utils import list_mhc_alleles
 alleles = list_mhc_alleles()
 # returns list of supported MHC alleles
 
-predictions = predict(peptides=['MEIFIEVFSHF', 'ELTLNMCL'], mhc_allele='HLA-B*44:02', sort=True, n_cpu=6)
+predictions = predict(
+    peptides=['MEIFIEVFSHF', 'LELPTGSLEKS', 'TELTLNMCLEL'], 
+    mhc_allele='HLA-B*44:02', 
+    sort=True, 
+    n_cpu=6
+)
 # returns pandas DataFrame with prediction results
 
 ```
@@ -93,15 +98,7 @@ LELPTGSLEKS  HLA-B*44:02              11  MEIFIEVFSHF HLA-B44:02       0.211701
 TELTLNMCLEL  HLA-B*44:02              11  MEIFIEVFSHF HLA-B44:02       0.185610
 IEVFSHFLLQL  HLA-B*44:02              11  MEIFIEVFSHF HLA-B44:02       0.171749
 LEKSLMISSQV  HLA-B*44:02              11  MEIFIEVFSHF HLA-B44:02       0.147054
-
 ```
-
-Columns:
-1. `peptide` - peptide sequence
-2. `sequence_name` - Fasta sequence name or name provided by `-n` argument
-3. `peptide_length` - length of peptide sequence
-4. `mhc` - MHC allele name
-5. `binding_score` - Higher score means better binding
 
 ### References
 * Reynisson, B., Alvarez, B., Paul, S., Peters, B., & Nielsen, M. (2020). NetMHCpan-4.1 and NetMHCIIpan-4.0: improved predictions of MHC antigen presentation by concurrent motif deconvolution and integration of MS MHC eluted ligand data. Nucleic Acids Research. [https://doi.org/10.1093/nar/gkaa379](https://doi.org/10.1093/nar/gkaa379)
