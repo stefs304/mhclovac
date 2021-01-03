@@ -30,7 +30,7 @@ def parse_args(argv):
 MHCLovac
 --------
 MHC binding prediction based on modeled physicochemical properties of peptides. 
-https://github.com/stojanovicbg/mhclovac
+https://github.com/stefs304/mhclovac
 Version: 4.0
 Author: Stefan Stojanovic
 """
