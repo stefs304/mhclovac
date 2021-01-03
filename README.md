@@ -71,7 +71,7 @@ pip install mhclovac
 ### Usage
 From command line:
 ```
-mhclovac -f example.fasta -m HLA-B*44:02 -l 11 --sort --cpu 6
+mhclovac -f example.fasta -m HLA-B*44:02 -l 11 --sort --n_cpu 6
 ```
 
 Programmatically:
@@ -89,12 +89,13 @@ predictions = predict(peptides=['MEIFIEVFSHF', 'ELTLNMCL'], mhc_allele='HLA-B*44
 
 Example output:
 ```
-peptide          mhc  peptide_length           sequence_name  binding_score
+    peptide   mhc_allele  peptide_length           sequence_name  binding_score
 MEIFIEVFSHF  HLA-B*44:02              11  MEIFIEVFSHF HLA-B44:02       0.626139
 LELPTGSLEKS  HLA-B*44:02              11  MEIFIEVFSHF HLA-B44:02       0.211701
 TELTLNMCLEL  HLA-B*44:02              11  MEIFIEVFSHF HLA-B44:02       0.185610
 IEVFSHFLLQL  HLA-B*44:02              11  MEIFIEVFSHF HLA-B44:02       0.171749
 LEKSLMISSQV  HLA-B*44:02              11  MEIFIEVFSHF HLA-B44:02       0.147054
+
 ```
 
 Columns:

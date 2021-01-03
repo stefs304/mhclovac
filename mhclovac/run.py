@@ -14,7 +14,7 @@ def predict(peptides: list, mhc_allele: str, sequence_name: str = "unknown", sor
     model = load_model(mhc_allele)
     data = pd.DataFrame()
     data['peptide'] = peptides
-    data['mhc'] = mhc_allele
+    data['mhc_allele'] = mhc_allele
     data['peptide_length'] = data['peptide'].apply(len)
     data['sequence_name'] = sequence_name
     x = get_features(peptide_list=data['peptide'], index_id_list=Config.INDEX_ID_LIST, n_cpu=n_cpu)
@@ -42,7 +42,7 @@ Author: Stefan Stojanovic
     parser.add_argument('-l', '--peptide_length', type=int, help='Peptide length', required=True)
     parser.add_argument('-o', '--output', type=str, help='Output file name. By default, output is printed to STDOUT')
     parser.add_argument('--sort', action='store_true', help='Sort output based on prediction score')
-    parser.add_argument('--cpu', type=int, help='Number of CPU cores to use', default=1)
+    parser.add_argument('--n_cpu', type=int, help='Number of CPU cores to use', default=1)
 
     return parser.parse_args(argv)
 
@@ -60,7 +60,7 @@ def run():
             try:
                 validate_sequence(sequence, seq_name, silent=False)
                 peptide_list = chop_sequence(sequence, args.peptide_length)
-                p = predict(peptides=peptide_list, mhc_allele=args.mhc, sequence_name=seq_name, sort=args.sort, n_cpu=args.cpu)
+                p = predict(peptides=peptide_list, mhc_allele=args.mhc, sequence_name=seq_name, sort=args.sort, n_cpu=args.n_cpu)
                 predictions.append(p)
             except Exception as e:
                 msg = f'Error encountered while processing sequence "{seq_name}": {e}'
@@ -70,7 +70,7 @@ def run():
         try:
             validate_sequence(args.sequence, args.sequence_name, silent=False)
             peptide_list = chop_sequence(args.sequence, args.peptide_length)
-            p = predict(peptides=peptide_list, mhc_allele=args.mhc, sequence_name=args.sequence_name, sort=args.sort, n_cpu=args.cpu)
+            p = predict(peptides=peptide_list, mhc_allele=args.mhc, sequence_name=args.sequence_name, sort=args.sort, n_cpu=args.n_cpu)
             predictions.append(p)
         except Exception as e:
             msg = f'Error encountered while processing sequence "{args.sequence_name}": {e}'
