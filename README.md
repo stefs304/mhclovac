@@ -69,12 +69,12 @@ pip install mhclovac
 ```
 
 ### Usage
-As command line tool:
+From command line:
 ```
-mhclovac -f example.fasta -m HLA-B*44:02 -l 11 --sort
+mhclovac -f example.fasta -m HLA-B*44:02 -l 11 --sort --cpu 6
 ```
 
-As python library:
+Programmatically:
 ```python
 from mhclovac import predict
 from mhclovac.utils import list_mhc_alleles
@@ -82,7 +82,7 @@ from mhclovac.utils import list_mhc_alleles
 alleles = list_mhc_alleles()
 # returns list of supported MHC alleles
 
-predictions = predict(peptides=['MEIFIEVFSHF', 'ELTLNMCL'], mhc_allele='HLA-B*44:02')
+predictions = predict(peptides=['MEIFIEVFSHF', 'ELTLNMCL'], mhc_allele='HLA-B*44:02', sort=True, n_cpu=6)
 # returns pandas DataFrame with prediction results
 
 ```
@@ -90,11 +90,11 @@ predictions = predict(peptides=['MEIFIEVFSHF', 'ELTLNMCL'], mhc_allele='HLA-B*44
 Example output:
 ```
 peptide          mhc  peptide_length           sequence_name  binding_score
-MEIFIEVFSHF  HLA-B*44:02              11  MEIFIEVFSHF HLA-B44:02       0.659597
-LEKSLMISSQV  HLA-B*44:02              11  MEIFIEVFSHF HLA-B44:02       0.272836
-IEVFSHFLLQL  HLA-B*44:02              11  MEIFIEVFSHF HLA-B44:02       0.268539
-LELPTGSLEKS  HLA-B*44:02              11  MEIFIEVFSHF HLA-B44:02       0.207665
-TELTLNMCLEL  HLA-B*44:02              11  MEIFIEVFSHF HLA-B44:02       0.202111
+MEIFIEVFSHF  HLA-B*44:02              11  MEIFIEVFSHF HLA-B44:02       0.626139
+LELPTGSLEKS  HLA-B*44:02              11  MEIFIEVFSHF HLA-B44:02       0.211701
+TELTLNMCLEL  HLA-B*44:02              11  MEIFIEVFSHF HLA-B44:02       0.185610
+IEVFSHFLLQL  HLA-B*44:02              11  MEIFIEVFSHF HLA-B44:02       0.171749
+LEKSLMISSQV  HLA-B*44:02              11  MEIFIEVFSHF HLA-B44:02       0.147054
 ```
 
 Columns:
