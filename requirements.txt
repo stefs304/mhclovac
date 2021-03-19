@@ -12,7 +12,7 @@ mhcnames==0.4.8
 numpy==1.19.4
 pandarallel==1.5.1
 pandas==1.1.4
-Pillow==8.0.1
+Pillow==8.1.1
 proteinko==5.0
 pyaaisc==1.2
 pyparsing==2.4.7
