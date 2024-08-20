@@ -2,19 +2,18 @@
 
 MHC binding prediction based on modeled physicochemical properties of peptides
 
-### New in version 4.0
-* Training data with 4+ million data samples, binding affinity + eluted ligands.
-* Separate ligand prediction from the previous version is removed.
-* Binding score is reported as the log transformed binding affinity: `1 - log50k(affinity)`.
+> * [Installation](#installation)
+> * [Usage](#usage)
+>   * [Python package](#usage)
+>   * [Cli](#usage)
+> * [Research](#about)
+>   * [About](#about)
+>   * [Materials](#materials)
+>   * [Methods](#methods)
+>   * [Evaluation](#results)
+>   * [References](#references)
+> 
 
-### Table of content
-* [About](#about)
-* [Materials](#materials)
-* [Methods](#methods)
-* [Results](#results)
-* [Installation](#installation)
-* [Usage](#usage)
-* [References](#references)
 
 ### About
 MHCLovac is MHC binding prediction method that focuses on physicochemical properties of peptides responsible for interaction with MHC molecules.
@@ -42,18 +41,6 @@ Starting from the highest scoring index (selected by default), each next index w
 Only if correlation coefficients with all indexes from selection were in range [-0.3, 0.3] the new index was added to the selection. 
 This resulted in total of 9 indexes (table 1) which had high prediction potential for most alleles and were also low-correlated between themselves. 
 
-| Accession number  | Title | Average r2 score |
-| ------------- | ------------- | ------------ |
-| ROSM880102  | Side chain hydropathy, corrected for solvation (Roseman, 1988)  | 0.2819 |
-| ZIMJ680104  | Isoelectric point (Zimmerman et al., 1968)  | 0.2740 |
-| OOBM770104  | Average non-bonded energy per residue (Oobatake-Ooi, 1977)  | 0.2498 |
-| SNEP660101  | Principal component I (Sneath, 1966)  | 0.2454 |
-| ROBB760111  | Information measure for C-terminal turn (Robson-Suzuki, 1976)  | 0.2353 |
-| CHAM830102  | A parameter defined from the residuals obtained from the best correlation of the Chou-Fasman parameter of beta-sheet (Charton-Charton, 1983)  | 0.2062 |
-| RACS820104  | Average relative fractional occurrence in EL(i) (Rackovsky-Scheraga, 1982)  | 0.1833 |
-| WERD780103  | Free energy change of alpha(Ri) to alpha(Rh) (Wertz-Scheraga, 1978)  | 0.1704 |
-| KARS160120  | Weighted minimum eigenvalue based on the atomic numbers (Karkbara-Knisley, 2016) | 0.1413 |
-
 ### Results
 Prediction is evaluated using FRANK method from NetMHCPan 4.1 paper. 
 Dataset was also obtained from NetMHCPan website and contains some 1600 sequences and corresponding epitopes of which 200 were randomly selected for this benchmark. 
@@ -67,12 +54,9 @@ pip install mhclovac
 ```
 
 ### Usage
-From command line:
-```
-mhclovac -f example.fasta -m HLA-B*44:02 -l 11 --sort --n_cpu 6
-```
 
-Programmatically:
+#### Python package
+
 ```python
 from mhclovac import predict
 from mhclovac.utils import list_mhc_alleles

@@ -1,4 +1,4 @@
-import setuptools
+
 import os
 
 
@@ -9,12 +9,11 @@ with open(readme_path, "r") as f:
 
 
 required_packages = [
-    "scikit-learn==0.23.2",
+    "scikit-learn",
     "numpy",
     "pandas",
     "joblib",
     'argparse',
-    'pandarallel'
 ]
 
 
