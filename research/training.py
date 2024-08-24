@@ -4,7 +4,7 @@ import numpy as np
 import time
 import math
 import matplotlib.pyplot as plt
-from mhclovac.binding import AlleleSpecificBindingPredictor
+from mhclovac.binding import MhcSpecificBindingPredictor
 
 
 

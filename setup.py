@@ -12,8 +12,6 @@ required_packages = [
     "scikit-learn",
     "numpy",
     "pandas",
-    "joblib",
-    'argparse',
 ]
 
 
