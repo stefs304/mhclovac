@@ -53,10 +53,7 @@ def get_index_correlation(index1, index2):
     return np.corrcoef(array_1, array_2)[0][1]
 
 
-
-
-
-def peptide_sequence_validator(peptide):
+def validate_sequence(peptide):
     # expects uppercase letters
     peptide = peptide.strip()
     if peptide == '':
@@ -64,3 +61,4 @@ def peptide_sequence_validator(peptide):
     valid = ['C', 'D', 'S', 'Q', 'K', 'I', 'P', 'T', 'F', 'N',
              'G', 'H', 'L', 'R', 'W', 'A', 'V', 'E', 'Y', 'M']
     return not any([p not in valid for p in peptide])
+
