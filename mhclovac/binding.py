@@ -3,11 +3,13 @@ from sklearn.linear_model import LinearRegression
 from sklearn.svm import SVR
 import pandas as pd
 from mhclovac.core import MhclovacCore
-from mhclovac.schemas import (
+from mhclovac.const import (
     hydrogen_bonds_params,
     wimley_white_params,
     polarizability_params,
-    isoelectric_params
+    isoelectric_params,
+    class_1_pep_len,
+    class_2_pep_len
 )
 
 
@@ -19,10 +21,10 @@ schemas = [
 
 class AlleleSpecificBindingPredictor:
 
-    def __init__(self, mhc_allele: str, median_length: int):
+    def __init__(self, mhc_allele: str, class_: int):
         self.model = SVR()
         self.mhc_allele = mhc_allele
-        self.median_length = median_length
+        self.median_length = class_2_pep_len if class_ == 2 else class_1_pep_len
 
     def train(self, peptides, values):
         features = self._get_features(peptides)
@@ -42,16 +44,15 @@ class AlleleSpecificBindingPredictor:
 
 
 
-class PanBindingPredictor:
+class PanSpecificBindingPredictor:
 
-    def __init__(self, species: str, mhc_class: str, median_length: int):
-        self.species = species
-        self.mhc_class = mhc_class
-        self.median_length = median_length
+    def __init__(self):
+        raise NotImplementedError()
 
-    def train(self):
-        pass
+    def train(self, peptides, alleles, values):
+        raise NotImplementedError()
 
-    def predict(self, peptides, alleles):
-        pass
+    def predict(self, peptides, allele):
+        raise NotImplementedError()
+
 

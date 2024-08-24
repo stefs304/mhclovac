@@ -1,4 +1,6 @@
 
+class_1_pep_len = 9
+class_2_pep_len = 15
 
 hydrogen_bonds_params = {
     'A': 0.0, 'L': 0.0, 'R': 4.0, 'K': 2.0, 'N': 2.0,
