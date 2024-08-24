@@ -3,7 +3,7 @@ import numpy as np
 from typing import Literal
 
 
-class GaussProt(object):
+class MhclovacCore:
 
     multiplier = 10
 
@@ -20,7 +20,7 @@ class GaussProt(object):
             validate_schema: bool = True
     ):
         """
-        GaussProt class implements an algorithm to create Gaussian kernel models of proteins.
+        MhclovacCore class implements an algorithm to create Gaussian kernel models of proteins.
 
         :param schema: Dictionary with key-value pairs where the keys are one-letter amino-acid codes and values are
         the corresponding values.
