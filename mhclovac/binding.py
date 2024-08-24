@@ -10,10 +10,12 @@ from sklearn.svm import SVR, LinearSVR
 import pandas as pd
 from mhclovac.core import MhclovacCore
 from mhclovac.const import (
+    hydrophobicity_params,
     hydrogen_bonds_params,
     wimley_white_params,
     polarizability_params,
     isoelectric_params,
+    eiip_params,
     class_1_pep_len,
     class_2_pep_len
 )
@@ -25,9 +27,10 @@ pseudoseq_file = os.path.join(os.path.dirname(__file__), 'data', 'pseudo.json')
 
 schemas = [
     hydrogen_bonds_params,
-    wimley_white_params,
-    polarizability_params,
+    hydrophobicity_params,
+    isoelectric_params
 ]
+
 
 class MhcSpecificBindingPredictor:
 
@@ -69,7 +72,7 @@ class PanSpecificBindingPredictor:
 
     def __init__(self, class_: int):
         self.median_length = class_2_pep_len if class_ == 2 else class_1_pep_len
-        self.model = MLPRegressor(learning_rate_init=0.01)
+        self.model = MLPRegressor(learning_rate_init=0.01, hidden_layer_sizes=(130,), random_state=0)
 
     def train(self, peptides, mhcs, values):
         assert len(peptides) == len(mhcs)

@@ -146,7 +146,7 @@ class MhclovacCore:
             'C', 'D', 'S', 'Q', 'K', 'I', 'P', 'T', 'F', 'N', 'G', 'H', 'L', 'R', 'W', 'A', 'V', 'E', 'Y', 'M'
         ]
         if not all([k in self.schema for k in valid_letters]):
-            raise ValueError('Invalid schema.\nValid letters: {}'.format(valid_letters))
+            raise ValueError(f'Invalid schema {self.schema}.\nValid letters: {valid_letters}')
 
     def _standardize_schema(self):
         vals = list(self.schema.values())
