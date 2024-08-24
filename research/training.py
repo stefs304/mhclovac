@@ -1,35 +1,38 @@
-from mhclovac.training import train_binding_model
-from mhclovac.preprocessing import get_features
-from mhclovac.config import Config
-from mhclovac.utils import list_mhc_alleles
+
 import pandas as pd
+import numpy as np
 import time
+import math
+import matplotlib.pyplot as plt
+from mhclovac.binding import AlleleSpecificBindingPredictor
+
 
 
 TRAINING_SET_SIZE_THRESHOLD = 50
 RANDOM_SEED = 0
 
-train_data = pd.read_csv('../data/ba_el_data.zip')
-print(f'Total number of samples = {len(train_data)}')
+train_data = pd.read_csv('./data/mhc_full_cleaned.csv')
 
-for mhc_key in list(train_data['mhc_allele'].unique()):
+for mhc_allele in list(train_data['mhc_allele'].unique()):
 
-    # if not mhc_key.startswith('Patr'):
-    #     continue
+    if not mhc_allele in ['HLA-B*27:05']:
+        continue
 
-    mhc_train_data = train_data[train_data['mhc_allele'] == mhc_key]
+    mhc_train_data = train_data[train_data['mhc_allele'] == mhc_allele]
+    mhc_train_data.dropna(subset=['quant_meas'], inplace=True)
+    target = mhc_train_data['quant_meas'].apply(lambda x: 1 - math.log(x, 50.000))
 
     if len(mhc_train_data) < TRAINING_SET_SIZE_THRESHOLD:
         continue
-    t0 = time.time()
-    print(mhc_key)
-    print(f'n_samples = {len(mhc_train_data)}')
 
-    x = get_features(peptide_list=mhc_train_data['peptide'], index_id_list=Config.INDEX_ID_LIST, n_cpu=4)
-    y = mhc_train_data['target']
-    train_binding_model(features=x, target_values=y, mhc_name=mhc_key, random_state=RANDOM_SEED, verbose=True)
+    print(f'training {mhc_allele}')
 
-    print(f'Finished in {round(time.time() - t0, 2)} seconds')
+    model = AlleleSpecificBindingPredictor(mhc_allele=mhc_allele, median_length=9)
+    model.train(mhc_train_data['peptide'], target)
 
-print(f'Total number of MHC alleles = {len(list_mhc_alleles())}')
-print(list_mhc_alleles())
+    data = model.predict(mhc_train_data['peptide'])
+
+    plt.scatter(target, data)
+    plt.title(f'{np.corrcoef(target, data)}')
+    plt.show()
+
