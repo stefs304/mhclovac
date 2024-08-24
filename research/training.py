@@ -20,14 +20,14 @@ for mhc_allele in list(train_data['mhc_allele'].unique()):
 
     mhc_train_data = train_data[train_data['mhc_allele'] == mhc_allele]
     mhc_train_data.dropna(subset=['quant_meas'], inplace=True)
-    target = mhc_train_data['quant_meas'].apply(lambda x: 1 - math.log(x, 50.000))
+    target = mhc_train_data['quant_meas'].apply(lambda x: 1 - math.log(max([x, 0.0001]), 50.000))
 
     if len(mhc_train_data) < TRAINING_SET_SIZE_THRESHOLD:
         continue
 
     print(f'training {mhc_allele}')
 
-    model = AlleleSpecificBindingPredictor(mhc_allele=mhc_allele, median_length=9)
+    model = AlleleSpecificBindingPredictor(mhc_allele=mhc_allele, class_=1)
     model.train(mhc_train_data['peptide'], target)
 
     data = model.predict(mhc_train_data['peptide'])
