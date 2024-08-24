@@ -53,14 +53,14 @@ def get_index_correlation(index1, index2):
     return np.corrcoef(array_1, array_2)[0][1]
 
 
-def pdf(x, sigma):
-    """
-    Calculates normal probability density function at x data points. Assumes
-    mean of 0 and std provided by sigma parameter.
-    :param x: data points
-    :param sigma: std
-    :return: np.array
-    """
-    y = np.exp(-x**2/(2*sigma))/(sigma*np.sqrt(2*np.pi))
-    y = (y - y.min())/(y.max()-y.min())
-    return y
+
+
+
+def peptide_sequence_validator(peptide):
+    # expects uppercase letters
+    peptide = peptide.strip()
+    if peptide == '':
+        return False
+    valid = ['C', 'D', 'S', 'Q', 'K', 'I', 'P', 'T', 'F', 'N',
+             'G', 'H', 'L', 'R', 'W', 'A', 'V', 'E', 'Y', 'M']
+    return not any([p not in valid for p in peptide])
