@@ -4,8 +4,9 @@ import pickle
 import json
 from typing import Union
 
-from sklearn.linear_model import LinearRegression
-from sklearn.svm import SVR
+from sklearn.linear_model import LinearRegression, SGDRegressor
+from sklearn.neural_network import MLPRegressor
+from sklearn.svm import SVR, LinearSVR
 import pandas as pd
 from mhclovac.core import MhclovacCore
 from mhclovac.const import (
@@ -68,7 +69,7 @@ class PanSpecificBindingPredictor:
 
     def __init__(self, class_: int):
         self.median_length = class_2_pep_len if class_ == 2 else class_1_pep_len
-        self.model = SVR()
+        self.model = MLPRegressor(learning_rate_init=0.01)
 
     def train(self, peptides, mhcs, values):
         assert len(peptides) == len(mhcs)
