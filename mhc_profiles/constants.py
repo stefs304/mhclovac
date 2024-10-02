@@ -1,13 +1,34 @@
 
+peptide_length_map = {
+    1: 9,
+    2: 15
+}
+
 class_1_pep_len = 9
 class_2_pep_len = 15
 
-hydrogen_bonds_params = {
+# Fauchere, J.L., Charton, M., Kier, L.B., Verloop, A. and Pliska, V.
+# Amino acid side chain parameters for correlation studies in biology and
+# pharmacology
+# aaindex:FAUJ880109
+hydrogen_bond_donors = {
     'A': 0.0, 'L': 0.0, 'R': 4.0, 'K': 2.0, 'N': 2.0,
     'M': 0.0, 'D': 1.0, 'F': 0.0, 'C': 0.0, 'P': 0.0,
     'Q': 2.0, 'S': 1.0, 'E': 1.0, 'T': 1.0, 'G': 0.0,
     'W': 1.0, 'H': 1.0, 'Y': 1.0, 'I': 0.0, 'V': 0.0
 }
+
+# Side chain volume (Krigbaum-Komoriya, 1979)
+# Krigbaum, W.R. and Komoriya, A.
+# Local interactions as a structure determinant for protein molecules: II
+# aaindex:KRIW790103
+side_chain_volume = {
+    'A': 27.5, 'L': 93.5, 'R': 105.0, 'K': 100.0, 'N': 58.7,
+    'M': 94.1, 'D': 40.0, 'F': 115.5, 'C': 44.6, 'P': 41.9,
+    'Q': 80.7, 'S': 29.3, 'E': 62.0, 'T': 51.3, 'G': 0.0,
+    'W': 145.5, 'H': 79.0, 'Y': 117.3, 'I': 93.5, 'V': 71.5
+}
+
 
 wimley_white_params = {
     'A': 0.33, 'L': -0.69, 'R': 1.0, 'K': 1.81, 'N': 0.43,

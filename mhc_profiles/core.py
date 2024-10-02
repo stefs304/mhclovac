@@ -3,7 +3,7 @@ import numpy as np
 from typing import Literal
 
 
-class MhclovacCore:
+class PhysicochemicalProfiler:
 
     multiplier = 10
 
@@ -19,25 +19,6 @@ class MhclovacCore:
             verbose: bool = False,
             validate_schema: bool = True
     ):
-        """
-        MhclovacCore class implements an algorithm to create Gaussian kernel models of proteins.
-
-        :param schema: Dictionary with key-value pairs where the keys are one-letter amino-acid codes and values are
-        the corresponding values.
-        :param standardize_schema: If true schema values will be standardized to range -1:1 before modelling.
-        :param shard_size: Due to memory limitations the algorithm is implemented with sharding. In case of short
-        proteins the default shard_size should be enough to save memory. In case of larger proteins shard_size
-        should be decreased.
-        :param bandwidth: Width of the Gaussian kernel.
-        :param model_type: Discrete of continuous output.
-        :param discrete_model_length: In case of discrete model, if set this parameter will scale all model vectors to
-        be this length. This is achieved by calculating AUC of the continuous model at fixed number of windows. Only
-        applies to discrete model.
-        :param padded: In case of continuous model, shorted proteins will be padded with zeros at the end. Only applies
-        to continuous model.
-        :param verbose: If true the program will print the parameters at the start of the modeling process.
-        :param validate_schema: If true schema keys will be validated against 20 common amino acids.
-        """
         self.standardize_schema = standardize_schema
         self.validate_schema = validate_schema
         self.shard_size = shard_size
@@ -57,11 +38,6 @@ class MhclovacCore:
             raise AttributeError('discrete_model_length cannot be set when model_type is continuous')
 
     def generate_models(self, sequences: list[str]) -> list[np.ndarray]:
-        """
-        Generate models of sequences.
-        :param sequences: List of protein sequences
-        :return: 2d array
-        """
         if self.verbose:
             print(f'Generating models with parameters:')
             print(f'model_type: {self.model_type}')
@@ -156,11 +132,6 @@ class MhclovacCore:
             self.schema[k] = 2 * (v - min_) / (max_ - min_) - 1
 
     def simply_encode(self, sequences: list[str]) -> list[np.ndarray]:
-        """
-        Encode sequences using the schema.
-        :param sequences: list of sequences
-        :return: list[np.ndarray]
-        """
         if not self.padded:
             return [np.array([self.schema[x] for x in seq]) for seq in sequences]
         encoded_sequences = []

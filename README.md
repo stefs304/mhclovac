@@ -1,12 +1,9 @@
-# MHCLovac
-#### pan-specific + mhc-specific prediction
-MHC binding prediction based on modeled physicochemical properties of peptides.
+# mhc-profiles
+Analysis of modeled physicochemical profiles of MHC ligands. 
 
-> * [About](#about)
-> * [Installation](#installation)
-> * [Usage](#usage)
->   * [Python package](#python-package)
->   * [Cli](#command-line-tool)
+* [About](#about)
+* [Installation](#installation)
+* [Usage](#usage)
 
 ### About
 MhcLovac uses physicochemical index values of amino acid residues to create theoretical models of mhc ligands. 
@@ -25,7 +22,3 @@ pip install mhclovac
 ```
 
 ### Usage
-
-#### Python package
-
-#### Command-line tool
