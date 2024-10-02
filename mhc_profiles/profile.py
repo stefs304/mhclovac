@@ -1,4 +1,4 @@
-
+import dataclasses
 import os
 import pickle
 import numpy as np
@@ -38,6 +38,27 @@ class MHCProfile:
     def profile_stats(self):
         return None
 
+    @staticmethod
+    def load(mhc, schema_name) -> 'MHCProfile':
+        with open(data_file, "rb") as f:
+            data = pickle.load(f)
+        if mhc in data and schema_name in data[mhc].profiles:
+            return data[mhc].profiles[schema_name]
+        raise ValueError(f'mhc and schema not found in data')
+
+    def save(self, overwrite=False):
+        if not os.path.exists(data_file):
+            with open(data_file, "wb") as f:
+                pickle.dump({}, f)
+        with open(data_file, "rb") as f:
+            data = pickle.load(f)
+        if self.mhc not in data:
+            data[self.mhc] = MHCProfileData(mhc=self.mhc, profiles={})
+        if self.schema_name in data[self.mhc].profiles and not overwrite:
+            raise ValueError(f"Schema {self.schema_name} already exists.")
+        data[self.mhc].profiles[self.schema_name] = self
+        with open(data_file, "wb") as f:
+            pickle.dump(data, f)
 
 class PositionalComponent:
 
@@ -60,7 +81,7 @@ class PositionalComponent:
 @dataclass
 class MHCProfileData:
     mhc: str
-    profiles: dict[str, MHCProfile]
+    profiles: dict[str, MHCProfile] = dataclasses.field(default_factory=dict)
 
 
 class MHCI:
