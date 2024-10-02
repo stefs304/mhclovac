@@ -1,0 +1,31 @@
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mhc-profiles"
+dynamic = ["version"]
+authors = [
+  { name="Stefan Stojanovic" },
+]
+description = ""
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.9"
+dependencies = [
+    "numpy"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+keywords = []
+
+[project.urls]
+Homepage = "https://github.com/stefs304/mhc-profiles"
+Issues = "https://github.com/stefs304/mhc-profiles/issues"
+
+[tool.hatch.version]
+path = "mhc_profiles/__version__.py"
