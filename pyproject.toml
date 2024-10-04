@@ -9,7 +9,7 @@ dynamic = ["version"]
 authors = [
   { name="Stefan Stojanovic" },
 ]
-description = ""
+description = "Analysis of modeled physicochemical profiles of MHC ligands."
 readme = "README.md"
 license = {file = "LICENSE"}
 requires-python = ">=3.9"
@@ -20,8 +20,10 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
 ]
-keywords = []
+keywords = ['bioinformatics', 'immunoinformatics', 'prediction', 'mhc', 'peptide', 'physicochemistry']
 
 [project.urls]
 Homepage = "https://github.com/stefs304/mhc-profiles"
