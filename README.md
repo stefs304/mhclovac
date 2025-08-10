@@ -1,7 +1,13 @@
-# MHCLovac
+# ⚠️ Project Status: Archived
 
->**Aug 10, 2025. This project is no longer maintained (hasn't been for a long time) and no future development is expected.**
-____
+> **This project is no longer maintained**  
+> No further development or updates are planned.  
+>  
+> The repository is kept available for reference only.  
+> Thank you to everyone who used or contributed to this project.
+
+
+# MHCLovac
 
 MHC binding prediction based on modeled physicochemical properties of peptides
 
