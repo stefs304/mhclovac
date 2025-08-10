@@ -1,6 +1,6 @@
 # MHCLovac
 
->**! Aug 10, 2025. This repository is no longer maintained.**
+>**Aug 10, 2025. This project is no longer maintained (hasn't been for a long time) and no future development is expected.**
 ____
 
 MHC binding prediction based on modeled physicochemical properties of peptides
